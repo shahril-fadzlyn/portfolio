@@ -1,72 +1,51 @@
-.my-logo {
-  width: 40px;
-}
-.header-font {
-  font-family: montserrat;
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const sidebar = document.getElementById("sidebar");
 
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
+  hamburger.addEventListener("click", () => {
+    sidebar.classList.toggle("-translate-y-full");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Function to check if an element is in the viewport
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
   }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 
-@keyframes slideInFromRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
+  const skills = document.querySelectorAll(".progress");
 
-.my-pic {
-  animation: 1s ease-out 0s 1 slideInFromRight;
-}
+  window.addEventListener("scroll", () => {
+    skills.forEach((skill) => {
+      if (isInViewport(skill)) {
+        skill.style.width = skill.getAttribute("data-progress");
+      }
+    });
+  });
+});
 
-.text-hello {
-  animation: 1s ease-out 0s 1 slideInFromLeft;
-}
+document.addEventListener("DOMContentLoaded", () => {
+  // Existing code...
 
-.nav-link {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 3px; /* Adjust as needed */
-}
+  // Smooth Scrolling
+  const navLinks = document.querySelectorAll(".nav-link");
 
-.nav-link::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px; /* Thickness of the underline */
-  bottom: 0;
-  left: 0;
-  background-color: rgb(122, 122, 122); /* Color of the underline */
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-}
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
 
-.nav-link:hover::after {
-  visibility: visible;
-  width: 100%;
-}
-
-#sidebar {
-  transition: transform 0.3s ease-in-out;
-}
-
-.progress-bar {
-  background-color: #e5e7eb; /* Light gray background */
-}
-
-.progress {
-  background-color: #3b82f6; /* Blue progress bar */
-  transition: width 2s; /* Smooth transition for the bar */
-}
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+});
