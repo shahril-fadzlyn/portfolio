@@ -5,7 +5,7 @@ I also quite curious to learn about Bootstrap & Tailwind CSS but it causing me t
 So I decided to explore a bit about Tailwind CSS because I think it is much easier to learn compare to Bootstrap and Tailwind also have a documentation about all the class with different style which is very convenient & helpful.
 Instead of watching the whole tutorial about Tailwind, I tried to start creating a project using Tailwind with help from ChatGPT.
 My first objective is to LEARN by creating my first website.
-So, I used ChatGPT to code everything and I tried to understand what's going on at every lines of the code.
+So, I used ChatGPT to code the main structure and I tried to edit the code to get what I want while trying to understand what's going on at every lines of the code.
 I also tried to tweak some of the codes to get a better understanding.
 
 So, here is my first project!
