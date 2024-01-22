@@ -8,6 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const sidebar = document.getElementById("sidebar");
+
+  sidebar.addEventListener("click", () => {
+    sidebar.classList.toggle("-translate-y-full");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   // Function to check if an element is in the viewport
   function isInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -38,6 +46,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".nav-link");
 
   navLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+
+  const sideBarLinks = document.querySelectorAll(".sidebar-link");
+
+  sideBarLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
       const targetId = this.getAttribute("href");
