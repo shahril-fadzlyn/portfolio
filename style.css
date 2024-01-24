@@ -4,6 +4,12 @@
 .header-font {
   font-family: montserrat;
 }
+.middle-dot{
+  color: rgb(53, 109, 206);
+  font-weight: 800;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
 @keyframes slideInFromLeft {
   0% {
@@ -63,7 +69,7 @@
 }
 
 .progress-bar {
-  background-color: #e5e7eb; /* Light gray background */
+  background-color: #dfdfdf; /* Light gray background */
 }
 
 .progress {
