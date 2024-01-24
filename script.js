@@ -44,8 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Smooth Scrolling
   const navLinks = document.querySelectorAll(".nav-link");
+  const hireLinks = document.querySelectorAll(".hire-link");
 
-  navLinks.forEach((link) => {
+
+  navLinks,hireLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
       const targetId = this.getAttribute("href");
@@ -56,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
 
   const sideBarLinks = document.querySelectorAll(".sidebar-link");
 
