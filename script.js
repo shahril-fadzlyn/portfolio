@@ -46,19 +46,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".nav-link");
   const hireLinks = document.querySelectorAll(".hire-link");
 
+  navLinks,
+    hireLinks.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href");
+        const targetSection = document.querySelector(targetId);
 
-  navLinks,hireLinks.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href");
-      const targetSection = document.querySelector(targetId);
-
-      if (targetSection) {
-        targetSection.scrollIntoView({ behavior: "smooth" });
-      }
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: "smooth" });
+        }
+      });
     });
-  });
-
 
   const sideBarLinks = document.querySelectorAll(".sidebar-link");
 
@@ -72,5 +71,32 @@ document.addEventListener("DOMContentLoaded", () => {
         targetSection.scrollIntoView({ behavior: "smooth" });
       }
     });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const rows = document.querySelectorAll(".table-row");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          let delay = 0;
+          rows.forEach((row) => {
+            if (row === entry.target) {
+              row.style.transitionDelay = `${delay}s`;
+              row.classList.add("visible");
+              delay += 0.2; // Delay increment for each row
+            }
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.7 }
+  );
+
+  rows.forEach((row) => {
+    observer.observe(row);
   });
 });
