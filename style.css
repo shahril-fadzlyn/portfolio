@@ -4,11 +4,11 @@
 .header-font {
   font-family: montserrat;
 }
-.middle-dot{
+.middle-line {
   color: rgb(53, 109, 206);
   font-weight: 800;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 11px;
+  margin-right: 11px;
 }
 
 @keyframes slideInFromLeft {
@@ -75,4 +75,51 @@
 .progress {
   background-color: #3b82f6; /* Blue progress bar */
   transition: width 2s; /* Smooth transition for the bar */
+}
+
+table {
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+.stars {
+  display: inline-block;
+}
+
+.stars[data-stars="5"]:before {
+  content: "★★★★★";
+  color: gold;
+}
+.stars[data-stars="4"]:before {
+  content: "★★★★☆";
+  color: gold;
+}
+.stars[data-stars="3"]:before {
+  content: "★★★☆☆";
+  color: gold;
+}
+.stars[data-stars="2"]:before {
+  content: "★★☆☆☆";
+  color: gold;
+}
+.stars[data-stars="1"]:before {
+  content: "★☆☆☆☆";
+  color: gold;
+}
+
+.table-row {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.table-row.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
