@@ -73,7 +73,7 @@
 }
 
 .progress {
-  background-color: #3b82f6; /* Blue progress bar */
+  background-color: rgb(59 130 246); /* Blue progress bar */
   transition: width 2s; /* Smooth transition for the bar */
 }
 
@@ -113,13 +113,57 @@ td {
   color: gold;
 }
 
-.table-row {
+#software-proficiency table {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
+#software-proficiency table.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.table-row {
+  opacity: 0;
+  transition: opacity 0.5s ease 0.5s, transform 0.5s ease 0.5s; /* Add initial delay for rows */
+}
+
+
+
 .table-row.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
+.animated-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  overflow: hidden; /* For rounded corner effect */
+}
+
+.animated-table th, .animated-table td {
+  text-align: center;
+  padding: 12px 16px;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  width: 50%;
+}
+
+.animated-table th {
+  background-color: rgb(30 58 138); /* Dark header background */
+  color: white;
+}
+
+.animated-table tr {
+  background-color: #ffffff;
+}
+
+.animated-table tr:hover {
+  background-color: #f7fafc; /* Light color on hover */
+}
+
+
+
