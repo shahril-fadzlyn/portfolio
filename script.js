@@ -75,28 +75,29 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const rows = document.querySelectorAll(".table-row");
+  const section = document.getElementById('software-proficiency');
+  const table = section.querySelector('table');
+  const rows = section.querySelectorAll('.table-row');
+  let isTableVisible = false;
 
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          let delay = 0;
-          rows.forEach((row) => {
-            if (row === entry.target) {
-              row.style.transitionDelay = `${delay}s`;
-              row.classList.add("visible");
-              delay += 0.2; // Delay increment for each row
-            }
-          });
-          observer.unobserve(entry.target);
-        }
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting && !isTableVisible) {
+              table.classList.add('visible');
+              isTableVisible = true;
+              
+              let delay = 0.5; // Start after table animation
+              rows.forEach(row => {
+                  row.style.transitionDelay = `${delay}s`;
+                  row.classList.add('visible');
+                  delay += 0.3; // Delay increment for each row
+              });
+
+              observer.disconnect(); // We don't need to observe anymore
+          }
       });
-    },
-    { threshold: 0.7 }
-  );
+  }, { threshold: 0.5 });
 
-  rows.forEach((row) => {
-    observer.observe(row);
-  });
+  observer.observe(section);
 });
+
