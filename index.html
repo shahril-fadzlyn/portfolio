@@ -352,7 +352,7 @@
     <section id="portfolio" class="py-20 bg-gray-100 text-gray-800">
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-8">My Portfolio</h2>
-        <div class="flex flex-wrap -mx-4 justify-center hidden md:block">
+        <div class="flex flex-wrap -mx-4 justify-center">
           <!-- Project 1 -->
           <div class="portfolio-card">
             <img
@@ -393,56 +393,57 @@
             </div>
           </div>
 
-
-
           <!-- Repeat for other projects -->
         </div>
-        <div class="swiper mySwiper md:hidden">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="portfolio-card">
-                  <img
-                    src="thumbnail/img1.jpg"
-                    alt="Project Image"
-                    class="portfolio-image"
-                  />
-                  <div class="portfolio-info">
-                    <h3>Project Title</h3>
-                    <p>Short description of the project aosdjh</p>
-                    <button class="view-project hover:bg-blue-500 w-1/2">
-                      View Project
-                    </button>
-                  </div>
-                
-                <!-- card content -->
+              <!-- Swiper Carousel Container -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Swiper Slide for Each Project -->
+        <div class="swiper-slide">
+          <div class="portfolio-card">
+            <div class="portfolio-card">
+              <img
+                src="thumbnail/img1.jpg"
+                alt="Project Image"
+                class="portfolio-image"
+              />
+              <div class="portfolio-info">
+                <h3>Project Title</h3>
+                <p>Short description of the project aosdjh</p>
+                <button class="view-project hover:bg-blue-500 w-1/2">
+                  View Project
+                </button>
               </div>
-              
-              
             </div>
-            <div class="swiper-slide">
-              <div class="portfolio-card">
-                  <img
-                    src="thumbnail/img1.jpg"
-                    alt="Project Image"
-                    class="portfolio-image"
-                  />
-                  <div class="portfolio-info">
-                    <h3>Project Title</h3>
-                    <p>Short description of the project aosdjh</p>
-                    <button class="view-project hover:bg-blue-500 w-1/2">
-                      View Project
-                    </button>
-                  </div>
-                
-                <!-- card content -->
-              </div>
-              
-              
-            </div>
-            <!-- Swiper Slides (Your portfolio cards for mobile view) -->
+            <!-- Card Content: Image, Title, Description, etc. -->
           </div>
-          <div class="swiper-pagination"></div>
         </div>
+        <div class="swiper-slide">
+          <div class="portfolio-card">
+            <div class="portfolio-card">
+              <img
+                src="thumbnail/img1.jpg"
+                alt="Project Image"
+                class="portfolio-image"
+              />
+              <div class="portfolio-info">
+                <h3>Project </h3>
+                <p>Short description of the project aosdjh</p>
+                <button class="view-project hover:bg-blue-500 w-1/2">
+                  View Project
+                </button>
+              </div>
+            </div>
+            <!-- Card Content: Image, Title, Description, etc. -->
+          </div>
+        </div>
+
+        <!-- Repeat for other project cards -->
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+
+    </div>
       </div>
     </section>
 
@@ -501,6 +502,7 @@
           </div>
         </div>
       </div>
+
     </section>
 
     <script src="script.js"></script>
