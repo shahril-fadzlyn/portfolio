@@ -105,16 +105,18 @@ var mySwiper = new Swiper('.mySwiper', {
   // Optional parameters
   slidesPerView: 1,
   spaceBetween: 10,
+  loop: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
-  // Swiper settings for different breakpoints
+  // Disable navigation buttons
+  navigation: false,
+  // Only initialize Swiper for mobile view
   breakpoints: {
-    // When window width is >= 640px
-    640: {
-      slidesPerView: 2,
-      spaceBetween: 20,
+    320: { // Swiper activates at screen width 320px and below
+      slidesPerView: 1,
+      spaceBetween: 10,
     },
   }
 });
