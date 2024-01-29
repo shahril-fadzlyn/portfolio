@@ -101,3 +101,20 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(section);
 });
 
+var mySwiper = new Swiper('.mySwiper', {
+  // Optional parameters
+  slidesPerView: 1,
+  spaceBetween: 10,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  // Swiper settings for different breakpoints
+  breakpoints: {
+    // When window width is >= 640px
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+  }
+});
