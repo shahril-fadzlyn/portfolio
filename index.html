@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-    <style></style>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -352,7 +352,7 @@
     <section id="portfolio" class="py-20 bg-gray-100 text-gray-800">
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-8">My Portfolio</h2>
-        <div class="flex flex-wrap -mx-4 justify-center">
+        <div class="flex flex-wrap -mx-4 justify-center hidden md:block">
           <!-- Project 1 -->
           <div class="portfolio-card">
             <img
@@ -393,7 +393,55 @@
             </div>
           </div>
 
+
+
           <!-- Repeat for other projects -->
+        </div>
+        <div class="swiper mySwiper md:hidden">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="portfolio-card">
+                  <img
+                    src="thumbnail/img1.jpg"
+                    alt="Project Image"
+                    class="portfolio-image"
+                  />
+                  <div class="portfolio-info">
+                    <h3>Project Title</h3>
+                    <p>Short description of the project aosdjh</p>
+                    <button class="view-project hover:bg-blue-500 w-1/2">
+                      View Project
+                    </button>
+                  </div>
+                
+                <!-- card content -->
+              </div>
+              
+              
+            </div>
+            <div class="swiper-slide">
+              <div class="portfolio-card">
+                  <img
+                    src="thumbnail/img1.jpg"
+                    alt="Project Image"
+                    class="portfolio-image"
+                  />
+                  <div class="portfolio-info">
+                    <h3>Project Title</h3>
+                    <p>Short description of the project aosdjh</p>
+                    <button class="view-project hover:bg-blue-500 w-1/2">
+                      View Project
+                    </button>
+                  </div>
+                
+                <!-- card content -->
+              </div>
+              
+              
+            </div>
+            <!-- Swiper Slides (Your portfolio cards for mobile view) -->
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -456,5 +504,7 @@
     </section>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   </body>
 </html>
