@@ -205,7 +205,6 @@ td {
   cursor: pointer;
 }
 
-
 .portfolio-card:hover .portfolio-info {
   transform: translateY(0);
 }
@@ -214,7 +213,7 @@ td {
 }
 
 @media (max-width: 768px) {
-  .portfolio-card {
+  .portfolio-card-mobile {
     max-width: none;
     margin: 15px 0;
   }
@@ -226,7 +225,78 @@ td {
 }
 
 @media (min-width: 769px) {
-  .mySwiper {
+  .mySwiper,
+  .slider {
     display: none; /* Hide Swiper on larger screens */
+  }
+}
+
+/* Media Query for Mobile Screens */
+@media only screen and (max-width: 769px) {
+  .slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    /* other styles... */
+  }
+
+  .portfolio-card-mobile {
+    flex: 0 0 auto;
+    height: 300px;
+    width: 80%;
+    margin: 10px;
+    scroll-snap-align: start;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    /* other styles... */
+  }
+
+  .portfolio-card-mobile img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .portfolio-card-mobile h3 {
+    margin: 10px 0;
+  }
+
+  .portfolio-card-mobile p {
+    color: #666;
+    margin: 10px 0;
+  }
+
+  /* Style the button (optional) */
+  .portfolio-card-mobile button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .portfolio-card-mobile button:hover {
+    background-color: #0056b3;
+  }
+  .portfolio-info-mobile {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  }
+
+  .portfolio-info-mobile.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .portfolio-image-mobile {
+    object-fit: cover;
+    transition: height 0.3s ease-out; /* Smooth transition for the height change */
+  }
+
+  .portfolio-image-mobile.in-view {
+    height: 200px; /* Height when in viewport (shorter) */
   }
 }
