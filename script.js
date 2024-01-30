@@ -40,25 +40,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Existing code...
-
   // Smooth Scrolling
   const navLinks = document.querySelectorAll(".nav-link");
   const hireLinks = document.querySelectorAll(".hire-link");
 
-  navLinks,
-    hireLinks.forEach((link) => {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute("href");
-        const targetSection = document.querySelector(targetId);
+  [...navLinks, ...hireLinks].forEach((link) => {
+    // Spread both NodeLists into a single array
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
 
-        if (targetSection) {
-          targetSection.scrollIntoView({ behavior: "smooth" });
-        }
-      });
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth" });
+      }
     });
+  });
 
+  // Repeat for sidebar links if necessary
   const sideBarLinks = document.querySelectorAll(".sidebar-link");
 
   sideBarLinks.forEach((link) => {
@@ -75,48 +74,64 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const section = document.getElementById('software-proficiency');
-  const table = section.querySelector('table');
-  const rows = section.querySelectorAll('.table-row');
+  const section = document.getElementById("software-proficiency");
+  const table = section.querySelector("table");
+  const rows = section.querySelectorAll(".table-row");
   let isTableVisible = false;
 
-  const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-          if (entry.isIntersecting && !isTableVisible) {
-              table.classList.add('visible');
-              isTableVisible = true;
-              
-              let delay = 0.5; // Start after table animation
-              rows.forEach(row => {
-                  row.style.transitionDelay = `${delay}s`;
-                  row.classList.add('visible');
-                  delay += 0.3; // Delay increment for each row
-              });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !isTableVisible) {
+          table.classList.add("visible");
+          isTableVisible = true;
 
-              observer.disconnect(); // We don't need to observe anymore
-          }
+          let delay = 0.5; // Start after table animation
+          rows.forEach((row) => {
+            row.style.transitionDelay = `${delay}s`;
+            row.classList.add("visible");
+            delay += 0.3; // Delay increment for each row
+          });
+
+          observer.disconnect(); // We don't need to observe anymore
+        }
       });
-  }, { threshold: 0.5 });
+    },
+    { threshold: 0.5 }
+  );
 
   observer.observe(section);
 });
 
-var mySwiper = new Swiper('.mySwiper', {
-  // Optional parameters
-  slidesPerView: 1,
-  spaceBetween: 10,
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  // Disable navigation buttons
-  navigation: false,
-  // Only initialize Swiper for mobile view
-  breakpoints: {
-    320: { // Swiper activates at screen width 320px and below
-      slidesPerView: 1,
-      spaceBetween: 10,
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target
+            .querySelector(".portfolio-image-mobile")
+            .classList.add("in-view");
+          entry.target
+            .querySelector(".portfolio-info-mobile")
+            .classList.add("visible");
+        } else {
+          entry.target
+            .querySelector(".portfolio-image-mobile")
+            .classList.remove("in-view");
+          entry.target
+            .querySelector(".portfolio-info-mobile")
+            .classList.remove("visible");
+        }
+      });
     },
-  }
+    {
+      rootMargin: "0px",
+      threshold: 0.5,
+    }
+  );
+
+  // Observe all portfolio-card elements
+  document.querySelectorAll(".portfolio-card-mobile").forEach((card) => {
+    observer.observe(card);
+  });
 });
