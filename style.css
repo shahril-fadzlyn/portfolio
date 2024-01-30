@@ -235,6 +235,7 @@ td {
 @media only screen and (max-width: 769px) {
   .slider {
     display: flex;
+    overflow-y: hidden;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
