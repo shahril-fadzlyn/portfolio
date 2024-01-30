@@ -15,7 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -352,7 +355,7 @@
     <section id="portfolio" class="py-20 bg-gray-100 text-gray-800">
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-8">My Portfolio</h2>
-        <div class="flex flex-wrap -mx-4 justify-center">
+        <div class="hidden md:flex flex-wrap -mx-4 justify-center">
           <!-- Project 1 -->
           <div class="portfolio-card">
             <img
@@ -395,55 +398,43 @@
 
           <!-- Repeat for other projects -->
         </div>
-              <!-- Swiper Carousel Container -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <!-- Swiper Slide for Each Project -->
-        <div class="swiper-slide">
-          <div class="portfolio-card">
-            <div class="portfolio-card">
-              <img
-                src="thumbnail/img1.jpg"
-                alt="Project Image"
-                class="portfolio-image"
-              />
-              <div class="portfolio-info">
-                <h3>Project Title</h3>
-                <p>Short description of the project aosdjh</p>
-                <button class="view-project hover:bg-blue-500 w-1/2">
-                  View Project
-                </button>
-              </div>
+        <!-- Swiper Carousel Container -->
+        <div id="card-slider" class="slider">
+          <div class="portfolio-card-mobile">
+            <img
+              src="thumbnail/img1.jpg"
+              alt="Image 1"
+              class="portfolio-image-mobile"
+            />
+            <div class="portfolio-info-mobile">
+              <h3>Title 1</h3>
+              <p>Short description for card 1...</p>
             </div>
-            <!-- Card Content: Image, Title, Description, etc. -->
           </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="portfolio-card">
-            <div class="portfolio-card">
-              <img
-                src="thumbnail/img1.jpg"
-                alt="Project Image"
-                class="portfolio-image"
-              />
-              <div class="portfolio-info">
-                <h3>Project </h3>
-                <p>Short description of the project aosdjh</p>
-                <button class="view-project hover:bg-blue-500 w-1/2">
-                  View Project
-                </button>
-              </div>
+          <div class="portfolio-card-mobile">
+            <img
+              src="thumbnail/img1.jpg"
+              alt="Image 1"
+              class="portfolio-image-mobile"
+            />
+            <div class="portfolio-info-mobile">
+              <h3>Title 1</h3>
+              <p>Short description for card 1...</p>
             </div>
-            <!-- Card Content: Image, Title, Description, etc. -->
           </div>
+          <div class="portfolio-card-mobile">
+            <img
+              src="thumbnail/img1.jpg"
+              alt="Image 1"
+              class="portfolio-image-mobile"
+            />
+            <div class="portfolio-info-mobile">
+              <h3>Title 1</h3>
+              <p>Short description for card 1...</p>
+            </div>
+          </div>
+          <!-- Add more cards as needed -->
         </div>
-
-        <!-- Repeat for other project cards -->
-      </div>
-      <!-- Add Pagination -->
-      <div class="swiper-pagination"></div>
-
-    </div>
       </div>
     </section>
 
@@ -502,11 +493,9 @@
           </div>
         </div>
       </div>
-
     </section>
 
     <script src="script.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
   </body>
 </html>
