@@ -250,73 +250,36 @@ td {
     scroll-snap-align: start;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 10px;
-    background-color: white;
     overflow: hidden;
-
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* other styles... */
   }
 
-  .portfolio-card-mobile img {
+  .image-container img {
+    width: auto;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease; /* Smooth transition for the zoom effect */
+  }
+
+  .portfolio-card-mobile.in-view .image-container img {
+    transform: scale(1.3); /* Adjust scale value for desired zoom level */
+  }
+
+  .description {
+    position: absolute;
+    bottom: -100%; /* Initially hidden */
+    left: 0;
     width: 100%;
-    height: 100%;
-    border-radius: 10px 10px 0 0;
+    height: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    transition: bottom 0.5s ease; /* Smooth slide-up animation */
   }
 
-  .portfolio-card-mobile h3 {
-    margin: 10px 0;
-  }
-
-  .portfolio-card-mobile p {
-    color: #666;
-    margin: 10px 0;
-  }
-
-  /* Style the button (optional) */
-  .portfolio-card-mobile button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .portfolio-card-mobile button:hover {
-    background-color: #0056b3;
-  }
-  .portfolio-info-mobile {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
-  }
-
-  .portfolio-info-mobile.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  /* .portfolio-image-mobile {
-    object-fit: cover;
-    transition: height 0.2s ease-out; 
-  }
-
-  .portfolio-image-mobile.in-view {
-    height: 200px; 
-  } */
-
-  .image-container {
-    height: 270px; /* Initial height */
-    transition: height 0.3s ease-out;
-    overflow: hidden;
-  }
-
-  .image-container.in-view {
-    height: 200px; /* Height when in viewport */
-  }
-
-  .portfolio-image-mobile {
-    object-fit: cover;
-
-    width: 100%; /* Ensure it covers the full container width */
-    height: auto; /* Maintain aspect ratio */
+  .portfolio-card-mobile.in-view .description {
+    bottom: 0; /* Slides up to cover the bottom part of the image */
   }
 }
