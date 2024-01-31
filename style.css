@@ -126,7 +126,7 @@ td {
 
 .table-row {
   opacity: 0;
-  transition: opacity 0.5s ease 0.5s, transform 0.5s ease 0.5s; /* Add initial delay for rows */
+  transition: opacity 0.3s ease 0.3s, transform 0.3s ease 0.3s; /* Add initial delay for rows */
 }
 
 .table-row.visible {
@@ -247,7 +247,7 @@ td {
     height: 300px;
     width: 80%;
     margin: 10px;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
