@@ -108,29 +108,17 @@ document.addEventListener("DOMContentLoaded", () => {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target
-            .querySelector(".image-container")
-            .classList.add("in-view");
-          entry.target
-            .querySelector(".portfolio-info-mobile")
-            .classList.add("visible");
+          entry.target.classList.add("in-view");
         } else {
-          entry.target
-            .querySelector(".image-container")
-            .classList.remove("in-view");
-          entry.target
-            .querySelector(".portfolio-info-mobile")
-            .classList.remove("visible");
+          entry.target.classList.remove("in-view");
         }
       });
     },
     {
-      rootMargin: "0px",
-      threshold: 0.8,
+      threshold: 0.5, // Adjust as needed to trigger when half the card is in view
     }
   );
 
-  // Observe all portfolio-card elements
   document.querySelectorAll(".portfolio-card-mobile").forEach((card) => {
     observer.observe(card);
   });
