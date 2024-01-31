@@ -109,14 +109,14 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target
-            .querySelector(".portfolio-image-mobile")
+            .querySelector(".image-container")
             .classList.add("in-view");
           entry.target
             .querySelector(".portfolio-info-mobile")
             .classList.add("visible");
         } else {
           entry.target
-            .querySelector(".portfolio-image-mobile")
+            .querySelector(".image-container")
             .classList.remove("in-view");
           entry.target
             .querySelector(".portfolio-info-mobile")
