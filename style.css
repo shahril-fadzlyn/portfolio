@@ -11,6 +11,22 @@
   margin-right: 11px;
 }
 
+.hamburger-line {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#hamburger.open .line1 {
+  transform: rotate(45deg) translate(3px, -4px);
+}
+
+#hamburger.open .line2 {
+  opacity: 0;
+}
+
+#hamburger.open .line3 {
+  transform: rotate(-45deg) translate(-14px, -3px);
+}
+
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -69,7 +85,8 @@
 }
 
 @keyframes pulsateGradient {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
   50% {
@@ -78,18 +95,40 @@
 }
 
 .hire-link {
-  background: linear-gradient(45deg, rgb(30, 58, 138), rgb(60, 115, 200), rgb(30, 58, 138), rgb(60, 115, 200), rgb(30, 58, 138));
+  position: relative;
+  background: linear-gradient(
+    45deg,
+    rgb(21, 44, 107),
+    rgb(60, 115, 200),
+    rgb(17, 39, 99),
+    rgb(60, 115, 200),
+    rgb(23, 48, 116)
+  );
   background-size: 200% 200%;
   animation: pulsateGradient 3s ease infinite;
-  transition: all;
+  transition: background-color 0.2s ease;
+  z-index: 0;
+
+  /* Other styles... */
 }
 
-.hire-link:hover {
-  background: linear-gradient(45deg, rgb(22, 160, 133), rgb(46, 204, 113), rgb(22, 160, 133));
-
+.hire-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(72, 136, 231);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: inherit; /* Match the border-radius of the button */
+  z-index: -2;
 }
 
-
+.hire-link:hover::after {
+  opacity: 1;
+}
 
 .progress-bar {
   background-color: #dfdfdf; /* Light gray background */
