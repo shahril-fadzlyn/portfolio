@@ -74,6 +74,7 @@
 
 .progress {
   background-color: rgb(59 130 246); /* Blue progress bar */
+  width: 0; /* Initialize with no width */
   transition: width 2s; /* Smooth transition for the bar */
 }
 
