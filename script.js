@@ -34,6 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
     skills.forEach((skill) => {
       if (isInViewport(skill)) {
         skill.style.width = skill.getAttribute("data-progress");
+      } else {
+        skill.style.width = "0"; // Reset width when out of view
       }
     });
   });
