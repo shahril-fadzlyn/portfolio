@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           table.classList.add("visible");
-          let delay = 0.3; // Start after table animation
+          let delay = 0.2; // Start after table animation
           rows.forEach((row) => {
             row.style.transitionDelay = `${delay}s`;
             row.classList.add("visible");
