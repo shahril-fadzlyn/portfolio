@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   hamburger.addEventListener("click", () => {
     sidebar.classList.toggle("-translate-y-full");
+    hamburger.classList.toggle("open");
   });
 });
 
