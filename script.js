@@ -77,23 +77,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const section = document.getElementById("software-proficiency");
   const table = section.querySelector("table");
   const rows = section.querySelectorAll(".table-row");
-  let isTableVisible = false;
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting && !isTableVisible) {
+        if (entry.isIntersecting) {
           table.classList.add("visible");
-          isTableVisible = true;
-
-          let delay = 0.5; // Start after table animation
+          let delay = 0.3; // Start after table animation
           rows.forEach((row) => {
             row.style.transitionDelay = `${delay}s`;
             row.classList.add("visible");
-            delay += 0.3; // Delay increment for each row
+            delay += 0.1; // Delay increment for each row
           });
-
-          observer.disconnect(); // We don't need to observe anymore
+        } else {
+          table.classList.remove("visible");
+          rows.forEach((row) => {
+            row.style.transitionDelay = "0s";
+            row.classList.remove("visible");
+          });
         }
       });
     },
@@ -122,4 +123,30 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".portfolio-card-mobile").forEach((card) => {
     observer.observe(card);
   });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-fadeInUp");
+          entry.target.classList.remove("animate-fadeOutDown");
+        } else {
+          entry.target.classList.add("animate-fadeOutDown");
+          entry.target.classList.remove("animate-fadeInUp");
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+      rootMargin: "0px",
+    }
+  );
+
+  document
+    .querySelectorAll("#contact input, #contact textarea, #contact button")
+    .forEach((element) => {
+      observer.observe(element);
+    });
 });
