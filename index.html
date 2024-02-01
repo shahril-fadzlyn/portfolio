@@ -51,10 +51,25 @@
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
+              class="hamburger-line line1"
+              d="M3 6h18"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+            <path
+              class="hamburger-line line2"
+              d="M3 12h18"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            ></path>
+            <path
+              class="hamburger-line line3"
+              d="M3 18h18"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
             ></path>
           </svg>
         </button>
@@ -63,7 +78,7 @@
     <!-- Sidebar (Initially hidden) -->
     <div
       id="sidebar"
-      class="fixed left-0 right-0 bg-gray-900 text-white flex-row p-0 pt-16 transform -translate-y-full shadow-2xl"
+      class="fixed left-0 right-0 bg-gray-900 text-white flex-row p-0 pt-16 transform -translate-y-full shadow-2xl z-30"
     >
       <ul>
         <li>
@@ -121,7 +136,7 @@
             </a>
             <button
               href="#downloadcv"
-              class="border-2 border-blue-900 text-blue-900 font-bold py-1.5 px-1 rounded hover:bg-blue-200 transition-all w-36"
+              class="border-2 border-blue-900 text-blue-900 font-bold py-1.5 px-1 rounded hover:bg-blue-100 transition-all w-36"
             >
               Download CV
             </button>
