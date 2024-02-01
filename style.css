@@ -68,6 +68,29 @@
   transition: transform 0.3s ease-in-out;
 }
 
+@keyframes pulsateGradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.hire-link {
+  background: linear-gradient(45deg, rgb(30, 58, 138), rgb(60, 115, 200), rgb(30, 58, 138), rgb(60, 115, 200), rgb(30, 58, 138));
+  background-size: 200% 200%;
+  animation: pulsateGradient 3s ease infinite;
+  transition: all;
+}
+
+.hire-link:hover {
+  background: linear-gradient(45deg, rgb(22, 160, 133), rgb(46, 204, 113), rgb(22, 160, 133));
+
+}
+
+
+
 .progress-bar {
   background-color: #dfdfdf; /* Light gray background */
 }
