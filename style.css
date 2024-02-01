@@ -283,3 +283,32 @@ td {
     bottom: 0; /* Slides up to cover the bottom part of the image */
   }
 }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+}
+
+.animate-fadeOutDown {
+  animation: fadeOutDown 0.1s ease-out forwards;
+}
