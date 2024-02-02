@@ -84,28 +84,20 @@
   transition: transform 0.3s ease-in-out;
 }
 
-@keyframes pulsateGradient {
-  0%,
-  100% {
+@keyframes moveGradient {
+  0% {
     background-position: 0% 50%;
   }
-  50% {
-    background-position: 100% 50%;
+  100% {
+    background-position: 100% 100%;
   }
 }
 
 .hire-link {
   position: relative;
-  background: linear-gradient(
-    45deg,
-    rgb(21, 44, 107),
-    rgb(60, 115, 200),
-    rgb(17, 39, 99),
-    rgb(60, 115, 200),
-    rgb(23, 48, 116)
-  );
-  background-size: 200% 200%;
-  animation: pulsateGradient 3s ease infinite;
+  background: linear-gradient(45deg, rgb(21, 44, 107), rgb(60, 115, 200), rgb(17, 39, 99), rgb(60, 115, 200), rgb(21, 44, 107));
+  background-size: 400% 400%;
+  animation: moveGradient 3s linear infinite;
   transition: background-color 0.2s ease;
   z-index: 0;
 
@@ -121,7 +113,7 @@
   bottom: 0;
   background: rgb(72, 136, 231);
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
   border-radius: inherit; /* Match the border-radius of the button */
   z-index: -2;
 }
@@ -151,30 +143,21 @@ td {
   padding: 8px;
 }
 
+
+
 .stars {
-  display: inline-block;
+  display: inline-flex;
+  color: rgb(59 130 246);
 }
 
-.stars[data-stars="5"]:before {
-  content: "★★★★★";
-  color: gold;
+.stars .fas.fa-star {
+  color: rgb(229, 229, 229); /* Different color for empty stars */
 }
-.stars[data-stars="4"]:before {
-  content: "★★★★☆";
-  color: gold;
+
+.fa-star {
+  margin-right: 4px; /* Space between stars */
 }
-.stars[data-stars="3"]:before {
-  content: "★★★☆☆";
-  color: gold;
-}
-.stars[data-stars="2"]:before {
-  content: "★★☆☆☆";
-  color: gold;
-}
-.stars[data-stars="1"]:before {
-  content: "★☆☆☆☆";
-  color: gold;
-}
+
 
 #software-proficiency table {
   opacity: 0;
@@ -321,7 +304,7 @@ td {
 
   .image-container img {
     width: auto;
-    height: 300px;
+    height: auto;
     object-fit: cover;
     transition: transform 0.5s ease; /* Smooth transition for the zoom effect */
   }
