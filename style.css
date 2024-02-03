@@ -95,7 +95,14 @@
 
 .hire-link {
   position: relative;
-  background: linear-gradient(45deg, rgb(21, 44, 107), rgb(60, 115, 200), rgb(17, 39, 99), rgb(60, 115, 200), rgb(21, 44, 107));
+  background: linear-gradient(
+    45deg,
+    rgb(21, 44, 107),
+    rgb(60, 115, 200),
+    rgb(17, 39, 99),
+    rgb(60, 115, 200),
+    rgb(21, 44, 107)
+  );
   background-size: 400% 400%;
   animation: moveGradient 3s linear infinite;
   transition: background-color 0.2s ease;
@@ -143,8 +150,6 @@ td {
   padding: 8px;
 }
 
-
-
 .stars {
   display: inline-flex;
   color: rgb(59 130 246);
@@ -157,7 +162,6 @@ td {
 .fa-star {
   margin-right: 4px; /* Space between stars */
 }
-
 
 #software-proficiency table {
   opacity: 0;
@@ -231,11 +235,18 @@ td {
   left: 0;
   right: 0;
   background-color: white;
-  padding: 7px 15px 7px 15px;
+  padding: 7px 15px 0px 15px;
 
   transform: translateY(70%);
   transition: transform 0.3s ease;
 }
+
+#portfolio .container,
+#portfolio h2 {
+  position: relative;
+  z-index: 2; /* Ensure this is above the dynamic background */
+}
+
 .portfolio-info h3 {
   margin: 0 0 10px 0;
 }
@@ -256,6 +267,27 @@ td {
 }
 .portfolio-card:hover .view-project {
   opacity: 1;
+}
+
+.dynamic-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  transition: opacity 0.7s ease;
+  opacity: 0; /* Start hidden */
+}
+
+#portfolio {
+  position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -279,6 +311,27 @@ td {
 
 /* Media Query for Mobile Screens */
 @media only screen and (max-width: 769px) {
+  .dynamic-bg {
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0; /* Start hidden, show when in view */
+  }
+
+  #portfolio {
+    position: relative;
+    overflow: hidden;
+    background-color: #f0f0f0; /* Default solid color */
+  }
+
+  #portfolio .container,
+  #portfolio h2,
+  #portfolio .portfolio-card-mobile {
+    position: relative;
+    z-index: 1; /* Above the blurred background */
+  }
+
   .slider {
     display: flex;
     overflow-y: hidden;
@@ -304,7 +357,7 @@ td {
 
   .image-container img {
     width: auto;
-    height: auto;
+    height: 300px;
     object-fit: cover;
     transition: transform 0.5s ease; /* Smooth transition for the zoom effect */
   }
