@@ -153,3 +153,42 @@ document.addEventListener("DOMContentLoaded", () => {
       observer.observe(element);
     });
 });
+
+document.querySelectorAll(".portfolio-card").forEach((card) => {
+  const imgSrc = card.querySelector(".portfolio-image").src;
+  card.addEventListener("mouseenter", () => {
+    const dynamicBg = document.getElementById("dynamic-background");
+    dynamicBg.style.backgroundImage = `url(${imgSrc})`;
+    dynamicBg.style.opacity = 0.3; // Make visible
+    dynamicBg.style.scale = 1.1; // Make visible
+  });
+  card.addEventListener("mouseleave", () => {
+    document.getElementById("dynamic-background").style.opacity = 0; // Hide
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Change background to the card's image
+          document.getElementById(
+            "dynamic-background"
+          ).style.backgroundImage = `url(${
+            entry.target.querySelector("img").src
+          })`;
+          document.getElementById("dynamic-background").style.opacity = 0.3;
+          document.getElementById("dynamic-background").style.scale = 1.1;
+        } else {
+          document.getElementById("dynamic-background").style.opacity = 0;
+        }
+      });
+    },
+    { threshold: 1 }
+  );
+
+  document.querySelectorAll(".portfolio-card-mobile").forEach((card) => {
+    observer.observe(card);
+  });
+});
