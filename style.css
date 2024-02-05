@@ -38,19 +38,71 @@
   }
 }
 
-@keyframes slideInFromRight {
+@keyframes opacity {
   0% {
-    transform: translateX(100%);
+    opacity: 0;
+  }
+  20% {
     opacity: 0;
   }
   100% {
-    transform: translateX(0);
     opacity: 1;
   }
 }
 
+@keyframes graphicSlideInFromRight {
+  from {
+    opacity: 0;
+    transform: translate3d(200px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes graphicSlideOutFromLeft {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(200px, 0, 0);
+  }
+}
+
 .my-pic {
-  animation: 1s ease-out 0s 1 slideInFromRight;
+  position: relative;
+
+  z-index: 1;
+  animation: 1s ease-out 0s 1 opacity;
+}
+
+.circle-graphic-hero {
+  position: absolute;
+  z-index: 0;
+  top: 600px;
+  bottom: 0;
+  left: 600px;
+  right: 0;
+  background: linear-gradient(
+    45deg,
+    rgb(21, 44, 107),
+    rgb(60, 115, 200),
+    rgb(17, 39, 99),
+    rgb(60, 115, 200)
+  );
+}
+
+.graphicSlideInFromRight {
+  animation: graphicSlideInFromRight 0.5s ease-out forwards;
+}
+
+.graphicSlideOutFromLeft {
+  animation: graphicSlideOutFromLeft 0.5s ease-out forwards;
 }
 
 .text-hello {
@@ -104,8 +156,8 @@
     rgb(21, 44, 107)
   );
   background-size: 400% 400%;
-  animation: moveGradient 3s linear infinite;
-  transition: background-color 0.2s ease;
+  animation: moveGradient 2.7s linear infinite;
+  transition: background-color 0.1s ease;
   z-index: 0;
 
   /* Other styles... */
@@ -127,6 +179,16 @@
 
 .hire-link:hover::after {
   opacity: 1;
+}
+
+.circle-graphic {
+  background: linear-gradient(
+    45deg,
+    rgb(21, 44, 107),
+    rgb(60, 115, 200),
+    rgb(17, 39, 99),
+    rgb(60, 115, 200)
+  );
 }
 
 .progress-bar {
@@ -343,11 +405,11 @@ td {
 
   .portfolio-card-mobile {
     flex: 0 0 auto;
-    height: 300px;
+    height: 400px;
     width: 80%;
     margin: 10px;
     scroll-snap-align: center;
-    border: 1px solid #ddd;
+    border: none;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -357,7 +419,7 @@ td {
 
   .image-container img {
     width: auto;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
     transition: transform 0.5s ease; /* Smooth transition for the zoom effect */
   }
