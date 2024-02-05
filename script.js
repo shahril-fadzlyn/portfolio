@@ -192,3 +192,51 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(card);
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("graphicSlideInFromRight");
+          entry.target.classList.remove("graphicSlideOutFromLeft");
+        } else {
+          entry.target.classList.add("graphicSlideOutFromLeft");
+          entry.target.classList.remove("graphicSlideInFromRight");
+        }
+      });
+    },
+    {
+      threshold: 0.8,
+      rootMargin: "0px",
+    }
+  );
+
+  document.querySelectorAll("#hero .circle-graphic-hero").forEach((element) => {
+    observer.observe(element);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("graphicSlideInFromRight");
+          entry.target.classList.remove("graphicSlideOutFromLeft");
+        } else {
+          entry.target.classList.add("graphicSlideOutFromLeft");
+          entry.target.classList.remove("graphicSlideInFromRight");
+        }
+      });
+    },
+    {
+      threshold: 0.8,
+      rootMargin: "0px",
+    }
+  );
+
+  document.querySelectorAll("#hero .circle-graphic-hero").forEach((element) => {
+    observer.observe(element);
+  });
+});
