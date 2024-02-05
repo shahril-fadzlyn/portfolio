@@ -124,7 +124,7 @@
         <div class="text-hello text-center md:text-left mb-4">
           <h1 class="text-4xl font-bold mb-2">
             Hello, I'm
-            <span class="text-blue-900">Shah</span>
+            <span class="text-blue-900">Shahril Fadzlyn</span>
           </h1>
           <h2 class="text-2xl mb-6">Front-End Developer | Web Designer</h2>
           <p class="mb-6">
@@ -140,53 +140,86 @@
             </a>
             <button
               href="#downloadcv"
-              class="border-2 border-blue-900 text-blue-900 font-bold py-1.5 px-1 rounded hover:bg-blue-100 transition-all w-36"
+              class="border-2 border-blue-900 text-blue-900 font-bold py-1.5 px-1 rounded hover:border-blue-400 hover:text-blue-400 transition-all w-36"
             >
               Download CV
             </button>
           </div>
         </div>
-        <div class="md:w-auto">
+        <div class="md:w-auto relative">
           <img
             src="thumbnail/my-pic1.png"
             alt="Shahril Fadzlyn"
             class="my-pic mx-auto md:mx-auto my-0"
           />
+          <div
+            class="circle-graphic-hero rounded-full bg-black w-20 h-20 absolute top-44 bottom-0 left-0 right-0 md:w-36 md:h-36"
+          ></div>
         </div>
       </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white text-gray-800">
+    <section id="about" class="py-20 md:py-40 bg-white text-gray-800">
       <div class="container mx-auto px-6">
         <div class="text-center">
           <h2 class="text-3xl font-bold mb-2">About Me</h2>
-          <p class="mb-6">A brief story of my journey in web development</p>
+          <p class="mb-10 md:mb-10">
+            A brief story of my journey in web development
+          </p>
         </div>
-        <div class="flex flex-wrap -mx-4">
-          <div class="w-full md:w-1/2 px-4 mb-4 md:mb-0">
-            <p>
-              Hello! I'm Shahril Fadzlyn, a passionate Front-End Developer based
-              in Kuala Lumpur. I specialize in creating interactive and
-              responsive web designs. With 1 year of experience, I've developed
-              a deep understanding of HTML, CSS, JavaScript, and popular
-              frameworks like React. I love turning ideas into beautiful and
-              efficient websites.
-            </p>
-            <p class="mt-4">
-              My journey began in 2023, and since then, I've worked on various
-              projects ranging from small business websites to large web
-              applications. I'm constantly learning and adapting to new
-              technologies to deliver the best outcomes for my projects.
-            </p>
-          </div>
-          <div class="w-full md:w-1/2 px-4">
+        <div class="flex flex-wrap -mx-4 justify-center">
+          <div
+            class="w-3/4 md:w-1/2 px-4 flex justify-center mb-8 md:mb-0 relative"
+          >
+            <div
+              class="circle-graphic rounded-full bg-black w-20 h-20 absolute top-44 bottom-0 left-0 right-0 md:w-36 md:h-36 md:top-72 md:bottom-0 md:left-24 md:right-0"
+            ></div>
             <!-- You can insert an image or additional content here -->
             <img
               src="thumbnail/my-pic2.jpg"
               alt="[Your Name]"
-              class="rounded-lg shadow-lg"
+              class="rounded-full shadow-lg"
             />
+          </div>
+
+          <div class="w-full md:w-1/2 px-4 mb-10 md:mb-0 flex items-center">
+            <div>
+              <p>
+                Hello! I'm Shahril Fadzlyn, a passionate
+                <span class="font-bold text-blue-900">Front-End Developer</span>
+                based in Kuala Lumpur. I've dedicated over
+                <span class="font-bold text-blue-900"
+                  >10 years to mastering graphic design</span
+                >, ensuring versatility to meet diverse client needs. This
+                journey sparked my curiosity in web design, leading me to learn
+                <span class="font-bold text-blue-900">
+                  HTML, CSS, and JavaScript</span
+                >. The creation of my
+                <span class="font-bold text-blue-900"
+                  >personal portfolio website</span
+                >
+                marked the beginning of this journey and my eagerness to delve
+                deeper into front-end development.
+              </p>
+              <p class="mt-4">
+                My career is a
+                <span class="font-bold text-blue-900"
+                  >continuous learning journey</span
+                >
+                where I constantly explore new technologies to enhance my skill
+                set. The excitement of developing my own website has fueled my
+                aspiration to delve further into front-end development and
+                <span class="font-bold text-blue-900"
+                  >turning creative ideas into beautiful, functional
+                  websites</span
+                >. I am committed to producing the best outcomes for my
+                projects, combining aesthetic beauty with efficiency. This
+                dedication not only showcases my ability to adapt to the
+                ever-evolving tech landscape but also highlights my love for
+                bringing ideas to life through web design.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -194,10 +227,10 @@
 
     <!-- Skills Section -->
 
-    <section id="skills" class="bg-gray-100 text-gray-800 py-20">
+    <section id="skills" class="bg-gray-100 text-gray-800 py-20 md:py-40">
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-8">My Skills</h2>
-        <div class="flex flex-col md:flex-row">
+        <div class="flex flex-col md:flex-row py-10 md:py-20">
           <div class="flex-1 md:px-20 pb-16">
             <h3 class="text-2xl font-semibold mb-4">Web Development</h3>
             <div class="flex flex-wrap justify-center">
@@ -295,7 +328,10 @@
 
     <!-- Software Section -->
 
-    <section id="software-proficiency" class="bg-white text-gray-800 py-20">
+    <section
+      id="software-proficiency"
+      class="bg-white text-gray-800 py-20 md:py-32"
+    >
       <div class="container mx-auto md:px-40 text-center">
         <h2 class="text-3xl font-bold mb-8">Software Proficiency</h2>
         <div class="container mx-auto px-6 py-6">
@@ -391,6 +427,42 @@
                   </div>
                 </td>
               </tr>
+              <tr class="table-row">
+                <td class="border-b py-4 px-6">Microsoft Word</td>
+                <td class="border-b py-4 px-6">
+                  <div class="stars" data-stars="5">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </td>
+              </tr>
+              <tr class="table-row">
+                <td class="border-b py-4 px-6">Microsoft Excel</td>
+                <td class="border-b py-4 px-6">
+                  <div class="stars" data-stars="4">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </td>
+              </tr>
+              <tr class="table-row">
+                <td class="border-b py-4 px-6">Microsoft PowerPoint</td>
+                <td class="border-b py-4 px-6">
+                  <div class="stars" data-stars="4">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </td>
+              </tr>
               <!-- Repeat for other software -->
             </tbody>
           </table>
@@ -399,7 +471,7 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-20 bg-gray-100 text-gray-800">
+    <section id="portfolio" class="py-20 md:py-32 bg-gray-100 text-gray-800">
       <div id="dynamic-background" class="dynamic-bg"></div>
       <!-- New Background Div -->
 
@@ -488,7 +560,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 md:py-72 bg-blue-900 text-white">
+    <section id="contact" class="py-44 md:py-72 bg-blue-900 text-white">
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-8">Contact Me</h2>
         <p class="mb-8">
