@@ -222,11 +222,11 @@ document.addEventListener("DOMContentLoaded", () => {
     (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("graphicSlideInFromRight");
-          entry.target.classList.remove("graphicSlideOutFromLeft");
+          entry.target.classList.add("graphicSlideInFromBottom");
+          entry.target.classList.remove("graphicSlideOutFromTop");
         } else {
-          entry.target.classList.add("graphicSlideOutFromLeft");
-          entry.target.classList.remove("graphicSlideInFromRight");
+          entry.target.classList.add("graphicSlideOutFromTop");
+          entry.target.classList.remove("graphicSlideInFromBottom");
         }
       });
     },
