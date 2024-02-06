@@ -50,10 +50,10 @@
   }
 }
 
-@keyframes graphicSlideInFromRight {
+@keyframes graphicSlideInFromBottom {
   from {
     opacity: 0;
-    transform: translate3d(200px, 0, 0);
+    transform: translate3d(0, 200px, 0);
   }
 
   to {
@@ -62,7 +62,7 @@
   }
 }
 
-@keyframes graphicSlideOutFromLeft {
+@keyframes graphicSlideOutFromTop {
   from {
     opacity: 1;
     transform: translate3d(0, 0, 0);
@@ -70,7 +70,7 @@
 
   to {
     opacity: 0;
-    transform: translate3d(200px, 0, 0);
+    transform: translate3d(0, 200px, 0);
   }
 }
 
@@ -98,11 +98,11 @@
 }
 
 .graphicSlideInFromRight {
-  animation: graphicSlideInFromRight 0.5s ease-out forwards;
+  animation: graphicSlideInFromBottom 0.5s ease-out forwards;
 }
 
 .graphicSlideOutFromLeft {
-  animation: graphicSlideOutFromLeft 0.5s ease-out forwards;
+  animation: graphicSlideOutFromTop 0.5s ease-out forwards;
 }
 
 .text-hello {
