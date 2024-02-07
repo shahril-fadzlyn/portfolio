@@ -193,50 +193,49 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("graphicSlideInFromRight");
-          entry.target.classList.remove("graphicSlideOutFromLeft");
-        } else {
-          entry.target.classList.add("graphicSlideOutFromLeft");
-          entry.target.classList.remove("graphicSlideInFromRight");
-        }
-      });
-    },
-    {
-      threshold: 0.8,
-      rootMargin: "0px",
-    }
-  );
+// document.addEventListener("DOMContentLoaded", () => {
+//   const observer = new IntersectionObserver(
+//     (entries, observer) => {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//           entry.target.classList.add("graphicSlideInFromBottom");
+//           entry.target.classList.remove("graphicSlideOutFromTop");
+//         } else {
+//           entry.target.classList.add("graphicSlideOutFromTop");
+//           entry.target.classList.remove("graphicSlideInFromBottom");
+//         }
+//       });
+//     },
+//     {
+//       threshold: 0.5,
+//       rootMargin: "0px",
+//     }
+//   );
 
-  document.querySelectorAll("#hero .circle-graphic-hero").forEach((element) => {
-    observer.observe(element);
-  });
-});
+//   document.querySelectorAll("#hero .circle-graphic-hero").forEach((element) => {
+//     observer.observe(element);
+//   });
+// });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("graphicSlideInFromBottom");
-          entry.target.classList.remove("graphicSlideOutFromTop");
-        } else {
-          entry.target.classList.add("graphicSlideOutFromTop");
-          entry.target.classList.remove("graphicSlideInFromBottom");
-        }
-      });
-    },
-    {
-      threshold: 0.8,
-      rootMargin: "0px",
-    }
-  );
+// document.addEventListener("DOMContentLoaded", () => {
+//   const animatedObject = document.querySelector(".circle-graphic-hero");
 
-  document.querySelectorAll("#hero .circle-graphic-hero").forEach((element) => {
-    observer.observe(element);
-  });
-});
+//   window.addEventListener("scroll", () => {
+//     const scrollPosition = window.scrollY;
+//     const objectPosition = animatedObject.getBoundingClientRect().top;
+
+//     // Offset is set to 200px
+//     const offset = 300;
+
+//     if (
+//       objectPosition < window.innerHeight - offset &&
+//       objectPosition > -offset
+//     ) {
+//       animatedObject.classList.remove("graphicSlideInFromBottom");
+//       animatedObject.classList.add("graphicSlideOutFromTop");
+//     } else {
+//       animatedObject.classList.remove("graphicSlideOutFromTop");
+//       animatedObject.classList.add("graphicSlideInFromBottom");
+//     }
+//   });
+// });
