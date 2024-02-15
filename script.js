@@ -154,88 +154,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-document.querySelectorAll(".portfolio-card").forEach((card) => {
-  const imgSrc = card.querySelector(".portfolio-image").src;
-  card.addEventListener("mouseenter", () => {
-    const dynamicBg = document.getElementById("dynamic-background");
-    dynamicBg.style.backgroundImage = `url(${imgSrc})`;
-    dynamicBg.style.opacity = 0.3; // Make visible
-    dynamicBg.style.scale = 1.1; // Make visible
-  });
-  card.addEventListener("mouseleave", () => {
-    document.getElementById("dynamic-background").style.opacity = 0; // Hide
-  });
-});
+////////////////////////////////////
 
-document.addEventListener("DOMContentLoaded", () => {
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // Change background to the card's image
-          document.getElementById(
-            "dynamic-background"
-          ).style.backgroundImage = `url(${
-            entry.target.querySelector("img").src
-          })`;
-          document.getElementById("dynamic-background").style.opacity = 0.3;
-          document.getElementById("dynamic-background").style.scale = 1.1;
-        } else {
-          document.getElementById("dynamic-background").style.opacity = 0;
-        }
-      });
-    },
-    { threshold: 1 }
-  );
+// Function to open the modal
+function openModal() {
+  // Show the modal
+  document.getElementById("projectModal").style.display = "block";
 
-  document.querySelectorAll(".portfolio-card-mobile").forEach((card) => {
-    observer.observe(card);
-  });
-});
+  // Add a class to the body to prevent scrolling
+  document.body.classList.add("modal-open");
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const observer = new IntersectionObserver(
-//     (entries, observer) => {
-//       entries.forEach((entry) => {
-//         if (entry.isIntersecting) {
-//           entry.target.classList.add("graphicSlideInFromBottom");
-//           entry.target.classList.remove("graphicSlideOutFromTop");
-//         } else {
-//           entry.target.classList.add("graphicSlideOutFromTop");
-//           entry.target.classList.remove("graphicSlideInFromBottom");
-//         }
-//       });
-//     },
-//     {
-//       threshold: 0.5,
-//       rootMargin: "0px",
-//     }
-//   );
+  // Add event listener to close modal when clicking outside of modal content
+  document.querySelector(".modal").addEventListener("click", closeModalOutside);
+}
 
-//   document.querySelectorAll("#hero .circle-graphic-hero").forEach((element) => {
-//     observer.observe(element);
-//   });
-// });
+// Function to close the modal
+function closeModal() {
+  // Hide the modal
+  document.getElementById("projectModal").style.display = "none";
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const animatedObject = document.querySelector(".circle-graphic-hero");
+  // Remove the class from the body to enable scrolling
+  document.body.classList.remove("modal-open");
 
-//   window.addEventListener("scroll", () => {
-//     const scrollPosition = window.scrollY;
-//     const objectPosition = animatedObject.getBoundingClientRect().top;
+  // Remove event listener to close modal when clicking outside of modal content
+  document
+    .querySelector(".modal")
+    .removeEventListener("click", closeModalOutside);
+}
 
-//     // Offset is set to 200px
-//     const offset = 300;
-
-//     if (
-//       objectPosition < window.innerHeight - offset &&
-//       objectPosition > -offset
-//     ) {
-//       animatedObject.classList.remove("graphicSlideInFromBottom");
-//       animatedObject.classList.add("graphicSlideOutFromTop");
-//     } else {
-//       animatedObject.classList.remove("graphicSlideOutFromTop");
-//       animatedObject.classList.add("graphicSlideInFromBottom");
-//     }
-//   });
-// });
+// Function to close modal when clicking outside of modal content
+function closeModalOutside(event) {
+  if (event.target === document.querySelector(".modal")) {
+    closeModal();
+  }
+}
