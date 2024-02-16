@@ -370,7 +370,7 @@
               <tr class="table-row">
                 <td class="border-b py-4 px-6">Adobe Photoshop</td>
                 <td class="border-b py-4 px-6">
-                  <div class="stars" data-stars="5">
+                  <div class="stars-5" data-stars="5">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -382,7 +382,7 @@
               <tr class="table-row">
                 <td class="border-b py-4 px-6">Adobe Illustrator</td>
                 <td class="border-b py-4 px-6">
-                  <div class="stars" data-stars="5">
+                  <div class="stars-5" data-stars="5">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -394,7 +394,7 @@
               <tr class="table-row">
                 <td class="border-b py-4 px-6">Adobe InDesign</td>
                 <td class="border-b py-4 px-6">
-                  <div class="stars" data-stars="5">
+                  <div class="stars-5" data-stars="5">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -430,7 +430,7 @@
               <tr class="table-row">
                 <td class="border-b py-4 px-6">Microsoft Word</td>
                 <td class="border-b py-4 px-6">
-                  <div class="stars" data-stars="5">
+                  <div class="stars-5" data-stars="5">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -500,7 +500,7 @@
           </div>
           <!-- Project 2 -->
 
-          <div class="card">
+          <div class="card" onclick="openModal('category2')">
             <div class="card-image">
               <img src="project/UI-Design1.jpg" alt="Image" />
             </div>
@@ -589,22 +589,156 @@
           <!-- Modal Window 1 -->
 
           <div id="projectModal" class="modal">
+            <div class="modal-background"></div>
+
             <div class="modal-content">
-              <span class="close" onclick="closeModal()">&times;</span>
+              <span class="close" onclick="closeModal()"
+                ><i class="far fa-times-circle"></i
+              ></span>
               <div class="project-container">
-                <h2 id="modalTitle">Category Name</h2>
-                <div id="project-details" class="project-details">
-                  <!-- Project details will be dynamically populated here -->
-                  <img class="w-100" src="project/animation1.jpg" alt="Image" />
-                  <p>
-                    A webpage that I made from a HTML & CSS tutorial tasra as
-                    eda aas d
-                  </p>
-                  <img class="w-100" src="project/animation1.jpg" alt="Image" />
-                  <p>
-                    A webpage that I made from a HTML & CSS tutorial tasra as
-                    eda aas d
-                  </p>
+                <h1 class="portfolio-title">Responsive Website</h1>
+                <div
+                  id="project-details"
+                  class="project-details flex justify-center py-10 h-96"
+                >
+                  <img
+                    class="w-1/2 bg-black object-cover"
+                    src="project/animation1.jpg"
+                    alt="Image"
+                  />
+                  <div class="w-1/2 mx-5">
+                    <h2 id="modalTitle">Category Name</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusantium, nesciunt amet facilis minus at rerum
+                      molestias praesentium distinctio sapiente tenetur id ea
+                      voluptate, in inventore, quis voluptatibus labore
+                      temporibus maiores.
+                    </p>
+                  </div>
+                </div>
+                <hr />
+
+                <div
+                  id="project-details"
+                  class="project-details flex justify-center py-10 h-96"
+                >
+                  <div class="w-1/2 mx-5">
+                    <h2 id="modalTitle">Category Name</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusantium, nesciunt amet facilis minus at rerum
+                      molestias praesentium distinctio sapiente tenetur id ea
+                      voluptate, in inventore, quis voluptatibus labore
+                      temporibus maiores.
+                    </p>
+                  </div>
+                  <img
+                    class="w-1/2 bg-black object-cover"
+                    src="project/animation1.jpg"
+                    alt="Image"
+                  />
+                </div>
+                <hr />
+
+                <div
+                  id="project-details"
+                  class="project-details flex justify-center py-10 h-96"
+                >
+                  <img
+                    class="w-1/2 bg-black object-cover"
+                    src="project/animation1.jpg"
+                    alt="Image"
+                  />
+                  <div class="w-1/2 mx-5">
+                    <h2 id="modalTitle">Category Name</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusantium, nesciunt amet facilis minus at rerum
+                      molestias praesentium distinctio sapiente tenetur id ea
+                      voluptate, in inventore, quis voluptatibus labore
+                      temporibus maiores.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal Window 2 -->
+
+          <div id="projectModal" class="modal">
+            <div class="modal-background"></div>
+
+            <div class="modal-content">
+              <span class="close" onclick="closeModal()"
+                ><i class="far fa-times-circle"></i
+              ></span>
+              <div class="project-container">
+                <h1 class="portfolio-title">Responsive Website</h1>
+                <div
+                  id="project-details"
+                  class="project-details flex justify-center py-10 h-96"
+                >
+                  <img
+                    class="w-1/2 bg-black object-cover"
+                    src="project/animation1.jpg"
+                    alt="Image"
+                  />
+                  <div class="w-1/2 mx-5">
+                    <h2 id="modalTitle">Category Name</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusantium, nesciunt amet facilis minus at rerum
+                      molestias praesentium distinctio sapiente tenetur id ea
+                      voluptate, in inventore, quis voluptatibus labore
+                      temporibus maiores.
+                    </p>
+                  </div>
+                </div>
+                <hr />
+
+                <div
+                  id="project-details"
+                  class="project-details flex justify-center py-10 h-96"
+                >
+                  <div class="w-1/2 mx-5">
+                    <h2 id="modalTitle">Category Name</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusantium, nesciunt amet facilis minus at rerum
+                      molestias praesentium distinctio sapiente tenetur id ea
+                      voluptate, in inventore, quis voluptatibus labore
+                      temporibus maiores.
+                    </p>
+                  </div>
+                  <img
+                    class="w-1/2 bg-black object-cover"
+                    src="project/animation1.jpg"
+                    alt="Image"
+                  />
+                </div>
+                <hr />
+
+                <div
+                  id="project-details"
+                  class="project-details flex justify-center py-10 h-96"
+                >
+                  <img
+                    class="w-1/2 bg-black object-cover"
+                    src="project/animation1.jpg"
+                    alt="Image"
+                  />
+                  <div class="w-1/2 mx-5">
+                    <h2 id="modalTitle">Category Name</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusantium, nesciunt amet facilis minus at rerum
+                      molestias praesentium distinctio sapiente tenetur id ea
+                      voluptate, in inventore, quis voluptatibus labore
+                      temporibus maiores.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
