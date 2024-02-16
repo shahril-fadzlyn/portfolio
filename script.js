@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
           rows.forEach((row) => {
             row.style.transitionDelay = `${delay}s`;
             row.classList.add("visible");
-            delay += 0.1; // Delay increment for each row
+            delay += 0.05; // Delay increment for each row
           });
         } else {
           table.classList.remove("visible");
@@ -159,7 +159,16 @@ document.addEventListener("DOMContentLoaded", () => {
 // Function to open the modal
 function openModal() {
   // Show the modal
-  document.getElementById("projectModal").style.display = "block";
+  const modal = document.getElementById("projectModal");
+  modal.style.display = "block";
+  modal.style.height = "100%";
+
+  const projectContent = document.querySelector(".project-container");
+  projectContent.scrollTop = 0;
+
+  // Smoothly change the background color to black
+  document.querySelector(".modal-background").style.backgroundColor =
+    "rgba(0, 0, 0, 0.5)";
 
   // Add a class to the body to prevent scrolling
   document.body.classList.add("modal-open");
@@ -168,23 +177,24 @@ function openModal() {
   document.querySelector(".modal").addEventListener("click", closeModalOutside);
 }
 
-// Function to close the modal
 function closeModal() {
   // Hide the modal
-  document.getElementById("projectModal").style.display = "none";
+  const modalContent = document.querySelector(".modal-content");
+  modalContent.style.animation = "slideDownModal 0.3s forwards"; // Apply slide down animation
+  modalContent.style.pointerEvents = "none"; // Disable pointer events during animation
 
-  // Remove the class from the body to enable scrolling
-  document.body.classList.remove("modal-open");
-
-  // Remove event listener to close modal when clicking outside of modal content
-  document
-    .querySelector(".modal")
-    .removeEventListener("click", closeModalOutside);
+  setTimeout(() => {
+    const modal = document.getElementById("projectModal");
+    modal.style.display = "none";
+    modalContent.style.animation = ""; // Reset animation
+    modalContent.style.pointerEvents = ""; // Reset pointer events
+    document.body.classList.remove("modal-open");
+  }, 300);
 }
 
 // Function to close modal when clicking outside of modal content
 function closeModalOutside(event) {
-  if (event.target === document.querySelector(".modal")) {
+  if (event.target === document.querySelector(".modal-background")) {
     closeModal();
   }
 }
