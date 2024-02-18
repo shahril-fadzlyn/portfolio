@@ -157,44 +157,50 @@ document.addEventListener("DOMContentLoaded", () => {
 ////////////////////////////////////
 
 // Function to open the modal
-function openModal() {
-  // Show the modal
-  const modal = document.getElementById("projectModal");
+function openModal(projectModal) {
+  const modal = document.getElementById("projectModal" + projectModal);
   modal.style.display = "block";
-  modal.style.height = "100%";
-
-  const projectContent = document.querySelector(".project-container");
-  projectContent.scrollTop = 0;
-
-  // Smoothly change the background color to black
-  document.querySelector(".modal-background").style.backgroundColor =
-    "rgba(0, 0, 0, 0.5)";
-
-  // Add a class to the body to prevent scrolling
   document.body.classList.add("modal-open");
 
-  // Add event listener to close modal when clicking outside of modal content
-  document.querySelector(".modal").addEventListener("click", closeModalOutside);
+  const projectContent = document.querySelector(
+    "#projectModal" + projectModal + " .project-container"
+  );
+  if (projectContent) {
+    projectContent.scrollTop = 0;
+  }
+
+  const modalBackground = modal.querySelector(".modal-background");
+  modalBackground.addEventListener("click", function (event) {
+    if (event.target === modalBackground) {
+      closeModal(projectModal);
+    }
+  });
+
+  const closeButton = modal.querySelector(".close");
+  closeButton.addEventListener("click", function () {
+    closeModal(projectModal);
+  });
 }
 
-function closeModal() {
-  // Hide the modal
-  const modalContent = document.querySelector(".modal-content");
+function closeModal(projectModal) {
+  const modal = document.getElementById("projectModal" + projectModal);
+  const modalContent = modal.querySelector(".modal-content");
+  const modalBackground = modal.querySelector(".modal-background");
+
+  modalBackground.style.animation = "fadeOut 0.3s forwards";
   modalContent.style.animation = "slideDownModal 0.3s forwards"; // Apply slide down animation
-  modalContent.style.pointerEvents = "none"; // Disable pointer events during animation
 
   setTimeout(() => {
-    const modal = document.getElementById("projectModal");
     modal.style.display = "none";
     modalContent.style.animation = ""; // Reset animation
-    modalContent.style.pointerEvents = ""; // Reset pointer events
+    modalBackground.style.animation = "";
     document.body.classList.remove("modal-open");
-  }, 300);
+  }, 200);
 }
 
 // Function to close modal when clicking outside of modal content
-function closeModalOutside(event) {
-  if (event.target === document.querySelector(".modal-background")) {
-    closeModal();
-  }
-}
+// function closeModalOutside(event) {
+//   if (event.target === document.querySelector(".modal-background")) {
+//     closeModal();
+//   }
+// }
