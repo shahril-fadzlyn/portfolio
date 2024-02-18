@@ -188,36 +188,39 @@
               <p>
                 Hello! I'm Shahril Fadzlyn, a passionate
                 <span class="font-bold text-blue-900">Front-End Developer</span>
-                based in Kuala Lumpur. I've dedicated over
+                based in Kuala Lumpur. With
                 <span class="font-bold text-blue-900"
-                  >10 years to mastering graphic design</span
-                >, ensuring versatility to meet diverse client needs. This
-                journey sparked my curiosity in web design, leading me to learn
-                <span class="font-bold text-blue-900">
-                  HTML, CSS, and JavaScript</span
+                  >11 years of experience as a graphic designer</span
+                >, I'm adept at adapting my design style to meet diverse
+                clients' needs, like local banks, insurance companies, and even
+                overseas companies. My
+                <span class="font-bold text-blue-900"
+                  >problem-solving skills and passion for learning new
+                  things</span
+                >
+                sparked my curiosity in web design, leading me to learn
+                <span class="font-bold text-blue-900"
+                  >HTML, CSS, and JavaScript</span
                 >. The creation of my
                 <span class="font-bold text-blue-900"
                   >personal portfolio website</span
                 >
-                marked the beginning of this journey and my eagerness to delve
-                deeper into front-end development.
+                marked the beginning of this journey and my eagerness to explore
+                into front-end development.
               </p>
               <p class="mt-4">
-                My career is a
+                I'm always looking for new ways to improve my skills and learn
+                exciting new technologies. Whether it's creating
                 <span class="font-bold text-blue-900"
-                  >continuous learning journey</span
-                >
-                where I constantly explore new technologies to enhance my skill
-                set. The excitement of developing my own website has fueled my
-                aspiration to delve further into front-end development and
+                  >smooth animations, building responsive websites, or crafting
+                  beautiful user interfaces</span
+                >, I'm up for the challenge. I believe websites should be both
+                beautiful and functional, and I'm dedicated to delivering
+                top-notch results for every project. This dedication, combined
+                with my
                 <span class="font-bold text-blue-900"
-                  >turning creative ideas into beautiful, functional
-                  websites</span
-                >. I am committed to producing the best outcomes for my
-                projects, combining aesthetic beauty with efficiency. This
-                dedication not only showcases my ability to adapt to the
-                ever-evolving tech landscape but also highlights my love for
-                bringing ideas to life through web design.
+                  >ability to adapt to the dynamic tech landscape</span
+                >, makes me a valuable asset to any team.
               </p>
             </div>
           </div>
@@ -480,7 +483,7 @@
         <div class="hidden md:flex flex-wrap -mx-4 justify-center">
           <!-- Project 1 -->
 
-          <div class="card" onclick="openModal('category1')">
+          <div class="card" onclick="openModal('1')">
             <div class="card-image">
               <img src="project/youtube-clone.jpg" alt="Image" />
             </div>
@@ -500,7 +503,7 @@
           </div>
           <!-- Project 2 -->
 
-          <div class="card" onclick="openModal('category2')">
+          <div class="card" onclick="openModal('2')">
             <div class="card-image">
               <img src="project/UI-Design1.jpg" alt="Image" />
             </div>
@@ -522,7 +525,7 @@
           </div>
           <!-- Project 3 -->
 
-          <div class="card">
+          <div class="card" onclick="openModal('3')">
             <div class="card-image">
               <img src="project/game-1.jpg" alt="Image" />
             </div>
@@ -544,7 +547,7 @@
           </div>
           <!-- Project 4 -->
 
-          <div class="card">
+          <div class="card" onclick="openModal('4')">
             <div class="card-image">
               <img src="project/graphic-design1.jpg" alt="Image" />
             </div>
@@ -566,7 +569,7 @@
           </div>
           <!-- Project 5 -->
 
-          <div class="card">
+          <div class="card" onclick="openModal('5')">
             <div class="card-image">
               <img src="project/animation1.jpg" alt="Image" />
             </div>
@@ -588,7 +591,7 @@
           </div>
           <!-- Modal Window 1 -->
 
-          <div id="projectModal" class="modal">
+          <div id="projectModal1" class="modal">
             <div class="modal-background"></div>
 
             <div class="modal-content">
@@ -667,15 +670,15 @@
 
           <!-- Modal Window 2 -->
 
-          <div id="projectModal" class="modal">
+          <div id="projectModal2" class="modal">
             <div class="modal-background"></div>
 
             <div class="modal-content">
-              <span class="close" onclick="closeModal()"
+              <span class="close" onclick="closeModal('1')"
                 ><i class="far fa-times-circle"></i
               ></span>
               <div class="project-container">
-                <h1 class="portfolio-title">Responsive Website</h1>
+                <h1 class="portfolio-title">UI Design</h1>
                 <div
                   id="project-details"
                   class="project-details flex justify-center py-10 h-96"
@@ -744,6 +747,242 @@
             </div>
           </div>
 
+          <!-- Modal Window 3 -->
+
+          <div id="projectModal3" class="modal">
+            <div class="modal-background"></div>
+
+            <div class="modal-content">
+              <span class="close" onclick="closeModal()"
+                ><i class="far fa-times-circle"></i
+              ></span>
+              <div class="project-container">
+                <h1 class="portfolio-title">JavaScript Game</h1>
+                <div
+                  id="project-details"
+                  class="project-details flex justify-center py-10 h-96"
+                >
+                  <img
+                    class="w-1/2 bg-black object-cover"
+                    src="project/animation1.jpg"
+                    alt="Image"
+                  />
+                  <div class="w-1/2 mx-5">
+                    <h2 id="modalTitle">Category Name</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusantium, nesciunt amet facilis minus at rerum
+                      molestias praesentium distinctio sapiente tenetur id ea
+                      voluptate, in inventore, quis voluptatibus labore
+                      temporibus maiores.
+                    </p>
+                  </div>
+                </div>
+                <hr />
+
+                <div
+                  id="project-details"
+                  class="project-details flex justify-center py-10 h-96"
+                >
+                  <div class="w-1/2 mx-5">
+                    <h2 id="modalTitle">Category Name</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusantium, nesciunt amet facilis minus at rerum
+                      molestias praesentium distinctio sapiente tenetur id ea
+                      voluptate, in inventore, quis voluptatibus labore
+                      temporibus maiores.
+                    </p>
+                  </div>
+                  <img
+                    class="w-1/2 bg-black object-cover"
+                    src="project/animation1.jpg"
+                    alt="Image"
+                  />
+                </div>
+                <hr />
+
+                <div
+                  id="project-details"
+                  class="project-details flex justify-center py-10 h-96"
+                >
+                  <img
+                    class="w-1/2 bg-black object-cover"
+                    src="project/animation1.jpg"
+                    alt="Image"
+                  />
+                  <div class="w-1/2 mx-5">
+                    <h2 id="modalTitle">Category Name</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusantium, nesciunt amet facilis minus at rerum
+                      molestias praesentium distinctio sapiente tenetur id ea
+                      voluptate, in inventore, quis voluptatibus labore
+                      temporibus maiores.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal Window 4 -->
+
+          <div id="projectModal4" class="modal">
+            <div class="modal-background"></div>
+
+            <div class="modal-content">
+              <span class="close" onclick="closeModal()"
+                ><i class="far fa-times-circle"></i
+              ></span>
+              <div class="project-container">
+                <h1 class="portfolio-title">Graphic Design</h1>
+                <div
+                  id="project-details"
+                  class="project-details flex justify-center py-10 h-96"
+                >
+                  <img
+                    class="w-1/2 bg-black object-cover"
+                    src="project/animation1.jpg"
+                    alt="Image"
+                  />
+                  <div class="w-1/2 mx-5">
+                    <h2 id="modalTitle">Category Name</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusantium, nesciunt amet facilis minus at rerum
+                      molestias praesentium distinctio sapiente tenetur id ea
+                      voluptate, in inventore, quis voluptatibus labore
+                      temporibus maiores.
+                    </p>
+                  </div>
+                </div>
+                <hr />
+
+                <div
+                  id="project-details"
+                  class="project-details flex justify-center py-10 h-96"
+                >
+                  <div class="w-1/2 mx-5">
+                    <h2 id="modalTitle">Category Name</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusantium, nesciunt amet facilis minus at rerum
+                      molestias praesentium distinctio sapiente tenetur id ea
+                      voluptate, in inventore, quis voluptatibus labore
+                      temporibus maiores.
+                    </p>
+                  </div>
+                  <img
+                    class="w-1/2 bg-black object-cover"
+                    src="project/animation1.jpg"
+                    alt="Image"
+                  />
+                </div>
+                <hr />
+
+                <div
+                  id="project-details"
+                  class="project-details flex justify-center py-10 h-96"
+                >
+                  <img
+                    class="w-1/2 bg-black object-cover"
+                    src="project/animation1.jpg"
+                    alt="Image"
+                  />
+                  <div class="w-1/2 mx-5">
+                    <h2 id="modalTitle">Category Name</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusantium, nesciunt amet facilis minus at rerum
+                      molestias praesentium distinctio sapiente tenetur id ea
+                      voluptate, in inventore, quis voluptatibus labore
+                      temporibus maiores.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal Window 5 -->
+
+          <div id="projectModal5" class="modal">
+            <div class="modal-background"></div>
+
+            <div class="modal-content">
+              <span class="close" onclick="closeModal()"
+                ><i class="far fa-times-circle"></i
+              ></span>
+              <div class="project-container">
+                <h1 class="portfolio-title">2D Animation</h1>
+                <div
+                  id="project-details"
+                  class="project-details flex justify-center py-10 h-96"
+                >
+                  <img
+                    class="w-1/2 bg-black object-cover"
+                    src="project/animation1.jpg"
+                    alt="Image"
+                  />
+                  <div class="w-1/2 mx-5">
+                    <h2 id="modalTitle">Category Name</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusantium, nesciunt amet facilis minus at rerum
+                      molestias praesentium distinctio sapiente tenetur id ea
+                      voluptate, in inventore, quis voluptatibus labore
+                      temporibus maiores.
+                    </p>
+                  </div>
+                </div>
+                <hr />
+
+                <div
+                  id="project-details"
+                  class="project-details flex justify-center py-10 h-96"
+                >
+                  <div class="w-1/2 mx-5">
+                    <h2 id="modalTitle">Category Name</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusantium, nesciunt amet facilis minus at rerum
+                      molestias praesentium distinctio sapiente tenetur id ea
+                      voluptate, in inventore, quis voluptatibus labore
+                      temporibus maiores.
+                    </p>
+                  </div>
+                  <img
+                    class="w-1/2 bg-black object-cover"
+                    src="project/animation1.jpg"
+                    alt="Image"
+                  />
+                </div>
+                <hr />
+
+                <div
+                  id="project-details"
+                  class="project-details flex justify-center py-10 h-96"
+                >
+                  <img
+                    class="w-1/2 bg-black object-cover"
+                    src="project/animation1.jpg"
+                    alt="Image"
+                  />
+                  <div class="w-1/2 mx-5">
+                    <h2 id="modalTitle">Category Name</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusantium, nesciunt amet facilis minus at rerum
+                      molestias praesentium distinctio sapiente tenetur id ea
+                      voluptate, in inventore, quis voluptatibus labore
+                      temporibus maiores.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <!-- Repeat for other projects -->
         </div>
         <!-- Swiper Carousel Container -->
