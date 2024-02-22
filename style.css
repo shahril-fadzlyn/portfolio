@@ -1,3 +1,8 @@
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .my-logo {
   width: 40px;
 }
@@ -711,6 +716,11 @@ td {
   height: auto;
 }
 
+.mobile-view {
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px 0.5px rgba(0, 0, 0, 0.3);
+}
+
 @keyframes slideUpModal {
   from {
     opacity: 0;
@@ -730,4 +740,21 @@ td {
     opacity: 0;
     transform: translateY(100%);
   }
+}
+
+.tag {
+  color: #333;
+  border-radius: 20px;
+  margin: 10px 10px 0 0;
+  width: 100px;
+  border-color: rgb(189, 189, 189);
+  border-width: 1px;
+  padding: 3px;
+}
+
+.tags {
+  margin-top: auto; /* Push tags to the bottom */
+  display: flex; /* Use flexbox for the tags container */
+  flex-wrap: wrap;
+  font-size: 14px;
 }

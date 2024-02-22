@@ -204,3 +204,43 @@ function closeModal(projectModal) {
 //     closeModal();
 //   }
 // }
+
+// Select all project containers
+const projects = document.querySelectorAll(".project-description");
+
+// Loop through each project
+projects.forEach((project) => {
+  // Get the description paragraph of the project
+  const description = project.querySelector(".description");
+
+  // Split the description into words
+  const words = description.textContent.split(" ");
+
+  // Array to store unique tags
+  const tags = [];
+
+  // Loop through each word in the description
+  words.forEach((word) => {
+    // Check if the word starts with '#'
+    if (word.startsWith("#")) {
+      // Remove '#' from the word and add it to the tags array if it's not already present
+      const tag = word.slice(1);
+      if (!tags.includes(tag)) {
+        tags.push(tag);
+      }
+    }
+  });
+
+  // Create and append tag elements to the project
+  const tagsContainer = document.createElement("div");
+  tagsContainer.classList.add("tags");
+  tags.forEach((tag) => {
+    const tagElement = document.createElement("div");
+    tagElement.classList.add("tag");
+    tagElement.textContent = tag;
+    tagsContainer.appendChild(tagElement);
+  });
+  project.appendChild(tagsContainer);
+});
+
+////////////////////////////////////
