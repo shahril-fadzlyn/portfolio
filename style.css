@@ -551,7 +551,7 @@ td {
   }
 
   .portfolio-card-mobile.in-view .description-mobile {
-    bottom: 0; /* Slides up to cover the bottom part of the image */
+    bottom: 3px; /* Slides up to cover the bottom part of the image */
   }
 }
 @keyframes fadeInUp {
