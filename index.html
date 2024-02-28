@@ -12,7 +12,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -152,9 +156,9 @@
             alt="Shahril Fadzlyn"
             class="my-pic mx-auto md:mx-auto my-0"
           />
-          <div
+          <!-- <div
             class="circle-graphic-hero rounded-full bg-black w-20 h-20 absolute top-44 bottom-0 left-0 right-0 md:w-36 md:h-36 md:top-110 md:bottom-0 md:left-24 md:right-0"
-          ></div>
+          ></div> -->
         </div>
       </div>
     </section>
@@ -162,63 +166,61 @@
     <!-- About Section -->
     <section id="about" class="py-20 md:py-40 bg-white text-gray-800">
       <div class="container mx-auto px-6">
-        <div class="text-center">
-          <h2 class="text-3xl font-bold mb-2">About Me</h2>
-          <p class="mb-10 md:mb-10">
-            A brief story of my journey in web development
-          </p>
-        </div>
-        <div class="flex flex-wrap -mx-4 justify-center">
+        <div class="flex flex-wrap -mx-4 justify-center items-center">
           <div
-            class="w-3/4 md:w-1/2 px-4 flex justify-center mb-8 md:mb-0 relative"
+            class="w-auto h-auto px-10 flex justify-center mb-8 md:mb-0 relative"
           >
-            <div
-              class="circle-graphic rounded-full bg-black w-20 h-20 absolute top-44 bottom-0 left-0 right-0 md:w-36 md:h-36 md:top-72 md:bottom-0 md:left-24 md:right-0"
-            ></div>
-            <!-- You can insert an image or additional content here -->
+            <!-- <div
+              class="circle-graphic rounded-full bg-black w-20 h-20 absolute top-44 bottom-0 left-0 right-0 md:w-36 md:h-36 md:top-64 md:bottom-0 md:left-32 md:right-0"
+            ></div> -->
             <img
-              src="thumbnail/my-pic2.jpg"
+              src="thumbnail/my-pic3.jpg"
               alt="[Your Name]"
-              class="rounded-full shadow-lg bg:cover"
+              class="rounded-full shadow-lg bg:cover w-48 h-48 md:w-96 md:h-96"
             />
           </div>
 
-          <div class="w-full md:w-1/2 px-4 mb-10 md:mb-0 flex items-center">
+          <div
+            class="w-full md:w-1/2 px-10 mb-10 md:mb-0 flex-col items-center"
+          >
+            <div class="text-center md:text-left">
+              <h2 class="text-3xl font-bold mb-2">About Me</h2>
+              <p class="mb-10 md:mb-10">
+                A brief story of my journey in web development
+              </p>
+            </div>
             <div>
               <p>
                 Hello! I'm Shahril Fadzlyn, a passionate
-                <span class="font-bold text-blue-900">Front-End Developer</span>
+                <span class="p-bold">Front-End Developer</span>
                 based in Kuala Lumpur. With
-                <span class="font-bold text-blue-900"
+                <span class="p-bold"
                   >11 years of experience as a graphic designer</span
                 >, I'm adept at adapting my design style to meet diverse
                 clients' needs, like local banks, insurance companies, and even
                 overseas companies. My
-                <span class="font-bold text-blue-900"
+                <span class="p-bold"
                   >problem-solving skills and passion for learning new
                   things</span
                 >
                 sparked my curiosity in web design, leading me to learn
-                <span class="font-bold text-blue-900"
-                  >HTML, CSS, and JavaScript</span
-                >. The creation of my
-                <span class="font-bold text-blue-900"
-                  >personal portfolio website</span
-                >
+                <span class="p-bold">HTML, CSS, and JavaScript</span>. The
+                creation of my
+                <span class="p-bold">personal portfolio website</span>
                 marked the beginning of this journey and my eagerness to explore
                 into front-end development.
               </p>
               <p class="mt-4">
                 I'm always looking for new ways to improve my skills and learn
                 exciting new technologies. Whether it's creating
-                <span class="font-bold text-blue-900"
+                <span class="p-bold"
                   >smooth animations, building responsive websites, or crafting
                   beautiful user interfaces</span
                 >, I'm up for the challenge. I believe websites should be both
                 beautiful and functional, and I'm dedicated to delivering
                 top-notch results for every project. This dedication, combined
                 with my
-                <span class="font-bold text-blue-900"
+                <span class="p-bold"
                   >ability to adapt to the dynamic tech landscape</span
                 >, makes me a valuable asset to any team.
               </p>
@@ -319,7 +321,7 @@
                   >(website & games)</span
                 >
                 <span class="middle-line">|</span> ChatGPT
-                <span class="middle-line">|</span> Google Bard
+                <span class="middle-line">|</span> Google Gemini
               </p>
             </div>
           </div>
@@ -491,11 +493,12 @@
               <h2 class="card-title">Responsive Website</h2>
               <div class="card-p">
                 <p>
-                  Created a responsive Youtube website clone, replicating the design and functionality of the original site.
-                                </p>
+                  Developed interactive and responsive websites using HTML, CSS,
+                  and JavaScript for seamless user experience across devices.
+                </p>
               </div>
               <div class="btn-container">
-                <button>View Project</button>
+                <button>View Projects</button>
               </div>
             </div>
             <div class="card-bottom"></div>
@@ -510,13 +513,12 @@
               <h2 class="card-title">UI Design</h2>
               <div class="card-p">
                 <p>
-                  A webpage that I made from a HTML & CSS tutorial tasra as eda
-                  aas d
+                  Demonstrated my UI design skills through diverse projects.
                 </p>
               </div>
               <div class="btn-container">
                 <a href="https://shahrilfadzlyn.github.io/youtube.clone/">
-                  <button>View Project</button>
+                  <button>View Projects</button>
                 </a>
               </div>
             </div>
@@ -531,14 +533,11 @@
             <div class="card-description-container">
               <h2 class="card-title">JavaScript Game</h2>
               <div class="card-p">
-                <p>
-                  A webpage that I made from a HTML & CSS tutorial tasra as eda
-                  aas d
-                </p>
+                <p>Exploring javascript fundamental through game creation.</p>
               </div>
               <div class="btn-container">
                 <a href="https://shahrilfadzlyn.github.io/youtube.clone/">
-                  <button>View Project</button>
+                  <button>View Projects</button>
                 </a>
               </div>
             </div>
@@ -553,14 +552,11 @@
             <div class="card-description-container">
               <h2 class="card-title">Graphic Design</h2>
               <div class="card-p">
-                <p>
-                  A webpage that I made from a HTML & CSS tutorial tasra as eda
-                  aas d
-                </p>
+                <p>Variety of graphic design projects.</p>
               </div>
               <div class="btn-container">
                 <a href="https://shahrilfadzlyn.github.io/youtube.clone/">
-                  <button>View Project</button>
+                  <button>View Projects</button>
                 </a>
               </div>
             </div>
@@ -575,14 +571,11 @@
             <div class="card-description-container">
               <h2 class="card-title">2D Animation</h2>
               <div class="card-p">
-                <p>
-                  A webpage that I made from a HTML & CSS tutorial tasra as eda
-                  aas d
-                </p>
+                <p>Various 2D Animation Projects.</p>
               </div>
               <div class="btn-container">
                 <a href="https://shahrilfadzlyn.github.io/youtube.clone/">
-                  <button>View Project</button>
+                  <button>View Projects</button>
                 </a>
               </div>
             </div>
@@ -599,43 +592,84 @@
               ></span>
               <div class="project-container">
                 <h1 class="portfolio-title">Responsive Website</h1>
-                <div
-                  id="project-details"
-                  class="project-details flex justify-center py-10 h-100"
-                >
-                  <img
-                    class="w-1/2 bg-black object-cover"
-                    src="project/youtube-clone.jpg"
-                    alt="Image"
-                  />
-                  <div class="w-1/2 mx-10 flex flex-col project-description">
-                    <h2 id="modalTitle">Youtube clone</h2>
-                    <p class="description">
-                      This project involved replicating the design and functionality of the Youtube website across various devices using #HTML and #CSS. I followed a video tutorial to gain essential HTML & CSS knowledge and ensure the clone closely resembled the original site.
-                    </p>
+                <div class="project-details flex justify-center py-10 h-100">
+                  <div class="w-1/2">
+                    <img
+                      class="bg-black object-contain"
+                      src="project/youtube-clone.jpg"
+                      alt="Image"
+                    />
+                  </div>
+
+                  <div class="w-1/2 px-10 flex flex-col project-description">
+                    <h2 id="modalTitle">Youtube Clone</h2>
+                    <div class="description">
+                      <p>
+                        This project involved
+                        <strong>
+                          replicating the design and functionality
+                        </strong>
+                        of the Youtube website across various devices using
+                        #HTML and #CSS. I followed a video tutorial to gain
+                        essential HTML & CSS knowledge and ensure the clone
+                        closely resembled the original site.
+                      </p>
+                      <p>
+                        <a
+                          href="https://shahrilfadzlyn.github.io/youtube.clone/"
+                          target="_blank"
+                          >shahrilfadzlyn.github.io/youtube.clone/</a
+                        >
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <hr />
 
-                <div
-                  id="project-details"
-                  class="project-details flex justify-center py-10 h-100"
-                >
-                  <div class="w-1/2 mx-10 flex flex-col project-description">
-                    <h2 id="modalTitle">Personal website</h2>
-                    <p class="description">
-                      #Lorem ipsum dolor sit amet consectetur adipisicing #elit.
-                      Accusantium, nesciunt amet facilis minus at rerum
-                      molestias praesentium distinctio sapiente tenetur id ea
-                      voluptate, in inventore, quis voluptatibus labore
-                      temporibus maiores.
-                    </p>
+                <div class="project-details flex justify-center py-10 h-100">
+                  <div class="w-1/2 px-10 flex flex-col project-description">
+                    <h2 id="modalTitle">Personal Portfolio Website</h2>
+                    <div class="description">
+                      <p>
+                        This project features my portfolio website, which is my
+                        <strong> first fully working and responsive </strong>
+                        site built entirely from scratch.
+                      </p>
+                      <p>
+                        I designed the #UI layout using #Figma, then brought it
+                        to life with #HTML, #CSS, and #JavaScript, all coded
+                        within #VSCode, my primary code editor. This ensured a
+                        seamless and adaptable experience across various devices
+                      </p>
+                      <p>
+                        Building this website fostered my
+                        <strong>
+                          independent learning and problem-solving
+                          skills</strong
+                        >. Through resources like
+                        <strong>
+                          Stack Overflow, W3Schools, and online
+                          communities,</strong
+                        >
+                        I successfully tackled #debugging challenges and
+                        significantly enhanced my front-end development
+                        knowledge.
+                      </p>
+                      <p>
+                        This project proved to be an
+                        <strong> invaluable learning experience,</strong>
+                        equipping me with the skills and knowledge to tackle
+                        future projects with confidence.
+                      </p>
+                    </div>
                   </div>
-                  <img
-                    class="w-1/2 bg-black object-cover"
-                    src="project/portfolio-site.jpg"
-                    alt="Image"
-                  />
+                  <div class="w-1/2">
+                    <img
+                      class="bg-black object-cover"
+                      src="project/portfolio-site.jpg"
+                      alt="Image"
+                    />
+                  </div>
                 </div>
                 <hr />
               </div>
@@ -653,54 +687,83 @@
               ></span>
               <div class="project-container">
                 <h1 class="portfolio-title">UI Design</h1>
-                <div
-                  id="project-details"
-                  class="project-details flex justify-center py-10 h-100"
-                >
-                  <img
-                    class="w-1/2 bg-black object-cover"
-                    src="project/UI-Design1.jpg"
-                    alt="Image"
-                  />
-                  <div class="w-1/2 mx-10 flex flex-col project-description">
-                    <h2 id="modalTitle">Flash website</h2>
-                    <p class="description">
-                      Lorem ipsum dolor #sit amet consectetur adipisicing elit.
-                      Accusantium, nesciunt amet facilis minus at rerum
-                      molestias praesentium distinctio sapiente tenetur id ea
-                      voluptate, in inventore, quis voluptatibus labore
-                      temporibus maiores.
-                    </p>
+                <div class="project-details flex justify-center py-10 h-100">
+                  <div class="w-1/2">
+                    <img
+                      class="bg-black object-cover"
+                      src="project/UI-Design1.jpg"
+                      alt="Image"
+                    />
+                  </div>
+
+                  <div class="w-1/2 px-10 flex flex-col project-description">
+                    <h2 id="modalTitle">Flash Interactive Website</h2>
+                    <div class="description">
+                      <p>
+                        During my Diploma in Digital Media Design, I learnt to
+                        create interactive websites using #AdobeFlash. This
+                        involved crafting
+                        <strong>
+                          user interfaces (#UI), animating elements, and coding
+                          with #ActionScript 2.0,</strong
+                        >
+                        all within the Flash environment.
+                      </p>
+                      <p>
+                        This foundation allowed me to further explore
+                        interactive web design in a small project during my
+                        Bachelor's degree and several freelance jobs. These
+                        projects allowed me to test my creativity and develop
+                        engaging interactive experiences for diverse audiences.
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <hr />
 
-                <div
-                  id="project-details"
-                  class="project-details flex justify-center py-10 h-100"
-                >
-                  <div class="w-1/2 mx-10 flex flex-col project-description">
-                    <h2 id="modalTitle">UPA website</h2>
-                    <p class="description">
-                      Lorem ipsum #dolor sit #amet consectetur adipisicing elit.
-                      Accusantium, nesciunt amet facilis minus at rerum
-                      molestias praesentium distinctio sapiente tenetur id ea
-                      voluptate, in inventore, quis voluptatibus labore
-                      temporibus maiores.
-                    </p>
+                <div class="project-details flex justify-center py-10 h-100">
+                  <div class="w-1/2 px-10 flex flex-col project-description">
+                    <h2 id="modalTitle">UPA Website</h2>
+                    <div class="description">
+                      <p>
+                        While working for my previous company, I took the
+                        initiative to #redesign their website. Recognizing the
+                        limitations of the existing website, which came across
+                        as overly simple, unattractive, and navigationally
+                        confusing, I set out to create a more engaging and
+                        user-friendly experience. Utilizing #Figma, I developed
+                        a
+                        <strong>
+                          new layout, color scheme, and simplified navigation
+                          structure,</strong
+                        >
+                        all aimed at enhancing user experience.
+                      </p>
+                      <p>
+                        Additionally, I developed a
+                        <strong>
+                          compelling visual direction for showcasing their
+                          products,</strong
+                        >
+                        contributing to a more engaging and aesthetically
+                        pleasing website. This redesign project remains under
+                        development, but it exemplifies my dedication to
+                        user-centered design and my ability to translate
+                        creative ideas into practical solutions.
+                      </p>
+                    </div>
                   </div>
-                  <img
-                    class="w-1/2 bg-black object-cover"
-                    src="project/upa-website.jpg"
-                    alt="Image"
-                  />
+                  <div class="w-1/2">
+                    <img
+                      class="bg-black object-cover border-2 border-gray-100"
+                      src="project/upa-website.jpg"
+                      alt="Image"
+                    />
+                  </div>
                 </div>
                 <hr />
 
-                <div
-                  id="project-details"
-                  class="project-details flex justify-center py-10 h-100"
-                >
+                <div class="project-details flex justify-center py-10 h-100">
                   <div class="w-1/2 h-96 flex justify-center">
                     <img
                       class="h-100 bg-black object-cover mobile-view"
@@ -709,15 +772,28 @@
                     />
                   </div>
 
-                  <div class="w-1/2 mx-10 flex flex-col project-description">
-                    <h2 id="modalTitle">UPA mobile website</h2>
-                    <p class="description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Accusantium, nesciunt amet facilis minus at rerum
-                      molestias praesentium distinctio sapiente tenetur id ea
-                      voluptate, in inventore, quis voluptatibus labore
-                      temporibus maiores.
-                    </p>
+                  <div class="w-1/2 px-10 flex flex-col project-description">
+                    <h2 id="modalTitle">UPA Mobile website</h2>
+                    <div class="description">
+                      <p>
+                        Continuing with the company website #redesign
+                        initiative, I focused on developing a user-friendly and
+                        visually appealing mobile layout using #Figma. This
+                        involved
+                        <strong>
+                          translating the design concepts established for the
+                          desktop view into a mobile-optimized
+                          experience,</strong
+                        >
+                        prioritizing essential information, and simplifying
+                        navigation.
+                      </p>
+                      <p>
+                        This ongoing project demonstrates my ability to create
+                        user-centric mobile designs that seamlessly complement
+                        the existing desktop experience.
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <hr />
@@ -740,20 +816,58 @@
                   id="project-details"
                   class="project-details flex justify-center py-10 h-100"
                 >
-                  <img
-                    class="w-1/2 bg-black object-cover"
-                    src="project/game-1.jpg"
-                    alt="Image"
-                  />
-                  <div class="w-1/2 mx-10 flex flex-col project-description">
+                  <div class="w-1/2">
+                    <img
+                      class="bg-black object-cover"
+                      src="project/game-1.jpg"
+                      alt="Image"
+                    />
+                  </div>
+
+                  <div class="w-1/2 px-10 flex flex-col project-description">
                     <h2 id="modalTitle">Guess My Number</h2>
-                    <p class="description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Accusantium, nesciunt amet facilis minus at rerum
-                      molestias praesentium distinctio sapiente tenetur id ea
-                      voluptate, in inventore, quis voluptatibus labore
-                      temporibus maiores.
-                    </p>
+                    <div class="description">
+                      <p>
+                        To strengthen my grasp of #Javascript fundamentals, I
+                        followed a video tutorial from a Udemy course and built
+                        "Guess My Number," an engaging #game where players
+                        attempt to guess a hidden number within a limited score
+                        (starting at 20, decreasing with each incorrect guess).
+                        This project solidified my understanding of core
+                        concepts like variables, functions, and if/else
+                        statements, while also allowing me to explore additional
+                        functionalities:
+                      </p>
+                      <ul>
+                        <li>
+                          <strong> Generating the hidden number: </strong> Using
+                          Math.random() to generate a random number at the
+                          beginning of each game.
+                        </li>
+                        <li>
+                          <strong> Dynamic score updates: </strong>
+                          Employing DOM manipulation to dynamically update the
+                          score and high score displays based on user actions.
+                        </li>
+                        <li>
+                          <strong> Responding to user input: </strong>
+                          Implementing event listeners to capture user input,
+                          such as clicking a button to submit a guess or
+                          selecting the "restart" option.
+                        </li>
+                        <li>
+                          <strong> Conditional rendering: </strong>
+                          Utilizing conditional statements to show or hide
+                          elements like the "Game Over" message and "Restart"
+                          button based on the game state.
+                        </li>
+                      </ul>
+                      <p>
+                        This project not only provided a fun learning
+                        experience, but also significantly expanded my
+                        Javascript knowledge base.
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <hr />
@@ -762,21 +876,43 @@
                   id="project-details"
                   class="project-details flex justify-center py-10 h-100"
                 >
-                  <div class="w-1/2 mx-10 flex flex-col project-description">
+                  <div class="w-1/2 px-10 flex flex-col project-description">
                     <h2 id="modalTitle">Dice Game</h2>
-                    <p class="description">
-                      Lorem ipsum dolor #sit amet consectetur adipisicing elit.
-                      Accusantium, nesciunt amet facilis minus at rerum
-                      molestias praesentium distinctio sapiente tenetur id ea
-                      voluptate, in inventore, #quis voluptatibus labore
-                      temporibus maiores.
-                    </p>
+                    <div class="description">
+                      <p>
+                        Expanding my #Javascript skills, I followed another
+                        Udemy course video and built "Dice #Game," a two-player
+                        experience. This project solidified my understanding of
+                        core concepts (variables, functions, if/else) while
+                        exploring additional functionalities:
+                      </p>
+                      <ul>
+                        <li>
+                          <strong> Math.floor() and Math.random(): </strong>
+                          Generating random dice rolls.
+                        </li>
+                        <li>
+                          <strong> Event listeners: </strong>
+                          Responding to user clicks for rolling and holding.
+                        </li>
+                        <li>
+                          <strong> DOM manipulation: </strong>
+                          Updating player scores and dice visuals.
+                        </li>
+                        <li>
+                          <strong> Conditional logic: </strong>
+                          Implementing turn switching and win conditions.
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                  <img
-                    class="w-1/2 bg-black object-cover"
-                    src="project/game-2.jpg"
-                    alt="Image"
-                  />
+                  <div class="w-1/2">
+                    <img
+                      class="bg-black object-cover"
+                      src="project/game-2.jpg"
+                      alt="Image"
+                    />
+                  </div>
                 </div>
                 <hr />
               </div>
@@ -798,20 +934,41 @@
                   id="project-details"
                   class="project-details flex justify-center py-10 h-100"
                 >
-                  <img
-                    class="w-1/2 bg-black object-cover"
-                    src="project/graphic-design1.jpg"
-                    alt="Image"
-                  />
-                  <div class="w-1/2 mx-10 flex flex-col project-description">
-                    <h2 id="modalTitle">Poster Design</h2>
-                    <p class="description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Accusantium, nesciunt amet facilis minus at rerum
-                      molestias praesentium distinctio sapiente tenetur id ea
-                      voluptate, in inventore, quis voluptatibus labore
-                      temporibus maiores.
-                    </p>
+                  <div class="w-1/2">
+                    <img
+                      class="bg-black object-cover"
+                      src="project/graphic-design1.jpg"
+                      alt="Image"
+                    />
+                  </div>
+
+                  <div class="w-1/2 px-10 flex flex-col project-description">
+                    <h2 id="modalTitle">Poster Design - Jawi Streetwear</h2>
+                    <div class="description">
+                      <p>
+                        Throughout my creative journey, I've explored a variety
+                        of graphic design projects, including poster design. One
+                        such project I'm particularly proud of involved
+                        promoting my previous snapback brand, "Jawi Streetwear".
+                        I took charge of the entire
+                        <strong
+                          >creative process, conceptualizing the idea, setting
+                          up the photoshoot lighting, and even modeling for the
+                          poster myself.</strong
+                        >
+                        Using a self-timer camera, I captured the perfect image,
+                        which I then carefully edited in Adobe Photoshop to
+                        bring my vision to life.
+                      </p>
+                      <p>
+                        This project not only showcased my graphic #design
+                        skills but also highlighted my ability to
+                        <strong>
+                          manage multiple aspects of the creative process, from
+                          ideation to final execution.
+                        </strong>
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <hr />
@@ -820,21 +977,37 @@
                   id="project-details"
                   class="project-details flex justify-center py-10 h-100"
                 >
-                  <div class="w-1/2 mx-10 flex flex-col project-description">
+                  <div class="w-1/2 px-10 flex flex-col project-description">
                     <h2 id="modalTitle">Logo Design</h2>
-                    <p class="description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Accusantium, nesciunt amet facilis minus at rerum
-                      molestias praesentium distinctio sapiente tenetur id ea
-                      voluptate, in inventore, quis voluptatibus labore
-                      temporibus maiores.
-                    </p>
+                    <div class="description">
+                      <p>
+                        I've honed my logo design skills through various
+                        projects for academic assignments, freelance work,
+                        personal ventures, and even within my full-time role as
+                        graphic designer. My process typically involves
+                        <strong>
+                          in-depth research to understand the brand and its
+                          target audience, followed by creative exploration
+                          through sketching,
+                        </strong>
+                        and finally, meticulous execution in Adobe Illustrator
+                        to bring the final logo to life.
+                      </p>
+                      <p>
+                        This diverse experience has equipped me with the ability
+                        to design logos that are not only visually appealing but
+                        also strategically aligned with the respective brand's
+                        message and identity.
+                      </p>
+                    </div>
                   </div>
-                  <img
-                    class="w-1/2 bg-black object-cover"
-                    src="project/logo-design.jpg"
-                    alt="Image"
-                  />
+                  <div class="w-1/2">
+                    <img
+                      class="bg-black object-cover"
+                      src="project/logo-design.jpg"
+                      alt="Image"
+                    />
+                  </div>
                 </div>
                 <hr />
 
@@ -842,24 +1015,44 @@
                   id="project-details"
                   class="project-details flex justify-center py-10 h-100"
                 >
-                  <img
-                    class="w-1/2 bg-black object-cover"
-                    src="project/packaging-design.jpg"
-                    alt="Image"
-                  />
-                  <div class="w-1/2 mx-10 flex flex-col project-description">
+                  <div class="w-1/2">
+                    <img
+                      class="bg-black object-cover"
+                      src="project/packaging-design.jpg"
+                      alt="Image"
+                    />
+                  </div>
+
+                  <div class="w-1/2 px-10 flex flex-col project-description">
                     <h2 id="modalTitle">Packaging Design</h2>
-                    <p class="description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Accusantium, nesciunt amet facilis minus at rerum
-                      molestias praesentium distinctio sapiente tenetur id ea
-                      voluptate, in inventore, quis voluptatibus labore
-                      temporibus maiores.
-                    </p>
+                    <div class="description">
+                      <p>
+                        My experience in graphic #design extends to packaging
+                        creation. During my full-time employment, I designed
+                        various packaging solutions, including one for my own
+                        snapback brand.
+                      </p>
+                      <p>
+                        For this project, I embraced a hands-on approach.
+                        Following a thorough research phase, I investigated
+                        suitable box materials and carefully measured the
+                        required dimensions. With a clear vision in mind, I
+                        translated my design into reality using Adobe
+                        Illustrator. Finally, I worked with a box supplier to
+                        produce the finished product.
+                      </p>
+                      <p>
+                        This project allowed me to not only showcase my design
+                        skills but also gain
+                        <strong>
+                          practical experience in material selection,
+                          dimensioning, and supplier communication.
+                        </strong>
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <hr />
-
               </div>
             </div>
           </div>
@@ -879,25 +1072,36 @@
                   id="project-details"
                   class="project-details flex justify-center py-10 h-100"
                 >
-                  <img
-                    class="w-1/2 bg-black object-cover"
-                    src="project/animation1.jpg"
-                    alt="Image"
-                  />
-                  <div class="w-1/2 mx-10 flex flex-col project-description">
+                  <div class="w-1/2">
+                    <img
+                      class="bg-black object-cover"
+                      src="project/animation1.jpg"
+                      alt="Image"
+                    />
+                  </div>
+
+                  <div class="w-1/2 px-10 flex flex-col project-description">
                     <h2 id="modalTitle">
                       Ciko Animation
                       <span class="italic text-sm font-normal"
                         >(Pilot episode)</span
                       >
                     </h2>
-                    <p class="description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Accusantium, nesciunt amet facilis minus at rerum
-                      molestias praesentium distinctio sapiente tenetur id ea
-                      voluptate, in inventore, quis voluptatibus labore
-                      temporibus maiores.
-                    </p>
+                    <div class="description">
+                      <p>
+                        I had the opportunity to collaborate with "iProduksi
+                        Studio" on the pilot episode of the 2D animated series,
+                        "Ciko Animation". Contributing as a key animator, I
+                        played a crucial role in bringing the series to life. My
+                        responsibilities included
+                        <strong
+                          >crafting the character designs, developing the
+                          background environments, and bringing both to life
+                          through #animation</strong
+                        >
+                        in Adobe Flash.
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <hr />
@@ -906,21 +1110,28 @@
                   id="project-details"
                   class="project-details flex justify-center py-10 h-100"
                 >
-                  <div class="w-1/2 mx-10 flex flex-col project-description">
+                  <div class="w-1/2 px-10 flex flex-col project-description">
                     <h2 id="modalTitle">My Little Friend</h2>
-                    <p class="description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Accusantium, nesciunt amet facilis minus at rerum
-                      molestias praesentium distinctio sapiente tenetur id ea
-                      voluptate, in inventore, quis voluptatibus labore
-                      temporibus maiores.
-                    </p>
+                    <div class="description">
+                      <p>
+                        Leveraging my academic foundation in 2D #animation, I
+                        created a small project titled "My Little Friend" for my
+                        YouTube channel. This project served as my first
+                        exploration in combining 2D animation with live-action
+                        footage. Utilizing Adobe Flash for animation and Adobe
+                        After Effects for compositing, I brought the concept to
+                        life, showcasing both my
+                        <strong> technical skills and creative vision. </strong>
+                      </p>
+                    </div>
                   </div>
-                  <img
-                    class="w-1/2 bg-black object-cover"
-                    src="project/animation2.jpg"
-                    alt="Image"
-                  />
+                  <div class="w-1/2">
+                    <img
+                      class="bg-black object-cover"
+                      src="project/animation2.jpg"
+                      alt="Image"
+                    />
+                  </div>
                 </div>
                 <hr />
 
@@ -928,24 +1139,34 @@
                   id="project-details"
                   class="project-details flex justify-center py-10 h-100"
                 >
-                  <img
-                    class="w-1/2 bg-black object-cover"
-                    src="project/character-animation.jpg"
-                    alt="Image"
-                  />
-                  <div class="w-1/2 mx-10 flex flex-col project-description">
+                  <div class="w-1/2">
+                    <img
+                      class="bg-black object-cover"
+                      src="project/character-animation.jpg"
+                      alt="Image"
+                    />
+                  </div>
+
+                  <div class="w-1/2 px-10 flex flex-col project-description">
                     <h2 id="modalTitle">Character Animation</h2>
-                    <p class="description">
-                      Lorem ipsum dolor sit amet #consectetur adipisicing elit.
-                      Accusantium, nesciunt amet facilis minus at rerum
-                      molestias #praesentium distinctio sapiente tenetur id ea
-                      voluptate, in inventore, quis voluptatibus labore
-                      temporibus maiores.
-                    </p>
+                    <div class="description">
+                      <p>
+                        In a freelance role, I was tasked with animating a
+                        series of characters for an overseas client. The client
+                        provided the characters as static images, and I utilized
+                        my skills in Adobe After Effects to bring them to life
+                        through #animation. This project challenged me to
+                        creatively transform static designs into engaging
+                        characters, showcasing my ability to
+                        <strong
+                          >effectively collaborate with international clients
+                          and meet their specific project requirements.</strong
+                        >
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <hr />
-
               </div>
             </div>
           </div>
@@ -957,7 +1178,7 @@
             <div class="image-container">
               <img src="thumbnail/img1.jpg" alt="Project Image" />
             </div>
-            <div class="description">
+            <div class="description-mobile">
               <h3>Title Here</h3>
               <p>Short description here...</p>
             </div>
@@ -966,7 +1187,7 @@
             <div class="image-container">
               <img src="thumbnail/img1.jpg" alt="Project Image" />
             </div>
-            <div class="description">
+            <div class="description-mobile">
               <h3>Title Here</h3>
               <p>Short description here...</p>
             </div>
@@ -975,7 +1196,7 @@
             <div class="image-container">
               <img src="thumbnail/img1.jpg" alt="Project Image" />
             </div>
-            <div class="description">
+            <div class="description-mobile">
               <h3>Title Here</h3>
               <p>Short description here...</p>
             </div>

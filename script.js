@@ -213,8 +213,8 @@ projects.forEach((project) => {
   // Get the description paragraph of the project
   const description = project.querySelector(".description");
 
-  // Split the description into words
-  const words = description.textContent.split(" ");
+  // Remove punctuation marks and split the description into words
+  const words = description.textContent.replace(/[^\w#]/g, " ").split(/\s+/);
 
   // Array to store unique tags
   const tags = [];
@@ -243,4 +243,31 @@ projects.forEach((project) => {
   project.appendChild(tagsContainer);
 });
 
-////////////////////////////////////
+/////////////////////////////////
+
+document.getElementById("my-form").addEventListener("submit", function (event) {
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const messageInput = document.getElementById("message");
+
+  // Check if name is empty
+  if (nameInput.value === "") {
+    alert("Please enter your name.");
+    event.preventDefault(); // Prevent form submission
+    return;
+  }
+
+  // Check if email is valid format
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value)) {
+    alert("Please enter a valid email address.");
+    event.preventDefault();
+    return;
+  }
+
+  // Check if message is empty
+  if (messageInput.value === "") {
+    alert("Please enter a message.");
+    event.preventDefault();
+    return;
+  }
+});
