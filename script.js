@@ -46,8 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Smooth Scrolling
   const navLinks = document.querySelectorAll(".nav-link");
   const hireLinks = document.querySelectorAll(".hire-link");
+  const homeLink = document.querySelectorAll(".home-link");
 
-  [...navLinks, ...hireLinks].forEach((link) => {
+  [...navLinks, ...hireLinks, ...homeLink].forEach((link) => {
     // Spread both NodeLists into a single array
     link.addEventListener("click", function (e) {
       e.preventDefault();
@@ -60,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Repeat for sidebar links if necessary
   const sideBarLinks = document.querySelectorAll(".sidebar-link");
 
   sideBarLinks.forEach((link) => {
