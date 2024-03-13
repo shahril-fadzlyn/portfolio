@@ -732,7 +732,7 @@ td {
 }
 
 .project-details {
-  max-height: 80vh; /* Maximum height for modal content */
+  /*max-height: 80vh; /* Maximum height for modal content */
   /* overflow-y: auto;  */
 }
 
