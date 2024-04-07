@@ -551,7 +551,7 @@ td {
   }
 
   .portfolio-card-mobile.in-view .description-mobile {
-    bottom: 3px; /* Slides up to cover the bottom part of the image */
+    bottom: 0px; /* Slides up to cover the bottom part of the image */
   }
 }
 @keyframes fadeInUp {
@@ -708,7 +708,7 @@ td {
 .project-container p {
   font-size: 16px;
   font-weight: normal;
-  text-align: left;
+  text-align: justify;
   margin-bottom: 15px;
 }
 
@@ -731,10 +731,10 @@ td {
   object-fit: cover;
 }
 
-.project-details {
+/*.project-details {
   /*max-height: 80vh; /* Maximum height for modal content */
-  /* overflow-y: auto;  */
-}
+/* overflow-y: auto;  */
+/*}
 
 /* Styles for project details (title, video, photos, description, etc.) */
 .project-detail {

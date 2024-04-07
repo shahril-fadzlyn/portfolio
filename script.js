@@ -198,50 +198,45 @@ function closeModal(projectModal) {
   }, 200);
 }
 
-// Function to close modal when clicking outside of modal content
-// function closeModalOutside(event) {
-//   if (event.target === document.querySelector(".modal-background")) {
-//     closeModal();
-//   }
-// }
+/////////////////////////////////////////
 
 // Select all project containers
-const projects = document.querySelectorAll(".project-description");
+// const projects = document.querySelectorAll(".project-description");
 
-// Loop through each project
-projects.forEach((project) => {
-  // Get the description paragraph of the project
-  const description = project.querySelector(".description");
+// // Loop through each project
+// projects.forEach((project) => {
+//   // Get the description paragraph of the project
+//   const description = project.querySelector(".description");
 
-  // Remove punctuation marks and split the description into words
-  const words = description.textContent.replace(/[^\w#]/g, " ").split(/\s+/);
+//   // Remove punctuation marks and split the description into words
+//   const words = description.textContent.replace(/[^\w#]/g, " ").split(/\s+/);
 
-  // Array to store unique tags
-  const tags = [];
+//   // Array to store unique tags
+//   const tags = [];
 
-  // Loop through each word in the description
-  words.forEach((word) => {
-    // Check if the word starts with '#'
-    if (word.startsWith("#")) {
-      // Remove '#' from the word and add it to the tags array if it's not already present
-      const tag = word.slice(1);
-      if (!tags.includes(tag)) {
-        tags.push(tag);
-      }
-    }
-  });
+//   // Loop through each word in the description
+//   words.forEach((word) => {
+//     // Check if the word starts with '#'
+//     if (word.startsWith("#")) {
+//       // Remove '#' from the word and add it to the tags array if it's not already present
+//       const tag = word.slice(1);
+//       if (!tags.includes(tag)) {
+//         tags.push(tag);
+//       }
+//     }
+//   });
 
-  // Create and append tag elements to the project
-  const tagsContainer = document.createElement("div");
-  tagsContainer.classList.add("tags");
-  tags.forEach((tag) => {
-    const tagElement = document.createElement("div");
-    tagElement.classList.add("tag");
-    tagElement.textContent = tag;
-    tagsContainer.appendChild(tagElement);
-  });
-  project.appendChild(tagsContainer);
-});
+//   // Create and append tag elements to the project
+//   const tagsContainer = document.createElement("div");
+//   tagsContainer.classList.add("tags");
+//   tags.forEach((tag) => {
+//     const tagElement = document.createElement("div");
+//     tagElement.classList.add("tag");
+//     tagElement.textContent = tag;
+//     tagsContainer.appendChild(tagElement);
+//   });
+//   project.appendChild(tagsContainer);
+// });
 
 /////////////////////////////////
 
@@ -271,3 +266,8 @@ document.getElementById("my-form").addEventListener("submit", function (event) {
     return;
   }
 });
+
+////////////////////////////
+function openImage(imagePath) {
+  window.open(imagePath, "_blank");
+}
