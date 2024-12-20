@@ -177,7 +177,7 @@
     <!-- About Section -->
     <section id="about" class="py-20 md:py-40 bg-white text-gray-800">
       <div class="container mx-auto md:px-6">
-        <div class="flex flex-wrap -mx-4 justify-center items-center">
+        <div class="flex flex-wrap mx-4 justify-center items-center">
           <div
             class="w-auto h-auto px-10 flex justify-center mb-8 md:mb-0 relative"
           >
@@ -192,7 +192,7 @@
           </div>
 
           <div
-            class="w-full md:w-1/2 px-10 mb-10 md:mb-0 flex-col items-center text-justify"
+            class="w-full md:w-1/2 px-4 md:px-10 mb-10 md:mb-0 flex-col items-center text-justify"
           >
             <div class="text-center md:text-left">
               <h2 class="text-3xl font-bold mb-2">About Me</h2>
@@ -235,10 +235,10 @@
                 >, makes me a valuable asset to any team.
               </p>
             </div>
-            <div class="flex justify-start ">
+            <div class="flex justify-center">
               <a
                 href="#skills"
-                class="hire-link bg-blue-900 text-white text-center font-bold py-2 px-1 rounded-full hover:bg-blue-500 transition-all mr-2 w-36"
+                class="hire-link md:w-3/4 bg-blue-900 text-white text-center font-bold py-2 md:py-3 px-1 rounded-full hover:bg-blue-500 transition-all w-36"
               >
                 My Skills
               </a>
@@ -325,9 +325,9 @@
         </div>
       </div>
 
-      <div class="container mx-auto px-4 text-center mb-24">
+      <div class="container mx-auto px-4 md:w-1/2 text-center mb-24">
         <h3 class="text-2xl font-semibold mb-4">Other Skills & Knowledge</h3>
-        <div class="flex justify-center">
+        <div class="flex justify-center md:mb-20">
           <!-- Skill 1 -->
           <div class="w-full md:w-auto px-4 mb-4">
             <div class="skill text-lg font-normal">
@@ -346,18 +346,20 @@
           </div>
 
           <!-- Repeat for other skills -->
+          
+        </div>
+        <div class="flex justify-center">
+          <a
+            href="#software-proficiency"
+            class="hire-link md:w-1/2 bg-blue-900 text-white text-center font-bold py-2 md:py-3  px-1 rounded-full hover:bg-blue-500 transition-all w-36"
+          >
+          Software
+          </a>
+  
         </div>
       </div>
 
-      <div class="flex justify-center ">
-        <a
-          href="#software-proficiency"
-          class="hire-link bg-blue-900 text-white text-center font-bold py-2 px-1 rounded-full hover:bg-blue-500 transition-all mr-2 w-36"
-        >
-        Software
-        </a>
 
-      </div>
     </section>
 
     <!-- Software Section -->
@@ -505,7 +507,7 @@
       <div class="flex justify-center ">
         <a
           href="#portfolio"
-          class="hire-link bg-blue-900 text-white text-center font-bold py-2 px-1 rounded-full hover:bg-blue-500 transition-all mr-2 w-36"
+          class="hire-link md:w-1/4  bg-blue-900 text-white text-center font-bold py-2 md:py-3  px-1 rounded-full hover:bg-blue-500 transition-all w-36"
         >
         My Portfolio
         </a>
@@ -665,7 +667,8 @@
                 <div class="project-details flex justify-center py-10 h-100">
                   <div class="w-1/2 px-10 flex flex-col project-description">
                     <h2 id="modalTitle">Personal Portfolio Website</h2>
-                    <div class="description">
+
+                    <div class="description content-wrapper">
                       <p>
                         This project features my portfolio website, which is my
                         <strong> first fully working and responsive </strong>
@@ -675,8 +678,9 @@
                         I designed the UI layout using Figma, then brought it
                         to life with HTML, CSS, and JavaScript, all coded
                         within VSCode, my primary code editor. This ensured a
-                        seamless and adaptable experience across various devices
+                        seamless and adaptable experience across various devices.
                       </p>
+                      <span class="more">
                       <p>
                         Building this website fostered my
                         <strong>
@@ -697,6 +701,9 @@
                         equipping me with the skills and knowledge to tackle
                         future projects with confidence.
                       </p>
+                    </span>
+                    <button class="see-more flex text-blue-700 hover:text-gray-400" data-see-more="true">See more</button>
+
                     </div>
                   </div>
                   <div class="w-1/2">
@@ -734,7 +741,7 @@
                   </div>
                   <div class="w-1/2 px-10 flex flex-col project-description">
                     <h2 id="modalTitle">Locumnet Website - Redesign</h2>
-                    <div class="description">
+                    <div class="description content-wrapper">
                       <p>
                         This personal project involved a UI redesign of the
                         Locumnet website, a platform serving healthcare
@@ -747,6 +754,7 @@
                         intuitive navigation for all users, regardless of their
                         prior experience with the platform.
                       </p>
+                      <span class="more">
                       <p>
                         Additionally, the hero section was revamped using a
                         minimalist approach. This involved focusing on impactful
@@ -756,6 +764,8 @@
                         allowing me to gain valuable experience and improve my
                         UI design skillset.
                       </p>
+                      </span>
+                      <button class="see-more flex text-blue-700 hover:text-gray-400" data-see-more="true">See more</button>
                       <p>
                         <div class="flex space-x-4 ">
                           <div class="flex-auto">
@@ -795,7 +805,7 @@
                 <div class="project-details flex justify-center py-10 h-100">
                   <div class="w-1/2 px-10 flex flex-col project-description">
                     <h2 id="modalTitle">UPA Website - Redesign</h2>
-                    <div class="description">
+                    <div class="description content-wrapper">
                       <p>
                         While working for my previous company, I took the
                         initiative to redesign their website. Recognizing the
@@ -810,6 +820,7 @@
                         >
                         all aimed at enhancing user experience.
                       </p>
+                      <span class="more">
                       <p>
                         Additionally, I developed a
                         <strong>
@@ -822,6 +833,9 @@
                         user-centered design and my ability to translate
                         creative ideas into practical solutions.
                       </p>
+                    </span>
+                      <button class="see-more flex text-blue-700 hover:text-gray-400" data-see-more="true">See more</button>
+
                       <p>
                         <div class="flex space-x-4">
                           <div class="flex-auto">
@@ -956,7 +970,7 @@
 
                   <div class="w-1/2 px-10 flex flex-col project-description">
                     <h2 id="modalTitle">Guess My Number</h2>
-                    <div class="description">
+                    <div class="description content-wrapper">
                       <p>
                         To strengthen my grasp of Javascript fundamentals, I
                         followed a video tutorial from a Udemy course and built
@@ -968,6 +982,7 @@
                         statements, while also allowing me to explore additional
                         functionalities:
                       </p>
+                      <span class="more">
                       <ul class="body-ul">
                         <li>
                           <strong> Generating the hidden number: </strong> Using
@@ -997,6 +1012,8 @@
                         experience, but also significantly expanded my
                         Javascript knowledge base.
                       </p>
+                    </span>
+                      <button class="see-more flex text-blue-700 hover:text-gray-400" data-see-more="true">See more</button>
                     </div>
                   </div>
                 </div>
@@ -1074,12 +1091,15 @@
 
                   <div class="w-1/2 px-10 flex flex-col project-description">
                     <h2 id="modalTitle">Poster Design - Jawi Streetwear</h2>
-                    <div class="description">
+                    <div class="description content-wrapper">
                       <p>
                         Throughout my creative journey, I've explored a variety
                         of graphic design projects, including poster design. One
                         such project I'm particularly proud of involved
                         promoting my previous snapback brand, "Jawi Streetwear".
+                      </p>
+                      <span class="more">
+                      <p>
                         I took charge of the entire
                         <strong
                           >creative process, conceptualizing the idea, setting
@@ -1098,6 +1118,8 @@
                           ideation to final execution.
                         </strong>
                       </p>
+                    </span>
+                      <button class="see-more flex text-blue-700 hover:text-gray-400" data-see-more="true">See more</button>
                     </div>
                   </div>
                 </div>
@@ -1109,16 +1131,20 @@
                 >
                   <div class="w-1/2 px-10 flex flex-col project-description">
                     <h2 id="modalTitle">Logo Design</h2>
-                    <div class="description">
+                    <div class="description content-wrapper">
                       <p>
                         I've honed my logo design skills through various
                         projects for academic assignments, freelance work,
                         personal ventures, and even within my full-time role as
-                        graphic designer. My process typically involves
+                        graphic designer.
+                      </p>
+                      <span class="more">
+                      <p>
+                        My process typically involves
                         <strong>
-                          in-depth research to understand the brand and its
-                          target audience, followed by creative exploration
-                          through sketching,
+                        in-depth research to understand the brand and its
+                        target audience, followed by creative exploration
+                        through sketching,
                         </strong>
                         and finally, meticulous execution in Adobe Illustrator
                         to bring the final logo to life.
@@ -1129,6 +1155,9 @@
                         also strategically aligned with the respective brand's
                         message and identity.
                       </p>
+                    </span>
+
+                      <button class="see-more flex text-blue-700 hover:text-gray-400" data-see-more="true">See more</button>
                     </div>
                   </div>
                   <div class="w-1/2">
@@ -1155,13 +1184,15 @@
 
                   <div class="w-1/2 px-10 flex flex-col project-description">
                     <h2 id="modalTitle">Packaging Design</h2>
-                    <div class="description">
+                    <div class="description content-wrapper">
                       <p>
                         My experience in graphic design extends to packaging
                         creation. During my full-time employment, I designed
                         various packaging solutions, including one for my own
                         snapback brand.
                       </p>
+                      <span class="more">
+
                       <p>
                         For this project, I embraced a hands-on approach.
                         Following a thorough research phase, I investigated
@@ -1179,6 +1210,8 @@
                           dimensioning, and supplier communication.
                         </strong>
                       </p>
+                      </span>
+                      <button class="see-more flex text-blue-700 hover:text-gray-400" data-see-more="true">See more</button>
                     </div>
                   </div>
                 </div>
@@ -1372,7 +1405,7 @@
       <div class="flex justify-center ">
         <a
           href="#contact"
-          class="hire-link bg-blue-900 text-white text-center font-bold py-2 px-1 rounded-full hover:bg-blue-500 transition-all mr-2 w-36"
+          class="hire-link md:w-1/4  bg-blue-900 text-white text-center font-bold py-2 md:py-3  px-1 rounded-full hover:bg-blue-500 transition-all w-36"
         >
         Contact Me
         </a>
