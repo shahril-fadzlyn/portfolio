@@ -271,3 +271,20 @@ document.getElementById("my-form").addEventListener("submit", function (event) {
 function openImage(imagePath) {
   window.open(imagePath, "_blank");
 }
+
+
+////////////////////////////
+
+const seeMoreButtons = document.querySelectorAll('.see-more');
+
+seeMoreButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const contentWrapper = button.parentElement; // Get the parent wrapper
+    contentWrapper.classList.toggle('expanded'); // Toggle expanded class
+    
+    // Update button text and data attribute
+    const isCurrentlyExpanded = contentWrapper.classList.contains('expanded');
+    button.textContent = isCurrentlyExpanded ? 'See less' : 'See more';
+    button.dataset.seeMore = !isCurrentlyExpanded; // Update data attribute
+  });
+});
