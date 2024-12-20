@@ -7,6 +7,19 @@ body {
   font-family: roboto;
 }
 
+button {
+  margin: 0;
+  padding: 0;
+}
+
+.more {
+  display: none; /* Initially hide the extra text */
+}
+
+.content-wrapper.expanded .more {
+  display: block; /* Show the extra text on click */
+}
+
 .body-ul {
   list-style: disc outside;
   text-align: left;
