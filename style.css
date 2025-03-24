@@ -4,12 +4,20 @@ img {
 }
 
 body {
-  font-family: roboto;
+  font-family: roboto, arial;
 }
 
 button {
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-bar{
+  z-index: 100;
 }
 
 .more {
@@ -52,12 +60,14 @@ button {
 .header-font {
   font-family: montserrat;
 }
+/*
 .middle-line {
   color: rgb(53, 109, 206);
   font-weight: 800;
   margin-left: 11px;
   margin-right: 11px;
 }
+  */
 
 .hamburger-line {
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -99,59 +109,25 @@ button {
 }
 
 .my-pic {
-  position: relative;
 
   z-index: 1;
   animation: 1s ease-out 0s 1 opacity;
 }
 
-.circle-graphic-hero {
-  position: absolute;
-  /* z-index: 0;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0; */
-  background: linear-gradient(
-    45deg,
-    rgb(21, 44, 107),
-    rgb(60, 115, 200),
-    rgb(17, 39, 99),
-    rgb(60, 115, 200)
-  );
+
+.animated-hero {
+  align-items: center;
 }
 
-@keyframes graphicSlideInFromBottom {
-  from {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.more {
+  display: none; /* Initially hide the extra text */
 }
 
-@keyframes graphicSlideOutFromTop {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  to {
-    opacity: 0;
-    transform: translateY(100%);
-  }
+.content-wrapper.expanded .more {
+  display: block; /* Show the extra text on click */
 }
 
-.graphicSlideInFromBottom {
-  animation: graphicSlideInFromBottom 0.5s ease-out forwards;
-}
 
-.graphicSlideOutFromTop {
-  animation: graphicSlideOutFromTop 0.5s ease-out forwards;
-}
 
 .text-hello {
   animation: 1s ease-out 0s 1 slideInFromLeft;
@@ -198,9 +174,16 @@ button {
   background: linear-gradient(
     45deg,
     rgb(21, 44, 107),
+    rgb(21, 44, 107),
+    rgb(21, 44, 107),
+    rgb(21, 44, 107),
     rgb(60, 115, 200),
     rgb(17, 39, 99),
     rgb(60, 115, 200),
+    rgb(21, 44, 107),
+    rgb(21, 44, 107),
+    rgb(21, 44, 107),
+    rgb(21, 44, 107),
     rgb(21, 44, 107)
   );
   background-size: 400% 400%;
@@ -227,16 +210,6 @@ button {
 
 .hire-link:hover::after {
   opacity: 1;
-}
-
-.circle-graphic {
-  background: linear-gradient(
-    45deg,
-    rgb(21, 44, 107),
-    rgb(60, 115, 200),
-    rgb(17, 39, 99),
-    rgb(60, 115, 200)
-  );
 }
 
 .progress-bar {
@@ -337,7 +310,28 @@ td {
   background-color: #f7fafc; /* Light color on hover */
 }
 
+.skills-container {
+  display: flex;
+  justify-content: center; /* Center the entire container */
+}
+.skills-box {
+  display: flex;
+  flex-wrap: wrap; /* Wrap the boxes if they don't fit in a single row */
+  gap: 1rem; /* Space between the boxes */
+  row-gap: 2rem;
+}
+.skill-box {
+  display: flex;
+  width: 150px;
+  align-items: center;
+  padding: 0; /* Padding inside the boxes */
+  border: none; /* Solid gray border */
+  font-size: 1rem; /* Adjust font size */
+}
+
 /* ///////////////////////////////// */
+
+
 
 .card {
   position: relative;
@@ -476,6 +470,13 @@ td {
 /* ///////////////////////////////// */
 
 @media (max-width: 768px) {
+  /*.nav-btn{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    justify-items: center;
+  }*/
+
   .portfolio-card-mobile {
     max-width: none;
     margin: 15px 0;
@@ -485,6 +486,81 @@ td {
     transform: translateY(0);
     opacity: 1;
   }
+
+ 
+
+  .modal-content {
+    z-index: 102;
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    animation: slideUpModal 0.2s forwards; /* Apply animation to slide up the modal */
+  }
+
+  .project-container {
+    z-index: 103;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    background-color: white;
+    border-radius: 20px 20px 0 0;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+  }
+
+  .project-thumbnail {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .portfolio-title{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: white;
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+  }
+
+  .close {
+    z-index: 101;
+    position: absolute;
+    top: -55px;
+    right: 0;
+    left: 0;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    object-position: center;
+    color: white;
+    /* background-color: white; */
+    cursor: pointer;
+    /* border: 2px solid white; */
+    border-radius: 100%;
+    font-size: 40px;
+    margin: 0px;
+    padding: 0;
+  }
 }
 
 @media (min-width: 769px) {
@@ -492,10 +568,84 @@ td {
   .slider {
     display: none; /* Hide Swiper on larger screens */
   }
+  /* Modal content */
+  .modal-content {
+    z-index: 102;
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 20%;
+    right: 20%;
+    /* padding: 20px; */
+    /* width: 1000px; */
+    max-width: 80%;
+    /* height: 800px;  */
+    /* transform: translate(-50%, -50%); */
+    /* margin: 0 auto;  */
+    /* background-color: blue; */
+    animation: slideUpModal 0.2s forwards; /* Apply animation to slide up the modal */
+  }
+
+  .project-thumbnail {
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .project-thumbnail img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .project-container {
+    z-index: 103;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: white;
+    border-radius: 7px;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    scrollbar-width: thin;  
+    scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0);
+  }
+
+  .project-thumbnail {
+    transition: all 0.1s;
+  }
+  .project-thumbnail:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Close button */
+  .close {
+    z-index: 101;
+    position: absolute;
+    top: -33px;
+    right: -33px;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    object-position: center;
+    color: white;
+    /* background-color: white; */
+    cursor: pointer;
+    /* border: 2px solid white; */
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    margin: 0px;
+    padding: 0;
+    transform: translate(0%, 0%);
+  }
 }
 
 /* Media Query for Mobile Screens */
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 768px) {
   .dynamic-bg {
     background-size: cover;
     background-position: center;
@@ -509,13 +659,8 @@ td {
     overflow: hidden;
     background-color: #f0f0f0; /* Default solid color */
   }
+  
 
-  #portfolio .container,
-  #portfolio h2,
-  #portfolio .portfolio-card-mobile {
-    position: relative;
-    z-index: 1; /* Above the blurred background */
-  }
 
   .slider {
     display: flex;
@@ -629,74 +774,25 @@ td {
   backdrop-filter: blur(5px); /* Blur effect when modal is open */
 }
 
-/* Modal content */
-.modal-content {
-  z-index: 102;
-  position: absolute;
-  top: 10%;
-  bottom: 10%;
-  left: 20%;
-  right: 20%;
-  /* padding: 20px; */
-  /* width: 1000px; */
-  max-width: 80%;
-  /* height: 800px;  */
-  /* transform: translate(-50%, -50%); */
-  /* margin: 0 auto;  */
-  /* background-color: blue; */
-  animation: slideUpModal 0.2s forwards; /* Apply animation to slide up the modal */
-}
+
 
 .modal-open {
   overflow: hidden;
 }
 
-/* Close button */
-.close {
-  z-index: 101;
-  position: absolute;
-  top: -33px;
-  right: -33px;
-  font-size: 28px;
-  display: flex;
-  justify-content: center;
-  vertical-align: middle;
-  align-items: center;
-  object-position: center;
-  color: white;
-  /* background-color: white; */
-  cursor: pointer;
-  /* border: 2px solid white; */
-  border-radius: 100%;
-  height: 40px;
-  width: 40px;
-  margin: 0px;
-  padding: 0;
-  transform: translate(0%, 0%);
-}
 
-/* Project container */
-.project-container {
-  z-index: 103;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-color: white;
-  border-radius: 7px;
-  overflow-y: auto;
-  width: 100%;
-  height: 100%;
-  scrollbar-width: thin; /* "auto" can also be used */
-  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0);
-}
+
+/* Project container 
+
 
 .project-container::-webkit-scrollbar {
-  width: 8px; /* Adjust the width of the scrollbar */
+  width: 8px;  Adjust the width of the scrollbar 
   margin-right: 15px;
 }
 
 .project-container::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust color as needed */
-}
+  background-color: rgba(0, 0, 0, 0.5);  Adjust color as needed 
+}*/
 
 .close:hover,
 .close:focus {
@@ -732,17 +828,12 @@ td {
   background-color: rgb(219, 219, 219);
 }
 
-.project-thumbnail {
-  display: inline-block;
-  margin: 10px;
-  cursor: pointer;
+.project-container {
+  scrollbar-width: thin; 
+  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0);
 }
 
-.project-thumbnail img {
-  width: 150px;
-  height: 100px;
-  object-fit: cover;
-}
+
 
 /*.project-details {
   /*max-height: 80vh; /* Maximum height for modal content */

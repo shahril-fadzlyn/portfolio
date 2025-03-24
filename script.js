@@ -10,9 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const sidebar = document.getElementById("sidebar");
+  const hamburger = document.getElementById("hamburger");
 
   sidebar.addEventListener("click", () => {
     sidebar.classList.toggle("-translate-y-full");
+    hamburger.classList.toggle("open");
   });
 });
 
@@ -147,8 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
 
-  document
-    .querySelectorAll("#contact input, #contact textarea, #contact button")
+  document.querySelectorAll("#contact input, #contact textarea, #contact button")
     .forEach((element) => {
       observer.observe(element);
     });
@@ -159,11 +160,18 @@ document.addEventListener("DOMContentLoaded", () => {
 // Function to open the modal
 function openModal(projectModal) {
   const modal = document.getElementById("projectModal" + projectModal);
+
+  console.log("Opening modal: " + projectModal); // Debugging statement
+  if (!modal) {
+    console.error("Modal not found: " + projectModal); // Debugging statement
+    return;
+  }
+
   modal.style.display = "block";
   document.body.classList.add("modal-open");
 
   const projectContent = document.querySelector(
-    "#projectModal" + projectModal + " .project-container"
+    "#projectModal" + projectModal + ".project-container"
   );
   if (projectContent) {
     projectContent.scrollTop = 0;
@@ -246,9 +254,9 @@ document.getElementById("my-form").addEventListener("submit", function (event) {
   const messageInput = document.getElementById("message");
 
   // Check if name is empty
-  if (nameInput.value === "") {
+  if (!nameInput.value || !/\S+/.test(nameInput.value)) {
     alert("Please enter your name.");
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();
     return;
   }
 
@@ -265,6 +273,31 @@ document.getElementById("my-form").addEventListener("submit", function (event) {
     event.preventDefault();
     return;
   }
+
+  // Open a new tab or window to display the response
+  const xhr = new XMLHttpRequest();
+  xhr.open("POST", "https://formspree.io/f/xyyrzvpq", true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      console.log("Form submitted successfully:", xhr.responseText);
+
+      // Open a new tab or window to display the response
+      const responseText = JSON.parse(xhr.responseText).message;
+      alert(responseText);
+    } else {
+      console.error("Error submitting form:", xhr.statusText);
+    }
+  };
+
+  xhr.onerror = function () {
+    console.error("There was an error sending the form.");
+  };
+
+  // Send the form data as a JSON object
+  const formData = new FormData(this);
+  xhr.send(JSON.stringify(Object.fromEntries(formData.entries())));
 });
 
 ////////////////////////////
@@ -272,19 +305,21 @@ function openImage(imagePath) {
   window.open(imagePath, "_blank");
 }
 
-
 ////////////////////////////
 
-const seeMoreButtons = document.querySelectorAll('.see-more');
+const seeMoreButtons = document.querySelectorAll(".see-more");
 
-seeMoreButtons.forEach(button => {
-  button.addEventListener('click', () => {
+seeMoreButtons.forEach((button) => {
+  button.addEventListener("click", () => {
     const contentWrapper = button.parentElement; // Get the parent wrapper
-    contentWrapper.classList.toggle('expanded'); // Toggle expanded class
-    
+    contentWrapper.classList.toggle("expanded"); // Toggle expanded class
+
     // Update button text and data attribute
-    const isCurrentlyExpanded = contentWrapper.classList.contains('expanded');
-    button.textContent = isCurrentlyExpanded ? 'See less' : 'See more';
+    const isCurrentlyExpanded = contentWrapper.classList.contains("expanded");
+    button.textContent = isCurrentlyExpanded ? "See less" : "See more";
     button.dataset.seeMore = !isCurrentlyExpanded; // Update data attribute
   });
 });
+
+////////////////////////////////////////////////
+

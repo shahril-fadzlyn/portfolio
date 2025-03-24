@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Portfolio</title>
     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
@@ -34,7 +39,7 @@
   </head>
   <body>
     <!-- Navigation Bar -->
-    <nav class="bg-gray-200 text-black p-4 fixed left-0 right-0 z-40">
+    <nav class="nav-bar bg-gray-200 text-black p-4 fixed left-0 right-0">
       <div class="container mx-auto flex justify-between items-center">
         <div class="object-left flex items-center">
           <div class="my-logo mr-5 flex">
@@ -49,8 +54,9 @@
         </div>
         <div class="hidden md:flex space-x-4 header-font">
           <a href="#hero" class="nav-link">Home</a>
-          <a href="#about" class="nav-link">About</a>
           <a href="#portfolio" class="nav-link">Portfolio</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#about" class="nav-link">About</a>
           <a href="#contact" class="nav-link">Contact</a>
         </div>
         <!-- Mobile menu button -->
@@ -63,7 +69,7 @@
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-            xmlns="https://www.w3.org/2000/svg"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               class="hamburger-line line1"
@@ -99,15 +105,8 @@
         <li>
           <a
             href="#hero"
-            class="sidebar-link py-7 bg-gray-600 flex justify-center"
-            >Home</a
-          >
-        </li>
-        <li>
-          <a
-            href="#about"
             class="sidebar-link py-7 bg-gray-500 flex justify-center"
-            >About</a
+            >Home</a
           >
         </li>
         <li>
@@ -115,6 +114,20 @@
             href="#portfolio"
             class="sidebar-link py-7 bg-gray-400 flex justify-center"
             >Portfolio</a
+          >
+        </li>
+        <li>
+          <a
+            href="#skills"
+            class="sidebar-link py-7 bg-gray-500 flex justify-center"
+            >Skills</a
+          >
+        </li>
+        <li>
+          <a
+            href="#about"
+            class="sidebar-link py-7 bg-gray-600 flex justify-center"
+            >About</a
           >
         </li>
         <li>
@@ -128,136 +141,470 @@
     </div>
 
     <!-- Hero Section -->
-    <section id="hero" class="md:pt-24 pt-24 bg-gray-100 text-gray-800">
+    <section id="hero" class="md:pt-24 pt-28 bg-gray-100 text-gray-800 h-5/6">
       <div
-        class="container mx-auto px-5 flex flex-col md:flex-row items-center justify-around mb-0"
+        class="container h-screen mx-auto px-5 flex flex-col md:flex-row items-center md:justify-around mb-0"
       >
-        <div class="text-hello text-center md:text-left mb-4">
-          <h1 class="text-4xl font-bold mb-2">
+        <div class="text-hello text-center md:text-left mb-4 order-2 md:order-1">
+          <h1 class="text-4xl font-bold mb-2 ">
             Hello, I'm <br />
             <span class="text-blue-900">Shahril Fadzlyn</span>
           </h1>
-          <h2 class="text-2xl mb-6">UI/UX Designer | Front-End Developer</h2>
-          <p class="mb-6">
-            I create beautiful and functional websites that bring your ideas to
-            life.
+          <h2 class="text-xl mb-6">UI/UX Designer & Front-End Enthusiast</h2>
+          <p class="mb-6 italic">
+            From Graphic Design to UI/UX: 
+            <br>11-Year Journey of Solving Problems with Design. 
           </p>
-          <div class="flex justify-center md:justify-start">
+
+          <div class="grid grid-cols-1 gap-3 sm:gap-0 sm:flex justify-center sm:justify-start">
             <a
-              href="#about"
-              class="hire-link bg-blue-900 text-white text-center font-bold py-2 px-1 rounded-full hover:bg-blue-500 transition-all mr-2 w-36"
+              href="#portfolio"
+              class="hire-link bg-blue-900 text-white text-center font-bold py-4 sm:py-2 px-1 rounded-full hover:bg-blue-500 transition-all mr-2 w-full md:w-46"
             >
-              About Me
+              My Portfolio
             </a>
             <a
               href="download/Muhammad_Shahril_Fadzlyn_Resume2024.pdf"
-              target="_blank"
+              target="_self" class="border-2 border-blue-900 text-center text-blue-900 font-bold py-4 sm:py-2 px-1 rounded-full hover:border-blue-400 hover:text-blue-400 transition-all w-full md:w-46"
             >
-              <button
-                class="border-2 border-blue-900 text-blue-900 font-bold py-1.5 px-1 rounded-full hover:border-blue-400 hover:text-blue-400 transition-all w-36"
-              >
                 Download CV
-              </button>
             </a>
           </div>
         </div>
-        <div class="md:w-auto relative">
+        <div class="md:w-auto md:h-auto animated-hero flex md:self-end order-1 md:order-2">
           <img
-            src="thumbnail/my-pic1.png"
+            src="thumbnail/my-pic1-(animated).gif"
             alt="Shahril Fadzlyn"
-            class="my-pic mx-auto md:mx-auto my-0"
+            class="my-pic  mx-auto md:mx-auto w-5/6 sm:w-3/4 my-0"
           />
-          <!-- <div
-            class="circle-graphic-hero rounded-full bg-black w-20 h-20 absolute top-44 bottom-0 left-0 right-0 md:w-36 md:h-36 md:top-110 md:bottom-0 md:left-24 md:right-0"
-          ></div> -->
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 md:py-40 bg-white text-gray-800">
-      <div class="container mx-auto md:px-6">
-        <div class="flex flex-wrap mx-4 justify-center items-center">
-          <div
-            class="w-auto h-auto px-10 flex justify-center mb-8 md:mb-0 relative"
-          >
-            <!-- <div
-              class="circle-graphic rounded-full bg-black w-20 h-20 absolute top-44 bottom-0 left-0 right-0 md:w-36 md:h-36 md:top-64 md:bottom-0 md:left-32 md:right-0"
-            ></div> -->
-            <img
-              src="thumbnail/my-pic3.jpg"
-              alt="[Your Name]"
-              class="rounded-full shadow-lg bg:cover w-48 h-48 md:w-96 md:h-96"
-            />
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-28 md:py-32 text-gray-800">
+      <div id="dynamic-background" class="dynamic-bg"></div>
+      <!-- New Background Div -->
+
+      <div class="container mx-auto px-6 text-center md:mb-24 mb-10">
+        <h2 class="text-3xl font-bold mb-8">My Portfolio</h2>
+                  <!-- Modal Window 1 -->
+
+                  <div id="projectModal1" class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                      <span class="close" onclick="closeModal('1')"
+                        ><i class="far fa-times-circle"></i
+                      ></span>
+                      <div class="project-container flex flex-col gap-5 p-8">
+                        <h1 class="portfolio-title my-5">Responsive Website</h1>
+                        <a
+                          href="projects/responsive-websites/portfolio-site/portfolio-site.html"
+                          target="_self"
+                        >
+                          <img
+                            src="project-img/portfolio-site-v2.jpg"
+                            alt="Project Image 1"
+                            class="project-thumbnail"
+                          />
+                        </a>
+                        <a
+                          href="projects/responsive-websites/u-tiup-clone/u-tiup-clone.html"
+                          target="_self"
+                        >
+                          <img
+                            src="project-img/u-tiup-clone-v2.jpg"
+                            alt="Project Image 2"
+                            class="project-thumbnail"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <!-- Modal Window 2 -->
+        
+                  <div id="projectModal2" class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                      <span class="close" onclick="closeModal('2')"
+                        ><i class="far fa-times-circle"></i
+                      ></span>
+                      <div class="project-container flex flex-col gap-5 p-8">
+                        <h1 class="portfolio-title my-5">UI/UX Design</h1>
+                        <a href="projects/UIUX/locumnet/locumnet.html" target="_self">
+                          <img
+                            src="project-img/uiux-locumnet-v2.jpg"
+                            alt="Project Image 1"
+                            class="project-thumbnail"
+                          />
+                        </a>
+                        <a href="projects/UIUX/upapress/upapress.html" target="_self">
+                          <img
+                            src="project-img/uiux-upa-v2.jpg"
+                            alt="Project Image 2"
+                            class="project-thumbnail"
+                          />
+                        </a>
+                        <!--
+                        <a href="projects/UIUX/dentabay/dentabay.html" target="_self">
+                          <img
+                            src="project-img/uiux-dentabay.jpg"
+                            alt="Project Image 2"
+                            class="project-thumbnail"
+                          />
+                        </a>
+                        -->
+                        <a href="projects/UIUX/fintech-app/fintech.html" target="_self">
+                          <img
+                            src="project-img/uiux-fintech.jpg"
+                            alt="Project Image 2"
+                            class="project-thumbnail"
+                          />
+                        </a>
+                        <a
+                          href="projects/UIUX/flash-portfolio/flash-projects.html"
+                          target="_self"
+                        >
+                          <img
+                            src="project-img/uiux-diploma-project.jpg"
+                            alt="Project Image 2"
+                            class="project-thumbnail"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <!-- Modal Window 3 -->
+        
+                  <div id="projectModal3" class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                      <span class="close" onclick="closeModal('3')"
+                        ><i class="far fa-times-circle"></i
+                      ></span>
+                      <div class="project-container flex flex-col gap-5 p-8">
+                        <h1 class="portfolio-title my-5">JavaScript Game</h1>
+                        <a
+                          href="projects/javascript/javascript-game-1/javascript-game-1.html"
+                          target="_self"
+                          class="block"
+                        >
+                          <img
+                            src="project-img/javascript-game-1.jpg"
+                            alt="Project Image 1"
+                            class="project-thumbnail"
+                          />
+                        </a>
+                        <a
+                          href="projects/javascript/javascript-game-2/javascript-game-2.html"
+                          target="_self"
+                          class="block"
+                        >
+                          <img
+                            src="project-img/javascript-game-2.jpg"
+                            alt="Project Image 1"
+                            class="project-thumbnail"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <!-- Modal Window 4 -->
+        
+                  <div id="projectModal4" class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                      <span class="close" onclick="closeModal('4')"
+                        ><i class="far fa-times-circle"></i
+                      ></span>
+                      <div class="project-container flex flex-col gap-5 p-8">
+                        <h1 class="portfolio-title my-5">Graphic Design</h1>
+                        <a
+                          href="projects/graphic-design/branding/branding.html"
+                          target="_self"
+                          class="block"
+                        >
+                          <img
+                            src="project-img/graphic-1.jpg"
+                            alt="Project Image 1"
+                            class="project-thumbnail"
+                          />
+                        </a>
+                        <img
+                          src="project-img/graphic-2.jpg"
+                          alt="Project Image 1"
+                          class="opacity-50"
+                        />                
+                       <img
+                          src="project-img/graphic-3.jpg"
+                          alt="Project Image 1"
+                          class="opacity-50"
+                        />
+                        <!--
+                        <a
+                          href="project-img/portfolio-site-v2.jpg"
+                          target="_self"
+                          class="block"
+                        >
+                          <img
+                            src="project-img/graphic-2.jpg"
+                            alt="Project Image 1"
+                            class="project-thumbnail"
+                          />
+                        </a>
+                        <a
+                          href="project-img/portfolio-site-v2.jpg"
+                          target="_self"
+                          class="block"
+                        >
+                          <img
+                            src="project-img/graphic-3.jpg"
+                            alt="Project Image 1"
+                            class="project-thumbnail"
+                          />
+                        </a>
+                        -->
+                      </div>
+                    </div>
+                  </div>
+        
+                  <!-- Modal Window 5 -->
+        
+                  <div id="projectModal5" class="modal">
+                    <div class="modal-background"></div>
+        
+                    <div class="modal-content">
+                      <span class="close" onclick="closeModal('5')"
+                        ><i class="far fa-times-circle"></i
+                      ></span>
+                      <div class="project-container flex flex-col gap-5 p-8">
+                        <h1 class="portfolio-title my-5">2D Animation</h1>
+                        <a
+                          href="projects/2d-animation/ciko/ciko-animation.html"
+                          target="_self"
+                          class="block"
+                        >
+                          <img
+                            src="project-img/2d-animation-1.jpg"
+                            alt="Project Image 1"
+                            class="project-thumbnail"
+                          />
+                        </a>
+                        <img
+                          src="project-img/2d-animation-2.jpg"
+                          alt="Project Image 1"
+                          class="opacity-50"
+                        />
+                        <img
+                          src="project-img/2d-animation-3.jpg"
+                          alt="Project Image 1"
+                          class="opacity-50"
+                         />
+                        <!--
+                        <a
+                          href="project-img/portfolio-site-v2.jpg"
+                          target="_self"
+                          class="block"
+                        >
+                          <img
+                            src="project-img/2d-animation-2.jpg"
+                            alt="Project Image 1"
+                            class="project-thumbnail"
+                          />
+                        </a>
+                        <a
+                          href="project-img/portfolio-site-v2.jpg"
+                          target="_self"
+                          class="block"
+                        >
+                          <img
+                            src="project-img/2d-animation-3.jpg"
+                            alt="Project Image 1"
+                            class="project-thumbnail"
+                          />
+                        </a>
+                        -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Repeat for other projects -->
+        <div class="hidden md:flex flex-wrap -mx-4 justify-center">
+          <!-- Project 1 -->
+
+          <div class="card" onclick="openModal('1')">
+            <div class="card-image">
+              <img src="project-img/u-tiup-clone.jpg" alt="Image" />
+            </div>
+            <div class="card-description-container">
+              <h2 class="card-title">Responsive Website</h2>
+              <div class="card-p">
+                <p>
+                  Developed interactive and responsive websites using HTML, CSS,
+                  and JavaScript for seamless user experience across devices.
+                </p>
+              </div>
+              <div class="btn-container">
+                <button>View Projects</button>
+              </div>
+            </div>
+            <div class="card-bottom"></div>
+          </div>
+          <!-- Project 2 -->
+
+          <div class="card" onclick="openModal('2')">
+            <div class="card-image">
+              <img src="project-img/UI-Design1.jpg" alt="Image" />
+            </div>
+            <div class="card-description-container">
+              <h2 class="card-title">UI/UX Design</h2>
+              <div class="card-p">
+                <p>
+                  Demonstrated my UI/UX design skills through diverse projects.
+                </p>
+              </div>
+              <div class="btn-container">
+                <button>View Projects</button>
+              </div>
+            </div>
+            <div class="card-bottom"></div>
+          </div>
+          <!-- Project 3 -->
+
+          <div class="card" onclick="openModal('3')">
+            <div class="card-image">
+              <img src="project-img/game-1.jpg" alt="Image" />
+            </div>
+            <div class="card-description-container">
+              <h2 class="card-title">JavaScript Game</h2>
+              <div class="card-p">
+                <p>Exploring javascript fundamental through game creation.</p>
+              </div>
+              <div class="btn-container">
+                <button>View Projects</button>
+              </div>
+            </div>
+            <div class="card-bottom"></div>
+          </div>
+          <!-- Project 4 -->
+
+          <div class="card" onclick="openModal('4')">
+            <div class="card-image">
+              <img src="project-img/graphic-design1.jpg" alt="Image" />
+            </div>
+            <div class="card-description-container">
+              <h2 class="card-title">Graphic Design</h2>
+              <div class="card-p">
+                <p>Variety of graphic design projects.</p>
+              </div>
+              <div class="btn-container">
+                <button>View Projects</button>
+              </div>
+            </div>
+            <div class="card-bottom"></div>
+          </div>
+          <!-- Project 5 -->
+
+          <div class="card" onclick="openModal('5')">
+            <div class="card-image">
+              <img src="project-img/animation1.jpg" alt="Image" />
+            </div>
+            <div class="card-description-container">
+              <h2 class="card-title">2D Animation</h2>
+              <div class="card-p">
+                <p>Various 2D Animation Projects.</p>
+              </div>
+              <div class="btn-container">
+                <button>View Projects</button>
+              </div>
+            </div>
+            <div class="card-bottom"></div>
           </div>
 
-          <div
-            class="w-full md:w-1/2 px-4 md:px-10 mb-10 md:mb-0 flex-col items-center text-justify"
-          >
-            <div class="text-center md:text-left">
-              <h2 class="text-3xl font-bold mb-2">About Me</h2>
-              <p class="mb-10 md:mb-10">
-                A brief story of my journey in web development
-              </p>
-            </div>
-            <div class="mb-10">
-              <p>
-                Hello! I'm Shah, a passionate
-                <span class="p-bold">UI/UX Designer & Front-End Developer</span>
-                based in Kuala Lumpur. With 11 years of experience as a graphic
-                designer, I'm adept at adapting my design style to meet diverse
-                clients' needs, like local banks, insurance companies, and even
-                overseas companies.
-              </p>
-              <p class="mt-6">
-                Fueled by my passion for
-                <span class="p-bold"
-                  >design, problem-solving, and an insatiable thirst for tech
-                  knowledge</span
-                >, I ventured into UI/UX design and Figma, gradually acquainting
-                myself with the fundamentals of HTML, CSS, and JavaScript. The
-                creation of my personal portfolio website marked the beginning
-                of this journey, igniting my eagerness to delve deeper into
-                UI/UX and front-end development
-              </p>
-              <p class="mt-6">
-                I'm always looking for new ways to improve my skills and learn
-                exciting new technologies. Whether it's creating
-                <span class="p-bold"
-                  >smooth animations, building responsive websites, or crafting
-                  beautiful user interfaces</span
-                >, I'm up for the challenge. I believe websites should be both
-                beautiful and functional, and I'm dedicated to delivering
-                top-notch results for every project. This dedication, combined
-                with my
-                <span class="p-bold"
-                  >ability to adapt to the dynamic tech landscape</span
-                >, makes me a valuable asset to any team.
-              </p>
-            </div>
-            <div class="flex justify-center">
-              <a
-                href="#skills"
-                class="hire-link md:w-3/4 bg-blue-900 text-white text-center font-bold py-2 md:py-3 px-1 rounded-full hover:bg-blue-500 transition-all w-36"
-              >
-                My Skills
-              </a>
-
-            </div>
-          </div>
         </div>
+        
+        <!-- Swiper Carousel Container -->
+        <div id="card-slider" class="slider">
+          <div class="portfolio-card-mobile" onclick="openModal('1')">
+            <div class="image-container">
+              <img src="project-img/u-tiup-clone.jpg" alt="Project Image" />
+            </div>
+            <div class="description-mobile px-2 pb-2">
+              <h3 class="mb-2 font-bold">Responsive Website</h3>
+              <p>
+                Interactive and responsive websites using HTML, CSS, and
+                JavaScript.
+              </p>
+            </div>
+          </div>
+          <div class="portfolio-card-mobile" onclick="openModal('2')">
+            <div class="image-container">
+              <img src="project-img/UI-Design1.jpg" alt="Project Image" />
+            </div>
+            <div class="description-mobile px-2 pb-2">
+              <h3 class="mb-2 font-bold">UI/UX Design</h3>
+              <p>Demonstrated my UI/UX design skills through diverse projects.</p>
+            </div>
+          </div>
+          <div class="portfolio-card-mobile" onclick="openModal('3')">
+            <div class="image-container">
+              <img src="project-img/game-1.jpg" alt="Project Image" />
+            </div>
+            <div class="description-mobile px-2 pb-2">
+              <h3 class="mb-2 font-bold">Javascript Game</h3>
+              <p>Exploring javascript fundamental through game creation.</p>
+            </div>
+          </div>
+          <div class="portfolio-card-mobile" onclick="openModal('4')">
+            <div class="image-container">
+              <img src="project-img/graphic-design1.jpg" alt="Project Image" />
+            </div>
+            <div class="description-mobile px-2 pb-2">
+              <h3 class="mb-2 font-bold">Graphic Design</h3>
+              <p>Variety of graphic design projects.</p>
+            </div>
+          </div>
+          <div class="portfolio-card-mobile" onclick="openModal('5')">
+            <div class="image-container">
+              <img src="project-img/animation2.jpg" alt="Project Image" />
+            </div>
+            <div class="description-mobile px-2 pb-2">
+              <h3 class="mb-2 font-bold">2D Animation</h3>
+              <p>Various 2D Animation Projects.</p>
+            </div>
+          </div>
+
+          <!-- more cards -->
+        </div>
+      </div>
+      <div class="grid grid-cols-1 gap-3 sm:gap-0 sm:flex justify-center px-5">
+        <a
+          href="#skills"
+          class="hire-link bg-blue-900 text-white text-center font-bold py-4 sm:py-2 px-1 rounded-full hover:bg-blue-500 transition-all mr-2 w-full md:w-52"
+        >
+          My Skills
+        </a>
+
+        <a
+          href="#contact"
+          class="border-2 border-blue-900 text-center text-blue-900 font-bold py-4 sm:py-2 px-1 rounded-full hover:border-blue-400 hover:text-blue-400 transition-all w-full md:w-52"
+        >
+          Contact Me
+        </a>
       </div>
     </section>
 
     <!-- Skills Section -->
 
-    <section id="skills" class="bg-gray-100 text-gray-800 py-20 md:py-40">
+    <section id="skills" class="bg-gray-100 text-gray-800 py-28 md:py-40">
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-8">My Skills</h2>
         <div class="flex flex-col md:flex-row py-10 md:py-20">
           <div class="flex-1 md:px-20 pb-16">
             <h3 class="text-2xl font-semibold mb-4">Web Development</h3>
-            <div class="flex flex-wrap justify-center">
+            <div class="flex flex-wrap justify-center py-1">
               <p class="text-lg font-normal">HTML</p>
               <div class="progress-bar bg-gray-300 w-full rounded-full h-4">
                 <!-- update-progress value HERE-->
@@ -269,7 +616,7 @@
               </div>
             </div>
             <!-- Skill 2 -->
-            <div class="flex flex-wrap justify-center">
+            <div class="flex flex-wrap justify-center py-1">
               <p class="text-lg font-normal">CSS</p>
               <div class="progress-bar bg-gray-300 w-full rounded-full h-4">
                 <!-- update-progress value HERE-->
@@ -281,7 +628,7 @@
               </div>
             </div>
             <!-- Skill 3 -->
-            <div class="flex flex-wrap justify-center">
+            <div class="flex flex-wrap justify-center py-1">
               <p class="text-lg font-normal">JavaScript</p>
               <div class="progress-bar bg-gray-300 w-full rounded-full h-4">
                 <!-- update-progress value HERE-->
@@ -296,7 +643,7 @@
           </div>
           <div class="flex-1 md:px-20 pb-16">
             <h3 class="text-2xl font-semibold mb-4">Design Skills</h3>
-            <div class="flex flex-wrap justify-center">
+            <div class="flex flex-wrap justify-center py-1">
               <p class="text-lg font-normal">UI/UX Design</p>
               <div class="progress-bar bg-gray-300 w-full rounded-full h-4">
                 <!-- update-progress value HERE-->
@@ -308,7 +655,7 @@
               </div>
             </div>
             <!-- Skill 2 -->
-            <div class="flex flex-wrap justify-center">
+            <div class="flex flex-wrap justify-center py-1">
               <p class="text-lg font-normal">Graphic Design</p>
               <div class="progress-bar bg-gray-300 w-full rounded-full h-4">
                 <!-- update-progress value HERE-->
@@ -325,41 +672,93 @@
         </div>
       </div>
 
-      <div class="container mx-auto px-4 md:w-1/2 text-center mb-24">
-        <h3 class="text-2xl font-semibold mb-4">Other Skills & Knowledge</h3>
+      <div class="container mx-auto px-5 md:w-1/2 text-center mb-24">
+        <h3 class="text-2xl font-semibold mb-16">Other Skills & Knowledge</h3>
         <div class="flex justify-center md:mb-20">
           <!-- Skill 1 -->
-          <div class="w-full md:w-auto px-4 mb-4">
-            <div class="skill text-lg font-normal">
-              <p>
-                2D Animation <span class="middle-line">|</span> Motion Graphic
-                <span class="middle-line">|</span> Video Editing
-                <span class="middle-line">|</span> Photography
-                <span class="middle-line">|</span> Flash Interactive
-                <span class="font-normal italic text-base"
-                  >(website & games)</span
-                >
-                <span class="middle-line">|</span> ChatGPT
-                <span class="middle-line">|</span> Google Gemini
-              </p>
+          <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            rel="stylesheet"
+          />
+
+          <div class="skills-container w-full md:w-auto px-0 md:px-4 mb-4">
+            <div class="skills-box flex justify-center flex-wrap">
+              <div
+                class="skill-box border-solid border-2 border-gray-500 p-2 flex items-center justify-center flex-col gap-2"
+              >
+                <span class="fas fa-film text-3xl mb-1 -mr-0"></span>
+                <span>2D Animation</span>
+              </div>
+              <div
+                class="skill-box border-solid border-2 border-gray-500 p-2 flex items-center justify-center flex-col gap-2"
+              >
+                <span class="fas fa-chart-line text-3xl mb-1 -mr-0"></span>
+                <span>Motion Graphic</span>
+              </div>
+              <div
+                class="skill-box border-solid border-2 border-gray-500 p-2 flex items-center justify-center flex-col gap-2"
+              >
+                <span class="fas fa-video text-3xl mb-1 -mr-0"></span>
+                <span>Video Editing</span>
+              </div>
+              <div
+                class="skill-box border-solid border-2 border-gray-500 p-2 flex items-center justify-center flex-col gap-2"
+              >
+                <span class="fas fa-camera text-3xl mb-1 -mr-0"></span>
+                <span>Photography</span>
+              </div>
+              <div
+                class="skill-box border-solid border-2 border-gray-500 p-2 flex items-center justify-center flex-col gap-2"
+              >
+                <span class="fas fa-play-circle text-3xl mb-1 -mr-0"></span>
+                <span>Video Content</span>
+              </div>
+              <div
+                class="skill-box border-solid border-2 border-gray-500 p-2 flex items-center justify-center flex-col gap-2"
+              >
+                <span class="fas fa-gamepad text-3xl mb-1 -mr-0"></span>
+                <span>Flash Interactive</span>
+              </div>
+              <div
+                class="skill-box border-solid border-2 border-gray-500 p-2 flex items-center justify-center flex-col gap-2"
+              >
+                <span class="fas fa-robot text-3xl mb-1 -mr-0"></span>
+                <span>ChatGPT</span>
+              </div>
+              <div
+                class="skill-box border-solid border-2 border-gray-500 p-2 flex items-center justify-center flex-col gap-2"
+              >
+                <span class="fas fa-brain text-3xl mb-1 -mr-0"></span>
+                <span>Google Gemini</span>
+              </div>
+              <div
+                class="skill-box border-solid border-2 border-gray-500 p-2 flex items-center justify-center flex-col gap-2"
+              >
+                <span class="fa-solid fa-image text-3xl mb-1 -mr-0"></span>
+                <span>AI Image Generation</span>
+              </div>
             </div>
           </div>
 
           <!-- Repeat for other skills -->
-          
         </div>
-        <div class="flex justify-center">
+
+        <div class="grid grid-cols-1 gap-3 sm:gap-0 sm:flex justify-center px-0 md:px-5">
           <a
             href="#software-proficiency"
-            class="hire-link md:w-1/2 bg-blue-900 text-white text-center font-bold py-2 md:py-3  px-1 rounded-full hover:bg-blue-500 transition-all w-36"
+            class="hire-link bg-blue-900 text-white text-center font-bold py-4 sm:py-2 px-1 rounded-full hover:bg-blue-500 transition-all mr-2 w-full md:w-52"
           >
-          Software
+            Software
           </a>
-  
+
+          <a
+            href="#contact"
+            class="home-link border-2 border-blue-900 text-center text-blue-900 font-bold py-4 sm:py-2 px-1 rounded-full hover:border-blue-400 hover:text-blue-400 transition-all w-full md:w-52"
+          >
+            Contact Me
+          </a>
         </div>
       </div>
-
-
     </section>
 
     <!-- Software Section -->
@@ -368,8 +767,8 @@
       id="software-proficiency"
       class="bg-white text-gray-800 py-20 md:py-32"
     >
-      <div class="container mx-auto md:px-40 text-center mb-24">
-        <h2 class="text-3xl font-bold mb-8">Software Proficiency</h2>
+      <div class="container mx-auto md:px-40 text-center mb-8 md:mb-24">
+        <h2 class="text-3xl font-bold mb-0 md:mb-8">Software Proficiency</h2>
         <div class="container mx-auto px-6 py-6">
           <table class="animated-table min-w-full border-collapse rounded-t-lg">
             <thead>
@@ -504,934 +903,173 @@
           </table>
         </div>
       </div>
-      <div class="flex justify-center ">
-        <a
-          href="#portfolio"
-          class="hire-link md:w-1/4  bg-blue-900 text-white text-center font-bold py-2 md:py-3  px-1 rounded-full hover:bg-blue-500 transition-all w-36"
-        >
-        My Portfolio
-        </a>
 
+      <div class="grid grid-cols-1 gap-3 sm:gap-0 sm:flex justify-center px-5">
+        <a
+          href="#about"
+          class="hire-link bg-blue-900 text-white text-center font-bold py-4 sm:py-2 px-1 rounded-full hover:bg-blue-500 transition-all mr-2 w-full md:w-52"
+        >
+          About Me
+        </a>
+        <a
+          href="#contact"
+          class="home-link border-2 border-blue-900 text-center text-blue-900 font-bold py-4 sm:py-2 px-1 rounded-full hover:border-blue-400 hover:text-blue-400 transition-all w-full md:w-52"
+        >
+          Contact Me
+        </a>
       </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-20 md:py-32 bg-gray-100 text-gray-800">
-      <div id="dynamic-background" class="dynamic-bg"></div>
-      <!-- New Background Div -->
-
-      <div class="container mx-auto px-6 text-center mb-24">
-        <h2 class="text-3xl font-bold mb-8">My Portfolio</h2>
-        <div class="hidden md:flex flex-wrap -mx-4 justify-center">
-          <!-- Project 1 -->
-
-          <div class="card" onclick="openModal('1')">
-            <div class="card-image">
-              <img src="" alt="Image" />
-            </div>
-            <div class="card-description-container">
-              <h2 class="card-title">Responsive Website</h2>
-              <div class="card-p">
-                <p>
-                  Developed interactive and responsive websites using HTML, CSS,
-                  and JavaScript for seamless user experience across devices.
-                </p>
-              </div>
-              <div class="btn-container">
-                <button>View Projects</button>
-              </div>
-            </div>
-            <div class="card-bottom"></div>
-          </div>
-          <!-- Project 2 -->
-
-          <div class="card" onclick="openModal('2')">
-            <div class="card-image">
-              <img src="project/UI-Design1.jpg" alt="Image" />
-            </div>
-            <div class="card-description-container">
-              <h2 class="card-title">UI/UX Design</h2>
-              <div class="card-p">
-                <p>
-                  Demonstrated my UI/UX design skills through diverse projects.
-                </p>
-              </div>
-              <div class="btn-container">
-                <button>View Projects</button>
-              </div>
-            </div>
-            <div class="card-bottom"></div>
-          </div>
-          <!-- Project 3 -->
-
-          <div class="card" onclick="openModal('3')">
-            <div class="card-image">
-              <img src="project/game-1.jpg" alt="Image" />
-            </div>
-            <div class="card-description-container">
-              <h2 class="card-title">JavaScript Game</h2>
-              <div class="card-p">
-                <p>Exploring javascript fundamental through game creation.</p>
-              </div>
-              <div class="btn-container">
-                <button>View Projects</button>
-              </div>
-            </div>
-            <div class="card-bottom"></div>
-          </div>
-          <!-- Project 4 -->
-
-          <div class="card" onclick="openModal('4')">
-            <div class="card-image">
-              <img src="project/graphic-design1.jpg" alt="Image" />
-            </div>
-            <div class="card-description-container">
-              <h2 class="card-title">Graphic Design</h2>
-              <div class="card-p">
-                <p>Variety of graphic design projects.</p>
-              </div>
-              <div class="btn-container">
-                <button>View Projects</button>
-              </div>
-            </div>
-            <div class="card-bottom"></div>
-          </div>
-          <!-- Project 5 -->
-
-          <div class="card" onclick="openModal('5')">
-            <div class="card-image">
-              <img src="project/animation1.jpg" alt="Image" />
-            </div>
-            <div class="card-description-container">
-              <h2 class="card-title">2D Animation</h2>
-              <div class="card-p">
-                <p>Various 2D Animation Projects.</p>
-              </div>
-              <div class="btn-container">
-                <button>View Projects</button>
-              </div>
-            </div>
-            <div class="card-bottom"></div>
-          </div>
-          <!-- Modal Window 1 -->
-
-          <div id="projectModal1" class="modal">
-            <div class="modal-background"></div>
-
-            <div class="modal-content">
-              <span class="close" onclick="closeModal()"
-                ><i class="far fa-times-circle"></i
-              ></span>
-              <div class="project-container">
-                <h1 class="portfolio-title">Responsive Website</h1>
-                <div class="project-details flex justify-center py-10 h-100">
-                  <div class="w-1/2">
-                    <img
-                      class="bg-black object-contain"
-                      src=""
-                      alt="Image"
-                    />
-                  </div>
-
-                  <div class="w-1/2 px-10 flex flex-col project-description">
-                    <h2 id="modalTitle"></h2>
-                    <div class="description">
-                      <p>
-                        This project involved
-                        <strong>
-                          replicating the design and functionality
-                        </strong>
-                        of the  website across various devices using
-                        HTML and CSS. I followed a video tutorial to gain
-                        essential HTML & CSS knowledge and ensure the clone
-                        closely resembled the original site.
-                      </p>
-
-                    </div>
-                    <div class="flex flex-col justify-end h-full">
-                      <a
-                      href=""
-                      target="_blank"
-                    >
-                      <button
-                        class="bg-blue-500 text-white w-full h-10 rounded-full transition hover:bg-blue-900"
-                      >
-                        View Project
-                      </button>
-                    </a>
-                    </div>
-                  </div>
-                </div>
-                <hr />
-
-                <div class="project-details flex justify-center py-10 h-100">
-                  <div class="w-1/2 px-10 flex flex-col project-description">
-                    <h2 id="modalTitle">Personal Portfolio Website</h2>
-
-                    <div class="description content-wrapper">
-                      <p>
-                        This project features my portfolio website, which is my
-                        <strong> first fully working and responsive </strong>
-                        site built entirely from scratch.
-                      </p>
-                      <p>
-                        I designed the UI layout using Figma, then brought it
-                        to life with HTML, CSS, and JavaScript, all coded
-                        within VSCode, my primary code editor. This ensured a
-                        seamless and adaptable experience across various devices.
-                      </p>
-                      <span class="more">
-                      <p>
-                        Building this website fostered my
-                        <strong>
-                          independent learning and problem-solving
-                          skills</strong
-                        >. Through resources like
-                        <strong>
-                          Stack Overflow, W3Schools, and online
-                          communities,</strong
-                        >
-                        I successfully tackled debugging challenges and
-                        significantly enhanced my front-end development
-                        knowledge.
-                      </p>
-                      <p>
-                        This project proved to be an
-                        <strong> invaluable learning experience,</strong>
-                        equipping me with the skills and knowledge to tackle
-                        future projects with confidence.
-                      </p>
-                    </span>
-                    <button class="see-more flex text-blue-700 hover:text-gray-400" data-see-more="true">See more</button>
-
-                    </div>
-                  </div>
-                  <div class="w-1/2">
-                    <img
-                      class="bg-black object-cover"
-                      src="project/portfolio-site.jpg"
-                      alt="Image"
-                    />
-                  </div>
-                </div>
-                <hr />
-              </div>
-            </div>
+    <!-- About Section -->
+    <section id="about" class="py-20 md:py-40 bg-gray-100 text-gray-800">
+      <div class="container mx-auto md:px-6">
+        <div class="flex flex-wrap mx-4 justify-center items-top">
+          <div
+            class=" px-10  justify-center mb-8 md:mb-0 "
+          >
+            <img
+              src="thumbnail/about-me.jpg"
+              alt="[Your Name]"
+              class=" shadow-lg "
+            />
           </div>
 
-          <!-- Modal Window 2 -->
-
-          <div id="projectModal2" class="modal">
-            <div class="modal-background"></div>
-
-            <div class="modal-content">
-              <span class="close" onclick="closeModal('1')"
-                ><i class="far fa-times-circle"></i
-              ></span>
-              <div class="project-container">
-                <h1 class="portfolio-title">UI/UX Design</h1>
-
-                <div class="project-details flex justify-center py-10 h-100">
-                  <div class="w-1/2">
-                    <img
-                      class="bg-black object-cover border-2 border-gray-100"
-                      src="project/LocumnetPortal-redesign-Progress.jpg"
-                      alt="Image"
-                    />
-                  </div>
-                  <div class="w-1/2 px-10 flex flex-col project-description">
-                    <h2 id="modalTitle">Locumnet Website - Redesign</h2>
-                    <div class="description content-wrapper">
-                      <p>
-                        This personal project involved a UI redesign of the
-                        Locumnet website, a platform serving healthcare
-                        professionals. This project aimed to
-                        <strong>enhance the user experience</strong> for
-                        healthcare professionals of all ages and technical
-                        backgrounds. To achieve this, the redesign prioritized
-                        simplifying navigation. The website layout was
-                        streamlined to minimize information overload and ensure
-                        intuitive navigation for all users, regardless of their
-                        prior experience with the platform.
-                      </p>
-                      <span class="more">
-                      <p>
-                        Additionally, the hero section was revamped using a
-                        minimalist approach. This involved focusing on impactful
-                        visuals and clear messaging to deliver a strong first
-                        impression and effectively communicate the website's
-                        purpose. I used Figma throughout the design process,
-                        allowing me to gain valuable experience and improve my
-                        UI design skillset.
-                      </p>
-                      </span>
-                      <button class="see-more flex text-blue-700 hover:text-gray-400" data-see-more="true">See more</button>
-                      <p>
-                        <div class="flex space-x-4 ">
-                          <div class="flex-auto">
-                            <a
-                            href="https://www.figma.com/proto/CALKr6Z53zwHB95tHK86P9/Locumnet-Portal-redesign?page-id=0%3A1&type=design&node-id=188-901&viewport=-120%2C-323%2C0.5&t=bZ8IjR3Z79Htkuoz-1&scaling=scale-down&starting-point-node-id=1%3A2&mode=design"
-                            target="_blank"
-                          >
-                            <button
-                              class="bg-blue-500 text-white w-full h-10 rounded-full transition hover:bg-blue-900"
-                            >
-                              View Prototype
-                            </button>
-                          </a>
-                          </div>
-                          <div class="flex-auto">
-                            <a
-                            href="https://locumnet.com.my/"
-                            target="_blank"
-                          >
-                            <button
-                              class="border-solid border-2 border-gray-200 bg-white text-gray-500 w-full h-10 rounded-full transition hover:bg-gray-200"
-                            >
-                              View Original Site
-                            </button>
-                          </a>
-                          </div>
-                        </div>
-
-                      </p>
-                    </div>
-                  </div>
-
-                </div>
-
-                <hr />
-
-                <div class="project-details flex justify-center py-10 h-100">
-                  <div class="w-1/2 px-10 flex flex-col project-description">
-                    <h2 id="modalTitle">UPA Website - Redesign</h2>
-                    <div class="description content-wrapper">
-                      <p>
-                        While working for my previous company, I took the
-                        initiative to redesign their website. Recognizing the
-                        limitations of the existing website, which came across
-                        as overly simple, unattractive, and navigationally
-                        confusing, I set out to create a more engaging and
-                        user-friendly experience. Utilizing Figma, I developed
-                        a
-                        <strong>
-                          new layout, color scheme, and simplified navigation
-                          structure,</strong
-                        >
-                        all aimed at enhancing user experience.
-                      </p>
-                      <span class="more">
-                      <p>
-                        Additionally, I developed a
-                        <strong>
-                          compelling visual direction for showcasing their
-                          products,</strong
-                        >
-                        contributing to a more engaging and aesthetically
-                        pleasing website. This redesign project remains under
-                        development, but it exemplifies my dedication to
-                        user-centered design and my ability to translate
-                        creative ideas into practical solutions.
-                      </p>
-                    </span>
-                      <button class="see-more flex text-blue-700 hover:text-gray-400" data-see-more="true">See more</button>
-
-                      <p>
-                        <div class="flex space-x-4">
-                          <div class="flex-auto">
-                            <button onclick="openImage('https://github.com/Shahrilfadzlyn/portfolio/blob/main/project/1%20home%20page.jpg?raw=true')"
-                              class="bg-blue-500 text-white w-full h-10 rounded-full transition hover:bg-blue-900 "
-                            >
-                              View Full Design
-                            </button>
-                          </div>
-                          <div class="flex-auto">
-                            <a
-                            href="https://www.upapress.com.my/upashop/"
-                            target="_blank"
-                          >
-                            <button
-                              class="border-solid border-2 border-gray-200 bg-white text-gray-500 w-full h-10 rounded-full transition hover:bg-gray-200"
-                            >
-                              View Original Site
-                            </button>
-                          </a>
-                          </div>
-                        </div>
-
-                      </p>
-                    </div>
-                  </div>
-                  <div class="w-1/2">
-                    <img
-                      class="bg-black object-cover border-2 border-gray-100"
-                      src="project/upa-website.jpg"
-                      alt="Image"
-                    />
-                  </div>
-                </div>
-                <hr />
-
-                <div class="project-details flex justify-center py-10 h-100">
-                  <div class="w-1/2 h-96 flex justify-center">
-                    <img
-                      class="h-100 bg-black object-cover mobile-view"
-                      src="project/upa-mobile-site.jpg"
-                      alt="Image"
-                    />
-                  </div>
-
-                  <div class="w-1/2 px-10 flex flex-col project-description">
-                    <h2 id="modalTitle">UPA Mobile website - Redesign</h2>
-                    <div class="description">
-                      <p>
-                        Continuing with the company website redesign
-                        initiative, I focused on developing a user-friendly and
-                        visually appealing mobile layout using Figma. This
-                        involved
-                        <strong>
-                          translating the design concepts established for the
-                          desktop view into a mobile-optimized
-                          experience,</strong
-                        >
-                        prioritizing essential information, and simplifying
-                        navigation.
-                      </p>
-                      <p>
-                        This ongoing project demonstrates my ability to create
-                        user-centric mobile designs that seamlessly complement
-                        the existing desktop experience.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <hr />
-
-                <div class="project-details flex justify-center py-10 h-100">
-
-                  <div class="w-1/2 px-10 flex flex-col project-description">
-                    <h2 id="modalTitle">Flash Interactive Website</h2>
-                    <div class="description">
-                      <p>
-                        During my Diploma in Digital Media Design, I learnt to
-                        create interactive websites using AdobeFlash. This
-                        involved crafting
-                        <strong>
-                          user interfaces (UI), animating elements, and coding
-                          with ActionScript 2.0,</strong
-                        >
-                        all within the Flash environment.
-                      </p>
-                      <p>
-                        This foundation allowed me to further explore
-                        interactive web design in a small project during my
-                        Bachelor's degree and several freelance jobs. These
-                        projects allowed me to test my creativity and develop
-                        engaging interactive experiences for diverse audiences.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="w-1/2">
-                    <img
-                      class="bg-black object-cover"
-                      src="project/UI-Design1.jpg"
-                      alt="Image"
-                    />
-                  </div>
-                </div>
-                <hr />
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal Window 3 -->
-
-          <div id="projectModal3" class="modal">
-            <div class="modal-background"></div>
-
-            <div class="modal-content">
-              <span class="close" onclick="closeModal()"
-                ><i class="far fa-times-circle"></i
-              ></span>
-              <div class="project-container">
-                <h1 class="portfolio-title">JavaScript Game</h1>
-                <div
-                  id="project-details"
-                  class="project-details flex justify-center py-10 h-100"
-                >
-                  <div class="w-1/2">
-                    <img
-                      class="bg-black object-cover"
-                      src="project/game-1.jpg"
-                      alt="Image"
-                    />
-                  </div>
-
-                  <div class="w-1/2 px-10 flex flex-col project-description">
-                    <h2 id="modalTitle">Guess My Number</h2>
-                    <div class="description content-wrapper">
-                      <p>
-                        To strengthen my grasp of Javascript fundamentals, I
-                        followed a video tutorial from a Udemy course and built
-                        "Guess My Number," an engaging game where players
-                        attempt to guess a hidden number within a limited score
-                        (starting at 20, decreasing with each incorrect guess).
-                        This project solidified my understanding of core
-                        concepts like variables, functions, and if/else
-                        statements, while also allowing me to explore additional
-                        functionalities:
-                      </p>
-                      <span class="more">
-                      <ul class="body-ul">
-                        <li>
-                          <strong> Generating the hidden number: </strong> Using
-                          Math.random() to generate a random number at the
-                          beginning of each game.
-                        </li>
-                        <li>
-                          <strong> Dynamic score updates: </strong>
-                          Employing DOM manipulation to dynamically update the
-                          score and high score displays based on user actions.
-                        </li>
-                        <li>
-                          <strong> Responding to user input: </strong>
-                          Implementing event listeners to capture user input,
-                          such as clicking a button to submit a guess or
-                          selecting the "restart" option.
-                        </li>
-                        <li>
-                          <strong> Conditional rendering: </strong>
-                          Utilizing conditional statements to show or hide
-                          elements like the "Game Over" message and "Restart"
-                          button based on the game state.
-                        </li>
-                      </ul>
-                      <p>
-                        This project not only provided a fun learning
-                        experience, but also significantly expanded my
-                        Javascript knowledge base.
-                      </p>
-                    </span>
-                      <button class="see-more flex text-blue-700 hover:text-gray-400" data-see-more="true">See more</button>
-                    </div>
-                  </div>
-                </div>
-                <hr />
-
-                <div
-                  id="project-details"
-                  class="project-details flex justify-center py-10 h-100"
-                >
-                  <div class="w-1/2 px-10 flex flex-col project-description">
-                    <h2 id="modalTitle">Dice Game</h2>
-                    <div class="description">
-                      <p>
-                        Expanding my Javascript skills, I followed another
-                        Udemy course video and built "Dice Game," a two-player
-                        experience. This project solidified my understanding of
-                        core concepts (variables, functions, if/else) while
-                        exploring additional functionalities:
-                      </p>
-                      <ul class="body-ul">
-                        <li>
-                          <strong> Math.floor() and Math.random(): </strong>
-                          Generating random dice rolls.
-                        </li>
-                        <li>
-                          <strong> Event listeners: </strong>
-                          Responding to user clicks for rolling and holding.
-                        </li>
-                        <li>
-                          <strong> DOM manipulation: </strong>
-                          Updating player scores and dice visuals.
-                        </li>
-                        <li>
-                          <strong> Conditional logic: </strong>
-                          Implementing turn switching and win conditions.
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="w-1/2">
-                    <img
-                      class="bg-black object-cover"
-                      src="project/game-2.jpg"
-                      alt="Image"
-                    />
-                  </div>
-                </div>
-                <hr />
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal Window 4 -->
-
-          <div id="projectModal4" class="modal">
-            <div class="modal-background"></div>
-
-            <div class="modal-content">
-              <span class="close" onclick="closeModal()"
-                ><i class="far fa-times-circle"></i
-              ></span>
-              <div class="project-container">
-                <h1 class="portfolio-title">Graphic Design</h1>
-                <div
-                  id="project-details"
-                  class="project-details flex justify-center py-10 h-100"
-                >
-                  <div class="w-1/2">
-                    <img
-                      class="bg-black object-cover"
-                      src="project/graphic-design1.jpg"
-                      alt="Image"
-                    />
-                  </div>
-
-                  <div class="w-1/2 px-10 flex flex-col project-description">
-                    <h2 id="modalTitle">Poster Design - Jawi Streetwear</h2>
-                    <div class="description content-wrapper">
-                      <p>
-                        Throughout my creative journey, I've explored a variety
-                        of graphic design projects, including poster design. One
-                        such project I'm particularly proud of involved
-                        promoting my previous snapback brand, "Jawi Streetwear".
-                      </p>
-                      <span class="more">
-                      <p>
-                        I took charge of the entire
-                        <strong
-                          >creative process, conceptualizing the idea, setting
-                          up the photoshoot lighting, and even modeling for the
-                          poster myself.</strong
-                        >
-                        Using a self-timer camera, I captured the perfect image,
-                        which I then carefully edited in Adobe Photoshop to
-                        bring my vision to life.
-                      </p>
-                      <p>
-                        This project not only showcased my graphic design
-                        skills but also highlighted my ability to
-                        <strong>
-                          manage multiple aspects of the creative process, from
-                          ideation to final execution.
-                        </strong>
-                      </p>
-                    </span>
-                      <button class="see-more flex text-blue-700 hover:text-gray-400" data-see-more="true">See more</button>
-                    </div>
-                  </div>
-                </div>
-                <hr />
-
-                <div
-                  id="project-details"
-                  class="project-details flex justify-center py-10 h-100"
-                >
-                  <div class="w-1/2 px-10 flex flex-col project-description">
-                    <h2 id="modalTitle">Logo Design</h2>
-                    <div class="description content-wrapper">
-                      <p>
-                        I've honed my logo design skills through various
-                        projects for academic assignments, freelance work,
-                        personal ventures, and even within my full-time role as
-                        graphic designer.
-                      </p>
-                      <span class="more">
-                      <p>
-                        My process typically involves
-                        <strong>
-                        in-depth research to understand the brand and its
-                        target audience, followed by creative exploration
-                        through sketching,
-                        </strong>
-                        and finally, meticulous execution in Adobe Illustrator
-                        to bring the final logo to life.
-                      </p>
-                      <p>
-                        This diverse experience has equipped me with the ability
-                        to design logos that are not only visually appealing but
-                        also strategically aligned with the respective brand's
-                        message and identity.
-                      </p>
-                    </span>
-
-                      <button class="see-more flex text-blue-700 hover:text-gray-400" data-see-more="true">See more</button>
-                    </div>
-                  </div>
-                  <div class="w-1/2">
-                    <img
-                      class="bg-black object-cover"
-                      src="project/logo-design.jpg"
-                      alt="Image"
-                    />
-                  </div>
-                </div>
-                <hr />
-
-                <div
-                  id="project-details"
-                  class="project-details flex justify-center py-10 h-100"
-                >
-                  <div class="w-1/2">
-                    <img
-                      class="bg-black object-cover"
-                      src="project/packaging-design.jpg"
-                      alt="Image"
-                    />
-                  </div>
-
-                  <div class="w-1/2 px-10 flex flex-col project-description">
-                    <h2 id="modalTitle">Packaging Design</h2>
-                    <div class="description content-wrapper">
-                      <p>
-                        My experience in graphic design extends to packaging
-                        creation. During my full-time employment, I designed
-                        various packaging solutions, including one for my own
-                        snapback brand.
-                      </p>
-                      <span class="more">
-
-                      <p>
-                        For this project, I embraced a hands-on approach.
-                        Following a thorough research phase, I investigated
-                        suitable box materials and carefully measured the
-                        required dimensions. With a clear vision in mind, I
-                        translated my design into reality using Adobe
-                        Illustrator. Finally, I worked with a box supplier to
-                        produce the finished product.
-                      </p>
-                      <p>
-                        This project allowed me to not only showcase my design
-                        skills but also gain
-                        <strong>
-                          practical experience in material selection,
-                          dimensioning, and supplier communication.
-                        </strong>
-                      </p>
-                      </span>
-                      <button class="see-more flex text-blue-700 hover:text-gray-400" data-see-more="true">See more</button>
-                    </div>
-                  </div>
-                </div>
-                <hr />
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal Window 5 -->
-
-          <div id="projectModal5" class="modal">
-            <div class="modal-background"></div>
-
-            <div class="modal-content">
-              <span class="close" onclick="closeModal()"
-                ><i class="far fa-times-circle"></i
-              ></span>
-              <div class="project-container">
-                <h1 class="portfolio-title">2D Animation</h1>
-                <div
-                  id="project-details"
-                  class="project-details flex justify-center py-10 h-100"
-                >
-                  <div class="w-1/2">
-                    <img
-                      class="bg-black object-cover"
-                      src="project/animation1.jpg"
-                      alt="Image"
-                    />
-                  </div>
-
-                  <div class="w-1/2 px-10 flex flex-col project-description">
-                    <h2 id="modalTitle">
-                      Ciko Animation
-                      <span class="italic text-sm font-normal"
-                        >(Pilot episode)</span
-                      >
-                    </h2>
-                    <div class="description">
-                      <p>
-                        I had the opportunity to collaborate with "iProduksi
-                        Studio" on the pilot episode of the 2D animated series,
-                        "Ciko Animation". Contributing as a key animator, I
-                        played a crucial role in bringing the series to life. My
-                        responsibilities included
-                        <strong
-                          >crafting the character designs, developing the
-                          background environments, and bringing both to life
-                          through animation</strong
-                        >
-                        in Adobe Flash.
-                      </p>
-
-                    </div>
-                    <div class="flex flex-col justify-end h-full">
-                      <a
-                      href="https://www.youtube.com/watch?v=oEvVWU2xM0U"
-                      target="_blank"
-                    >
-                      <button
-                        class="bg-blue-500 text-white w-full h-10 rounded-full transition hover:bg-blue-900"
-                      >
-                        Watch Project
-                      </button>
-                    </a>
-                    </div>
-                  </div>
-                </div>
-                <hr />
-
-                <div
-                  id="project-details"
-                  class="project-details flex justify-center py-10 h-100"
-                >
-                  <div class="w-1/2 px-10 flex flex-col project-description">
-                    <h2 id="modalTitle">My Little Friend</h2>
-                    <div class="description">
-                      <p>
-                        Leveraging my academic foundation in 2D animation, I
-                        created a small project titled "My Little Friend" for my
-                        YouTube channel. This project served as my first
-                        exploration in combining 2D animation with live-action
-                        footage. Utilizing Adobe Flash for animation and Adobe
-                        After Effects for compositing, I brought the concept to
-                        life, showcasing both my
-                        <strong> technical skills and creative vision. </strong>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="w-1/2">
-                    <img
-                      class="bg-black object-cover"
-                      src="project/animation2.jpg"
-                      alt="Image"
-                    />
-                  </div>
-                </div>
-                <hr />
-
-                <div
-                  id="project-details"
-                  class="project-details flex justify-center py-10 h-100"
-                >
-                  <div class="w-1/2">
-                    <img
-                      class="bg-black object-cover"
-                      src="project/character-animation.jpg"
-                      alt="Image"
-                    />
-                  </div>
-
-                  <div class="w-1/2 px-10 flex flex-col project-description">
-                    <h2 id="modalTitle">Character Animation</h2>
-                    <div class="description">
-                      <p>
-                        In a freelance role, I was tasked with animating a
-                        series of characters for an overseas client. The client
-                        provided the characters as static images, and I utilized
-                        my skills in Adobe After Effects to bring them to life
-                        through animation. This project challenged me to
-                        creatively transform static designs into engaging
-                        characters, showcasing my ability to
-                        <strong
-                          >effectively collaborate with international clients
-                          and meet their specific project requirements.</strong
-                        >
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <hr />
-              </div>
-            </div>
-          </div>
-          <!-- Repeat for other projects -->
-        </div>
-        <!-- Swiper Carousel Container -->
-        <div id="card-slider" class="slider">
-          <div class="portfolio-card-mobile">
-            <div class="image-container">
-              <img src="" alt="Project Image" />
-            </div>
-            <div class="description-mobile px-2 pb-2">
-              <h3 class="mb-2 font-bold">Responsive Website</h3>
-              <p>
-                Interactive and responsive websites using HTML, CSS, and
-                JavaScript.
+          <div
+            class="w-full md:w-1/2 px-4 md:px-10 mb-10 md:mb-0 flex-col items-center text-justify"
+          >
+            <div class="text-center md:text-left">
+              <h2 class="text-3xl font-bold mb-2">About Me</h2>
+              <p class="mb-10 md:mb-10 italic">
+                From Graphic Designer to UI/UX: My Creative Journey
               </p>
             </div>
-          </div>
-          <div class="portfolio-card-mobile">
-            <div class="image-container">
-              <img src="project/UI-Design1.jpg" alt="Project Image" />
-            </div>
-            <div class="description-mobile px-2 pb-2">
-              <h3 class="mb-2 font-bold">UI Design</h3>
-              <p>Demonstrated my UI design skills through diverse projects.</p>
-            </div>
-          </div>
-          <div class="portfolio-card-mobile">
-            <div class="image-container">
-              <img src="project/game-1.jpg" alt="Project Image" />
-            </div>
-            <div class="description-mobile px-2 pb-2">
-              <h3 class="mb-2 font-bold">Javascript Game</h3>
-              <p>Exploring javascript fundamental through game creation.</p>
-            </div>
-          </div>
-          <div class="portfolio-card-mobile">
-            <div class="image-container">
-              <img src="project/graphic-design1.jpg" alt="Project Image" />
-            </div>
-            <div class="description-mobile px-2 pb-2">
-              <h3 class="mb-2 font-bold">Graphic Design</h3>
-              <p>Variety of graphic design projects.</p>
-            </div>
-          </div>
-          <div class="portfolio-card-mobile">
-            <div class="image-container">
-              <img src="project/animation2.jpg" alt="Project Image" />
-            </div>
-            <div class="description-mobile px-2 pb-2">
-              <h3 class="mb-2 font-bold">2D Animation</h3>
-              <p>Various 2D Animation Projects.</p>
-            </div>
-          </div>
+            <div class="mb-10 description content-wrapper">
+              <p>
+                Hi, I’m Shah, a designer making the leap from graphic design to UI/UX design. With over a decade of creative experience, I’m excited to bring my skills into the digital world.
+              </p>
+              <p class="mt-6">
+                For 11 years, I worked as a graphic designer at a printing company, designing table calendars and notebook planners for major clients in industries like banking, insurance, automotive, construction, and overseas markets. This role taught me to create designs that are both practical and visually appealing, always keeping the end-user in mind.
+              </p>
+              <span class="more">
 
-          <!-- more cards -->
+                <p class="mt-6">
+                  I realized that designing calendars and notebooks has a lot in common with UI/UX design. Both require understanding customer needs, crafting practical yet creative layouts, and working within production limitations to ensure the final product is perfect. This connection inspired me to explore UI/UX further.
+                </p>
+                <p class="mt-6">    
+                  My passion for creative work and my curiosity to learn new things drove me to dive into UI/UX—and even a bit into front-end development. I’ve picked up tools like Figma, along with the basics of HTML, CSS, and JavaScript, and built this portfolio site as a result. It’s been an exciting step in my journey!
+                </p>
+                <p class="mt-6">          
+                  Beyond design, I also enjoy 2D animation and video editing, skills that let me tell stories in fun, dynamic ways.
+                </p>
+                <p class="mt-6">          
+                  I’m excited to contribute my diverse skills and creative energy to help any team bring their ideas to life. Let’s make something great together!
+                </p>
+              </span>
+              <button class="see-more flex text-blue-700 hover:text-gray-400" data-see-more="true">See more</button>
+
+            </div>
+
+            <div class="grid grid-cols-1 gap-3 sm:gap-0 sm:flex justify-center md:justify-start px-0">
+              <a
+                href="#contact"
+                class="hire-link bg-blue-900 text-white text-center font-bold py-4 sm:py-2 px-1 rounded-full hover:bg-blue-500 transition-all mr-2 w-full md:w-52"
+              >
+                Contact Me
+              </a>
+              <a
+                href="download/Muhammad_Shahril_Fadzlyn_Resume2024.pdf"
+                target="_self"
+                class="border-2 border-blue-900 text-center text-blue-900 font-bold py-4 sm:py-2 px-1 rounded-full hover:border-blue-400 hover:text-blue-400 transition-all w-full md:w-52"
+              >
+                <button class="font-bold">Download CV</button>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="flex justify-center ">
-        <a
-          href="#contact"
-          class="hire-link md:w-1/4  bg-blue-900 text-white text-center font-bold py-2 md:py-3  px-1 rounded-full hover:bg-blue-500 transition-all w-36"
-        >
-        Contact Me
-        </a>
-
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-36 md:py-64 bg-blue-900 text-white">
+    <section id="contact" class="py-28 md:py-50 bg-blue-900 text-white">
       <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold mb-8">Contact Me</h2>
+        <h2 class="text-3xl font-bold mb-5 md:mb-8">Contact Me</h2>
         <p class="mb-8">
           Feel free to reach out for collaborations or just a friendly hello 👋
         </p>
-        
-        <div class="flex justify-center mt-8 items-center">
+        <div class="flex justify-center">
+          <div class="w-full max-w-xl">
+            <form
+              action="https://formspree.io/f/xyyrzvpq"
+              method="post"
+              id="my-form"
+            >
+              <div class="flex flex-wrap mb-6 -mx-3">
+                <div class="w-full md:w-1/2 px-3 mb-3 md:mb-0">
+                  <input
+                    class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:shadow-lg focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    required
+                  />
+                </div>
+                <div class="w-full md:w-1/2 px-3">
+                  <input
+                    class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:shadow-lg focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+                    type="email"
+                    name="_replyto"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-6 px-0">
+                <textarea
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:shadow-lg focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+                  rows="5"
+                  name="message"
+                  placeholder="Message"
+                  required
+                ></textarea>
+              </div>
+              <div class="px-3">
+                <button
+                  class="bg-blue-600 text-white text-center font-bold py-4 sm:py-3 px-1 rounded-full hover:bg-blue-500 transition-all mr-2 w-full md:w-52"
+                  type="submit"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="flex justify-center mt-8 md:mt-20 items-center">
           <p class="italic mx-5">shahrilfadzlyn@gmail.com</p>
           <a href="mailto:shahrilfadzlyn@gmail.com">
             <i class="fa fa-envelope" style="font-size: 24px"></i>
           </a>
-          <a href="https://wa.me/+60169191002" target="_blank" class="mx-5"
-            ><i class="fa fa-whatsapp" style="font-size: 26px"></i>
+          <a href="https://wa.me/+60169191002" target="_self" class="mx-5"
+            ><i class="fab fa-whatsapp" style="font-size: 26px"></i>
           </a>
         </div>
       </div>
     </section>
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-6 text-center">
+        <p>2025 Shahril Fadzlyn</p>
+        <div class="mt-4">
+          <a href="https://linkedin.com/in/shahril-fadzlyn-28619a66" class="text-gray-400 hover:text-white mx-2"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/shahril-fadzlyn" class="text-gray-400 hover:text-white mx-2"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://www.facebook.com/shahrilfadzlyn" class="text-gray-400 hover:text-white mx-2"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
