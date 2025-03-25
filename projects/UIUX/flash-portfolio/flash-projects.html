@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocumNet Portal Redesign - Project Overview</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .before-after {
+        background-color: #f2f2f2;
+        transition: box-shadow 0.3s ease;
+      }
+
+      .before-after:hover {
+        box-shadow: 0 0 5px #dddadb, 0 0 10px #dddadb, 0 0 15px #dddadb;
+      }
+      hr {
+        height: 2px;
+        background-color: rgb(128, 128, 128);
+        width: 50%;
+        margin: auto;
+        margin-bottom: 10px;
+      }
+      .grid img {
+        transition: scale 0.3s ease;
+      }
+      .grid img:hover {
+        scale: 1.05;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-200 text-black p-4 fixed left-0 right-0 z-40">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="object-left flex items-center">
+          <div class="my-logo mr-5 flex">
+            <img src="thumbnail/my logo-01.png" alt="Logo" />
+          </div>
+          <a
+            id="logo"
+            href="/#hero"
+            class="home-link header-font text-lg md:text-xl font-semibold"
+            >SHAHRIL FADZLYN</a
+          >
+        </div>
+        <div class="hidden md:flex space-x-4 header-font">
+          <a href="/#hero" class="nav-link">Home</a>
+          <a href="/#portfolio" class="nav-link">Portfolio</a>
+          <a href="/#skills" class="nav-link">Skills</a>
+          <a href="/#about" class="nav-link">About</a>
+          <a href="/#contact" class="nav-link">Contact</a>
+        </div>
+        <!-- Mobile menu button -->
+        <button
+          id="hamburger"
+          class="md:hidden text-gray-500 focus:outline-none z-50"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="hamburger-line line1"
+              d="M3 6h18"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            ></path>
+            <path
+              class="hamburger-line line2"
+              d="M3 12h18"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            ></path>
+            <path
+              class="hamburger-line line3"
+              d="M3 18h18"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Sidebar (Initially hidden) -->
+    <div
+      id="sidebar"
+      class="fixed left-0 right-0 bg-gray-900 text-white flex-row p-0 pt-16 transform -translate-y-full shadow-2xl z-30"
+    >
+      <ul>
+        <li>
+          <a
+            href="#hero"
+            class="sidebar-link py-7 bg-gray-500 flex justify-center"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#portfolio"
+            class="sidebar-link py-7 bg-gray-400 flex justify-center"
+            >Portfolio</a
+          >
+        </li>
+        <li>
+          <a
+            href="#skills"
+            class="sidebar-link py-7 bg-gray-500 flex justify-center"
+            >Skills</a
+          >
+        </li>
+        <li>
+          <a
+            href="#about"
+            class="sidebar-link py-7 bg-gray-600 flex justify-center"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="sidebar-link py-7 bg-blue-900 flex justify-center shadow-2xl"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="project-hero pt-24 bg-gray-100">
+      <div class="container mx-auto px-0 md:px-6 py-10 md:py-20">
+        <div class="px-6">
+          <h1 class="text-4xl font-bold text-center mb-8">
+            Flash Interactive Projects (2008 - 2013)
+          </h1>
+
+          <p class="text-xl text-center mb-12">
+            A Journey Through Creativity and Innovation
+          </p>
+        </div>
+
+        <!-- Project Overview -->
+        <div>
+          <div
+            class="max-w-4xl mx-auto bg-white rounded-3xl md:rounded-lg md:shadow-lg p-8 mb-12 main-content"
+          >
+            <img
+              src="project-img/uiux-fintech-banner.jpg"
+              alt="Portfolio Website Preview"
+              class="w-full rounded-lg mb-8"
+            />
+            <!--
+            <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
+-->
+            <p class="text-gray-700 mb-6">
+              During my diploma and bachelor's degree, I worked extensively on
+              Flash Interactive projects, combining UI/UX design, animation, and
+              coding using ActionScript 2.0. These projects were my passion,
+              allowing me to bring creative ideas to life through engaging
+              digital experiences. While Flash is no longer widely used, the
+              knowledge and skills I gained continue to influence my work as a
+              UI/UX designer and front-end developer.
+            </p>
+
+            <!-- projects overview -->
+            <h3 class="text-2xl font-bold mb-4">Projects Overview</h3>
+            <p class="text-gray-700 mb-6">
+              Below are some of my Flash Interactive projects:
+            </p>
+            <div class="">
+              <div class="before-after p-6 rounded-lg shadow-md mb-6">
+                <h4 class="text-xl font-bold text-center mb-4">
+                  Personal Portfolio Site (Interactive Flash Design)
+                </h4>
+                <div>
+                  <a href="project-img/flash portfolio.gif" target="_blank"
+                  >
+                    <img
+                    src="project-img/flash portfolio.gif"
+                    alt="LocumNet Portal Before Hero Design"
+                    class="w-full md:w-3/4 rounded-lg shadow-md mb-6 mt-4 mx-auto"
+                  />
+                  </a>
+                  <div class="mb-6">
+                    <ul class="list-disc pl-5 text-gray-700 mb-6 space-y-2">
+                      <li>
+                        Designed and developed a fully interactive portfolio
+                        showcasing my work with dynamic transitions and engaging
+                        animations.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="before-after p-6 rounded-lg shadow-md mb-6">
+                <h4 class="text-xl font-bold text-center mb-4">
+                  Interactive Comic
+                </h4>
+                <div>
+                  <img
+                    src="project-img/flash portfolio.gif"
+                    alt="LocumNet Portal Before Hero Design"
+                    class="w-full md:w-3/4 rounded-lg shadow-md mb-6 mt-4 mx-auto"
+                  />
+                  <div class="mb-6">
+                    <ul class="list-disc pl-5 text-gray-700 mb-6 space-y-2">
+                      <li>
+                        Created an immersive storytelling experience with
+                        animated panels, sound effects, and interactive choices
+                        to enhance user engagement.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="before-after p-6 rounded-lg shadow-md mb-6">
+                <h4 class="text-xl font-bold text-center mb-4">
+                  Interactive Documentary
+                </h4>
+                <div>
+                  <img
+                    src="project-img/flash portfolio.gif"
+                    alt="LocumNet Portal Before Hero Design"
+                    class="w-full md:w-3/4 rounded-lg shadow-md mb-6 mt-4 mx-auto"
+                  />
+                  <div class="mb-6">
+                    <ul class="list-disc pl-5 text-gray-700 mb-6 space-y-2">
+                      <li>
+                        Designed an educational and visually engaging documentary experience, allowing users to explore content through interactive elements and animated sequences.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="before-after p-6 rounded-lg shadow-md mb-6">
+                <h4 class="text-xl font-bold text-center mb-4">
+                  Flash Games
+                </h4>
+                <div>
+                  <img
+                    src="project-img/flash portfolio.gif"
+                    alt="LocumNet Portal Before Hero Design"
+                    class="w-full md:w-3/4 rounded-lg shadow-md mb-6 mt-4 mx-auto"
+                  />
+                  <div class="mb-6">
+                    <ul class="list-disc pl-5 text-gray-700 mb-6 space-y-2">
+                      <li>
+                        Developed a series of interactive games, incorporating UI/UX principles to enhance player experience, smooth animations, and engaging mechanics.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4">Skills & Experience Gained</h3>
+            <ul class="list-disc pl-5 text-gray-700 mb-6">
+              <li>UI/UX Design for interactive media</li>
+              <li>Animation and motion design</li>
+              <li>ActionScript 2.0 programming</li>
+              <li>User interaction and engagement strategies</li>
+              <li>Creativity and problem-solving in digital storytelling</li>
+            </ul>
+
+            <!-- Reflection -->
+            <h3 class="text-2xl font-bold mb-4">Reflection</h3>
+            <p class="text-gray-700 mb-6">
+              Even though Flash has become obsolete, these experiences helped shape my approach to designing user-friendly and engaging interfaces, which I now apply in modern UI/UX design and front-end development.
+            </p>
+
+            <!-- Tools Used -->
+            <h3 class="text-2xl font-bold mb-4">Tools Used</h3>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>Adobe Flash</li>
+            </ul>
+
+            <!-- 
+          <div class="flex flex-col md:flex-row justify-center mt-8 gap-2 md:gap-5">
+              <a
+                href="project-img/upa-website.jpg"
+                target="_blank"
+                class="bg-blue-600 text-white text-center px-6 py-3 w-44 rounded-full hover:bg-blue-700 transition duration-300"
+                >View Full Page</a
+              >
+            </div>
+            --->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-6 text-center">
+        <p>2025 Shahril Fadzlyn</p>
+        <div class="mt-4">
+          <a href="https://linkedin.com/in/shahril-fadzlyn-28619a66" class="text-gray-400 hover:text-white mx-2"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/shahril-fadzlyn" class="text-gray-400 hover:text-white mx-2"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://www.facebook.com/shahrilfadzlyn" class="text-gray-400 hover:text-white mx-2"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

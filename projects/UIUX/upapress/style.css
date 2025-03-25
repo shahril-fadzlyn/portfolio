@@ -1,0 +1,43 @@
+body {
+  font-family: roboto, arial;
+}
+.main-content p {
+  text-align: justify;
+}
+/* Project-specific styles */
+.project-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom, #f3f4f6 0%, #fff 100%);
+}
+
+.my-logo {
+  width: 40px;
+}
+.header-font {
+  font-family: montserrat;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 3px; /* Adjust as needed */
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  bottom: 0;
+  left: 0;
+  background-color: rgb(122, 122, 122); /* Color of the underline */
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  visibility: visible;
+  width: 100%;
+}
