@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>"U-tiup" Clone - Project Details</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-200 text-black p-4 fixed left-0 right-0 z-40">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="object-left flex items-center">
+          <div class="my-logo mr-5 flex">
+            <img src="thumbnail/my logo-01.png" />
+          </div>
+          <a
+            id="logo"
+            href="/#hero"
+            class="home-link header-font text-lg md:text-xl font-semibold"
+            >SHAHRIL FADZLYN</a
+          >
+        </div>
+        <div class="hidden md:flex space-x-4 header-font">
+          <a href="/#hero" class="nav-link">Home</a>
+          <a href="/#portfolio" class="nav-link">Portfolio</a>
+          <a href="/#skills" class="nav-link">Skills</a>
+          <a href="/#about" class="nav-link">About</a>
+          <a href="/#contact" class="nav-link">Contact</a>
+        </div>
+        <!-- Mobile menu button -->
+        <button
+          id="hamburger"
+          class="md:hidden text-gray-500 focus:outline-none z-50"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="hamburger-line line1"
+              d="M3 6h18"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            ></path>
+            <path
+              class="hamburger-line line2"
+              d="M3 12h18"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            ></path>
+            <path
+              class="hamburger-line line3"
+              d="M3 18h18"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Sidebar (Initially hidden) -->
+    <div
+      id="sidebar"
+      class="fixed left-0 right-0 bg-gray-900 text-white flex-row p-0 pt-16 transform -translate-y-full shadow-2xl z-30"
+    >
+      <ul>
+        <li>
+          <a
+            href="#hero"
+            class="sidebar-link py-7 bg-gray-500 flex justify-center"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#portfolio"
+            class="sidebar-link py-7 bg-gray-400 flex justify-center"
+            >Portfolio</a
+          >
+        </li>
+        <li>
+          <a
+            href="#skills"
+            class="sidebar-link py-7 bg-gray-500 flex justify-center"
+            >Skills</a
+          >
+        </li>
+        <li>
+          <a
+            href="#about"
+            class="sidebar-link py-7 bg-gray-600 flex justify-center"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="sidebar-link py-7 bg-blue-900 flex justify-center shadow-2xl"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="project-hero pt-24 bg-gray-100">
+      <div class="container mx-auto px-0 md:px-6 py-20">
+        <div class="px-6">
+          <h1 class="text-4xl font-bold text-center mb-8">
+            "U-Tiup" Clone Project
+          </h1>
+          <p class="text-xl text-center mb-12">
+            A responsive "U-Tiup" clone website, built with HTML and CSS
+          </p>
+        </div>
+
+        <!-- Project Overview -->
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8 mb-12 main-content">
+          <img
+            src="project-img/u-tiup-clone.jpg"
+            alt="Portfolio Website Preview"
+            class="w-full rounded-lg mb-8"
+          />
+
+          <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
+          <p class="text-gray-700 mb-6 italic">
+            If you wondering, I intentionally use "U-Tiup" name to replaced the
+            original website name to avoid any copyright issue.
+          </p>
+          <p class="text-gray-700 mb-6">
+            This project is a responsive "U-Tiup" clone website that I created
+            as a challenge to test my front-end development skills. After
+            initially following a tutorial to build the project, I challenged
+            myself to recreate it entirely from scratch without revisiting the
+            tutorial.
+          </p>
+          <p class="text-gray-700 mb-6">
+            Through this process, I gained hands-on experience in designing and
+            implementing a responsive layout, improving my understanding of
+            HTML, CSS, and JavaScript. I also honed my problem-solving skills by
+            troubleshooting and resolving challenges independently.
+          </p>
+          <p class="text-gray-700 mb-6">
+            This project highlights my ability to learn, apply, and adapt,
+            making it an important step in my journey as a front-end developer.
+          </p>
+
+          <h2 class="text-2xl font-bold mb-4">Technologies Used</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-6">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Responsive Design</li>
+            <li>CSS Grid & Flexbox</li>
+          </ul>
+
+          <h2 class="text-2xl font-bold mb-4">Key Features</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-6">
+            <li>Responsive layout that adapts to any screen size</li>
+            <li>Interactive elements</li>
+          </ul>
+          <!--
+          <div class="flex flex-col md:flex-row justify-center mt-8 gap-2 md:gap-5">
+            <a
+              href=""
+              class="bg-blue-600 text-white text-center px-6 py-3 w-full md:w-44 rounded-full hover:bg-blue-700 transition duration-300"
+              >View Live Site</a
+            >
+            <a
+              href=""
+              target="_blank"
+              class=" bg-gray-400 text-white text-center px-6 py-3 w-full md:w-44 rounded-full hover:bg-gray-900 transition duration-300"
+              >View Code</a
+            >
+          </div>
+          -->
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-6 text-center">
+        <p>2025 Shahril Fadzlyn</p>
+        <div class="mt-4">
+          <a href="https://linkedin.com/in/shahril-fadzlyn-28619a66" class="text-gray-400 hover:text-white mx-2"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/shahril-fadzlyn" class="text-gray-400 hover:text-white mx-2"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://www.facebook.com/shahrilfadzlyn" class="text-gray-400 hover:text-white mx-2"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
