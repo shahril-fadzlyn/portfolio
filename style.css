@@ -190,8 +190,9 @@ html {
   animation: moveGradient 2.7s linear infinite;
   transition: background-color 0.1s ease;
   z-index: 0;
-
-  /* Other styles... */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hire-link::after {
